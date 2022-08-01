@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<TITLE>多功能编辑器--插入表格</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta HTTP-EQUIV=Expires CONTENT=0>
+<Link rel="stylesheet" type="text/css" href="pop.css">
+<SCRIPT LANGUAGE=JavaScript FOR=Ok EVENT=onclick>
+if (tbwidth.value>500){
+window.alert('表格过大！')
+}else{
+  window.returnValue = selrow.value+"*"+selcol.value+"*"+tbwidth.value+"*"+tbborder.value+"*"+ celpadding.value + "*" + bdcolor.value + "*" + bgcolor.value + "*" + tbalign.value;
+  window.close();
+}
+</SCRIPT>
+<script>
+function IsDigit()
+{
+  return ((event.keyCode >= 48) && (event.keyCode <= 57));
+}
+function WBTB_selColor(obj)
+{
+	var arr = showModalDialog("selcolor.html", "", "dialogWidth:18.5em; dialogHeight:17.5em; status:0; help:0");
+	if (arr != null && arr != "") obj.value=arr;
+}
+
+</script>
+</HEAD>
+<BODY bgcolor="menu">
+<table border="0" height="90%" cellspacing="2" cellpadding="0" align=center style="padding-left:10px">
+<tr>
+<td colspan=2 align=center>
+<font class=title>插入表格</font>
+<hr width=100% >
+</td>
+</tr>
+<tr>
+<td align=center>
+行: <INPUT TYPE=TEXT SIZE=4 ID=selrow ONKEYPRESS="event.returnValue=IsDigit();" value=1>
+</td>
+<td align=center>
+&nbsp; 列: &nbsp; <input type=text id=selcol size=4 ONKEYPRESS="event.returnValue=IsDigit();" value=1>
+</td>
+</tr>
+<tr>
+<td>
+宽度: <INPUT TYPE=TEXT SIZE=4 ID=tbwidth ONKEYPRESS="event.returnValue=IsDigit();" value=500>
+</td>
+<td>
+边框 <INPUT TYPE=TEXT SIZE=4 ID=tbborder ONKEYPRESS="event.returnValue=IsDigit();" value=1>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<hr width=100% >
+单元格边距: <INPUT TYPE=TEXT SIZE=7 ID=celpadding ONKEYPRESS="event.returnValue=IsDigit();" value="2">
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<a href="#" onclick="WBTB_selColor(bdcolor);">边框颜色</a>: <INPUT TYPE=TEXT SIZE=7 ID=bdcolor value="#CCCCCC">
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<a href="#" onclick="WBTB_selColor(bgcolor);">背景色</a>: &nbsp; &nbsp;<INPUT TYPE=TEXT SIZE=7 ID=bgcolor value="#FFFFFF">
+</td>
+</tr>
+<tr>
+<td colspan=2>
+对齐方式: &nbsp; 
+<select id=tbalign >
+<option value=center>水平居中</option>
+<option value=left>左对齐</option>
+<option value=right>右对齐</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan=2 align=center>
+<BUTTON ID=Ok TYPE=SUBMIT>开始</BUTTON>&nbsp; &nbsp;<BUTTON ONCLICK="window.close();">关闭</BUTTON>
+</td>
+</tr>
+</table>
+</BODY>   
+</HTML>
+

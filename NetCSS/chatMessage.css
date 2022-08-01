@@ -1,0 +1,23 @@
+/*iphone气泡 */
+.the_user,.the_me{color: #000; position: relative; padding-bottom:20px;}
+.the_user{text-align: left;padding-left:10px}
+.the_me{text-align: right;padding-right:10px;}
+.bubble { position: relative; display: inline-block; min-width: 30px; max-width: 270px; word-break: break-all; word-wrap: break-word; min-height: 22px; background: #d2d2d2; border-radius: 15px; margin-bottom: 20px; padding: 6px 8px; -webkit-box-shadow: 0px 1px 2px #000, inset 0px 4px 4px rgba(0,0,0,.3), inset 0px -4px 4px rgba(255,255,255,.5); -moz-shadow: 0px 1px 2px #000, inset 0px 4px 4px rgba(0,0,0,.3), inset 0px -4px 4px rgba(255,255,255,.5); box-shadow: 0px 1px 2px #000, inset 0px 4px 4px rgba(0,0,0,.3), inset 0px -4px 4px rgba(255,255,255,.5);}
+.bubble:before { content: ''; display: block; font-size: 0; width: 0; height: 0; border-width: 6px; position: absolute; bottom: -12px; left: 12px; border-color: #4a4c50 transparent transparent #4a4c50; border-style: solid dashed dashed solid;}
+.bubble:after { content: ''; display: block; font-size: 0; position: absolute; bottom: -9px; left: 13px; width: 0; height: 0; border-width: 5px; border-color: #e8e8e8 transparent transparent #e8e8e8; border-style: solid dashed dashed solid;}
+.bubble .con {background:none; position: relative; padding:4px;}
+.bubble .con:before { content: ''; position: absolute; margin: auto; top: -5px; left: 0; width: 100%; height: 12px; background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.2) 90%, rgba(255,255,255,0) 90% ); background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.2) 90%, rgba(255,255,255,0) 90% ); border-radius: 10px}
+
+.info{ font:12px/1.5 "宋体"; color:#333;}
+.info .u_name{}
+.info .u_name label{padding-left:5px;}
+
+.the_me .info{ color:#03F}
+.the_me .info .u_name{text-align:right;padding-right:0px;}
+.the_me .info .u_name label{text-align:right;padding-left:0px;padding-right:5px;}
+/**
+ * 	绿色气泡
+ */
+.the_me .bubble { background: #b7da2b;}
+.the_me .bubble:before { left: auto; right: 12px; border-color: #4a4c50 #4a4c50 transparent transparent; border-style: solid solid dashed dashed}
+.the_me .bubble:after { left: auto; right: 13px; border-color: #daec93 #daec93 transparent transparent; border-style: solid solid dashed dashed;}

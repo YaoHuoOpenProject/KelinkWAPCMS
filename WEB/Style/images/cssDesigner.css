@@ -1,0 +1,94 @@
+﻿input{height:20px;border:1px solid #999999;}
+.QrEditor .QrEditBox {
+	BORDER-RIGHT: #cc8 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #cc8 1px solid; MARGIN-TOP: 10px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cc8 1px solid; WIDTH: 350px; PADDING-TOP: 5px; BORDER-BOTTOM: #cc8 1px solid; BACKGROUND-COLOR: #ffc
+}
+.QrEditor .QrEditSwitchHover {
+	BORDER-RIGHT: #33a 1px solid; BORDER-TOP: #33a 1px solid; BORDER-LEFT: #33a 1px solid; WIDTH: 10px; CURSOR: pointer; BORDER-BOTTOM: #33a 1px solid; BACKGROUND-COLOR: #ddd
+}
+.QrEditor .QrEditSwitch {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; BORDER-LEFT: #fff 1px solid; WIDTH: 10px; CURSOR: pointer; BORDER-BOTTOM: #fff 1px solid; BACKGROUND-COLOR: #ddd
+}
+.QrEditor .QrEditSwitchSelected {
+	BORDER-RIGHT: #a33 1px solid; BORDER-TOP: #a33 1px solid; BORDER-LEFT: #a33 1px solid; WIDTH: 10px; CURSOR: pointer; BORDER-BOTTOM: #a33 1px solid; BACKGROUND-COLOR: #daa
+}
+.QrEditor .QrToolBar {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10pt; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; TEXT-ALIGN: right
+}
+.QrEditor .QrStyleBox {
+	FLOAT: right; WIDTH: 150px; LINE-HEIGHT: 150%
+}
+.QrEditor .QrAddStyleBox {
+	CLEAR: both; BORDER-RIGHT: pink 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: pink 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 10pt; PADDING-BOTTOM: 5px; BORDER-LEFT: pink 1px solid; WIDTH: 300px; PADDING-TOP: 5px; BORDER-BOTTOM: pink 1px solid; BACKGROUND-COLOR: #edd
+}
+.QrEditor .QrAddBox {
+	CLEAR: both; BORDER-RIGHT: pink 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: pink 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 10pt; PADDING-BOTTOM: 5px; BORDER-LEFT: pink 1px solid; WIDTH: 150px; PADDING-TOP: 5px; BORDER-BOTTOM: pink 1px solid; BACKGROUND-COLOR: #edd
+}
+.QrEditor .QrInline {
+	PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.QrEditor .QrBlock {
+	PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.QrEditor {
+	WIDTH: 98%
+}
+.QrEditorArea {
+	FONT-FAMILY: sans-serif; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: white
+}
+.QrEditorArea .QrTab {
+	BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: white 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 10pt; PADDING-BOTTOM: 3px; BORDER-LEFT: white 1px solid; WIDTH: 100px; PADDING-TOP: 3px; BORDER-BOTTOM: white 1px solid; HEIGHT: 20px; TEXT-ALIGN: center
+}
+.QrEditorArea .QrTabSelected {
+	BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: white 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 10pt; PADDING-BOTTOM: 3px; BORDER-LEFT: white 1px solid; WIDTH: 100px; PADDING-TOP: 3px; BORDER-BOTTOM: white 0px solid; HEIGHT: 20px; BACKGROUND-COLOR: white; TEXT-ALIGN: center
+}
+.QrEditorArea .QrTabDivider {
+	BORDER-RIGHT: white 0px solid; BORDER-TOP: white 0px solid; BORDER-LEFT: white 0px solid; WIDTH: 1px; BORDER-BOTTOM: white 1px solid; HEIGHT: 20px
+}
+.QrEditorArea .QrTabSpacer {
+	BORDER-RIGHT: white 0px solid; BORDER-TOP: white 0px solid; BORDER-LEFT: white 0px solid; WIDTH: 50%; BORDER-BOTTOM: white 1px solid; HEIGHT: 20px
+}
+.QrEditorArea .QrMain {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 7px; FONT-SIZE: 10pt; PADDING-BOTTOM: 7px; WIDTH: 700px; PADDING-TOP: 7px
+}
+.QrEditorArea .QrLabel {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 5px; FONT-SIZE: 10pt; PADDING-BOTTOM: 3px; WIDTH: 700px; PADDING-TOP: 3px; BACKGROUND-COLOR: #eedddd
+}
+.QrEditorArea .QrLoading {
+	COLOR: #555; TEXT-ALIGN: center
+}
+.QrEditorArea .QrAnotation {
+	COLOR: #555
+}
+.QrTitle {
+	FONT-SIZE: 18pt; FONT-FAMILY: Impact;
+}
+.QrDescription {
+	FONT-SIZE: 14pt
+}
+
+/*webmasterhome.cn Edit 2006-6-23*/
+.QrPulldown {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+.QrPulldownButton {
+	MARGIN-LEFT: 2px; POSITION: relative
+}
+.QrPulldownInput {
+	PADDING-LEFT: 2px; HEIGHT: 22px
+}
+.QrPulldownFCMenu {
+	BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; Z-INDEX: 2; BACKGROUND-IMAGE: url(images/pulldownfc-back.gif); BORDER-LEFT: gray 1px solid; WIDTH: 400px; BORDER-BOTTOM: gray 1px solid; POSITION: absolute; BACKGROUND-COLOR: #eee
+}
+.QrPulldownMenu {
+	BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; Z-INDEX: 2; BACKGROUND-IMAGE: url(images/pulldown-back.gif); BORDER-LEFT: gray 1px solid; WIDTH: 200px; BORDER-BOTTOM: gray 1px solid; POSITION: absolute; BACKGROUND-COLOR: #eee
+}
+.QrPulldownItemHover {
+	BORDER-RIGHT: #336699 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #336699 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #336699 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #336699 1px solid; BACKGROUND-COLOR: #F3F8FC
+}
+.QrPulldownItem {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; WIDTH: 95%; PADDING-TOP: 3px
+}
+
+/*webmasterhome.cn Edit 2006-6-23*/
+.QrCSSDesignerPad{ /*margin-top:40px;*/ width:100%;}
+.QrCSSDesignerPadLeft{ width:70px; }

@@ -1,0 +1,434 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta HTTP-EQUIV=Expires CONTENT=0>
+<Link rel="stylesheet" type="text/css" href="pop.css">
+<script language="JavaScript">
+var sAction = "INSERT";
+var sTitle = "插入";
+var oControl;
+var oSeletion;
+var sRangeType;
+var sRow = "1";
+var sCol = "1";
+var sAlign = "";
+var sBorder = "1";
+var sCellPadding = "3";
+var sCellSpacing = "2";
+var sWidth = "";
+var sBorderColor = "#CCCCCC";
+var sBgColor = "#FFFFFF";
+var sWidthUnit = "%"
+var bCheck = true;
+var bWidthDisable = false;
+var sWidthValue = "100"
+
+oSelection = dialogArguments.edit.document.selection.createRange();
+sRangeType = dialogArguments.edit.document.selection.type;
+if (sRangeType == "Control") {
+	if (oSelection.item(0).tagName == "TABLE"){
+		sAction = "MODI";
+		sTitle = "修改";
+		oControl = oSelection.item(0);
+		sRow = oControl.rows.length;
+		sCol = getColCount(oControl);
+		sAlign = oControl.align;
+		sBorder = oControl.border;
+		sCellPadding = oControl.cellPadding;
+		sCellSpacing = oControl.cellSpacing;
+		sWidth = oControl.width;
+		sBorderColor = oControl.borderColor;
+		sBgColor = oControl.bgColor;
+	}
+}
+document.write("<TITLE>[" + sTitle + "]表格</TITLE>");
+// 初始值
+function InitDocument(){
+	SearchSelectValue(d_align, sAlign.toLowerCase());
+
+	// 修改状态时取值
+	if (sAction == "MODI"){
+		if (sWidth == ""){
+			bCheck = false;
+			bWidthDisable = true;
+			sWidthValue = "100";
+			sWidthUnit = "%";
+		}else{
+			bCheck = true;
+			bWidthDisable = false;
+			if (sWidth.substr(sWidth.length-1) == "%"){
+				sWidthValue = sWidth.substring(0, sWidth.length-1);
+				sWidthUnit = "%";
+			}else{
+				sWidthUnit = "";
+				sWidthValue = parseInt(sWidth);
+				if (isNaN(sWidthValue)) sWidthValue = "";
+			}
+		}
+	}
+
+	switch(sWidthUnit){
+	case "%":
+		d_widthunit.selectedIndex = 1;
+		break;
+	default:
+		sWidthUnit = "";
+		d_widthunit.selectedIndex = 0;
+		break;
+	}
+
+	d_row.value = sRow;
+	d_col.value = sCol;
+	d_border.value = sBorder;
+	d_cellspacing.value = sCellSpacing;
+	d_cellpadding.value = sCellPadding;
+	d_widthvalue.value = sWidthValue;
+	d_widthvalue.disabled = bWidthDisable;
+	d_widthunit.disabled = bWidthDisable;
+	d_bordercolor.value = sBorderColor;
+	s_bordercolor.style.backgroundColor = sBorderColor;
+	d_bgcolor.value = sBgColor;
+	s_bgcolor.style.backgroundColor = sBgColor;
+	d_check.checked = bCheck;
+
+
+}
+
+// 搜索下拉框值与指定值匹配，并选择匹配项
+function SearchSelectValue(o_Select, s_Value){
+	for (var i=0;i<o_Select.length;i++){
+		if (o_Select.options[i].value == s_Value){
+			o_Select.selectedIndex = i;
+			return true;
+		}
+	}
+	return false;
+}
+
+// 选颜色
+function SelectColor(what){
+	var dEL = document.all("d_"+what);
+	var sEL = document.all("s_"+what);
+	//var url = "selcolor.htm?color="+encodeURIComponent(dEL.value);
+	//var arr = showModalDialog(url,window,"dialogWidth:280px;dialogHeight:250px;help:no;scroll:no;status:no");
+	var arr = showModalDialog("selcolor.htm", "", "dialogWidth:18em; dialogHeight:19em; status:0;help:0;scroll:no;");
+	if (arr) {
+		dEL.value=arr;
+		sEL.style.backgroundColor=arr;
+	}
+}
+// 是否有效颜色值
+function IsColor(color){
+	var temp=color;
+	if (temp=="") return true;
+	if (temp.length!=7) return false;
+	return (temp.search(/\#[a-fA-F0-9]{6}/) != -1);
+}
+// 只允许输入数字
+function IsDigit(){
+  return ((event.keyCode >= 48) && (event.keyCode <= 57));
+}
+// 判断值是否大于0
+function MoreThanOne(obj, sErr){
+	var b=false;
+	if (obj.value!=""){
+		obj.value=parseFloat(obj.value);
+		if (obj.value!="0"){
+			b=true;
+		}
+	}
+	if (b==false){
+		BaseAlert(obj,sErr);
+		return false;
+	}
+	return true;
+}
+
+// 得到表格列数
+function getColCount(oTable) {
+	var intCount = 0;
+	if (oTable != null) {
+		for(var i = 0; i < oTable.rows.length; i++){
+			if (oTable.rows[i].cells.length > intCount) intCount = oTable.rows[i].cells.length;
+		}
+	}
+	return intCount;
+}
+
+// 增加行
+function InsertRows( oTable ) {
+	if ( oTable ) {
+		var elRow=oTable.insertRow();
+		for(var i=0; i<oTable.rows[0].cells.length; i++){
+			var elCell = elRow.insertCell();
+			elCell.innerHTML = "&nbsp;";
+		}
+	}
+}
+
+// 增加列
+function InsertCols( oTable ) {
+	if ( oTable ) {
+		for(var i=0; i<oTable.rows.length; i++){
+			var elCell = oTable.rows[i].insertCell();
+			elCell.innerHTML = "&nbsp;"
+		}
+	}
+}
+
+// 删除行
+function DeleteRows( oTable ) {
+	if ( oTable ) {
+		oTable.deleteRow();
+	}
+}
+
+// 删除列
+function DeleteCols( oTable ) {
+	if ( oTable ) {
+		for(var i=0;i<oTable.rows.length;i++){
+			oTable.rows[i].deleteCell();
+		}
+	}
+}
+
+</script>
+
+<SCRIPT event=onclick for=Ok language=JavaScript>
+	// 边框颜色的有效性
+	sBorderColor = d_bordercolor.value;
+	if (!IsColor(sBorderColor)){
+		BaseAlert(d_bordercolor,'无效的边框颜色值！');
+		return;
+	}
+	// 背景颜色的有效性
+	sBgColor = d_bgcolor.value;
+	if (!IsColor(sBgColor)){
+		BaseAlert(d_bgcolor,'无效的背景颜色值！');
+		return;
+	}
+	// 行数的有效性
+	if (!MoreThanOne(d_row,'无效的行数，至少要1行！')) return;
+	// 列数的有效性
+	if (!MoreThanOne(d_col,'无效的列数，至少要1列！')) return;
+	// 边线粗细的有效性
+	if (d_border.value == "") d_border.value = "0";
+	if (d_cellpadding.value == "") d_cellpadding.value = "0";
+	if (d_cellspacing.value == "") d_cellspacing.value = "0";
+	// 去前导0
+	d_border.value = parseFloat(d_border.value);
+	d_cellpadding.value = parseFloat(d_cellpadding.value);
+	d_cellspacing.value = parseFloat(d_cellspacing.value);
+	// 宽度有效值性
+	var sWidth = "";
+	if (d_check.checked){
+		if (!MoreThanOne(d_widthvalue,'无效的表格宽度！')) return;
+		sWidth = d_widthvalue.value + d_widthunit.value;
+	}
+
+	sRow = d_row.value;
+	sCol = d_col.value;
+	sAlign = d_align.options[d_align.selectedIndex].value;
+	sBorder = d_border.value;
+	sCellPadding = d_cellpadding.value;
+	sCellSpacing = d_cellspacing.value;
+
+	if (sAction == "MODI") {
+		// 修改行数
+		var xCount = sRow - oControl.rows.length;
+  		if (xCount > 0)
+	  		for (var i = 0; i < xCount; i++) InsertRows(oControl);
+  		else
+	  		for (var i = 0; i > xCount; i--) DeleteRows(oControl);
+		// 修改列数
+  		var xCount = sCol - getColCount(oControl);
+  		if (xCount > 0)
+  			for (var i = 0; i < xCount; i++) InsertCols(oControl);
+  		else
+  			for (var i = 0; i > xCount; i--) DeleteCols(oControl);
+
+		try {
+			oControl.width = sWidth;
+		}
+		catch(e) {
+			//alert("对不起，请您输入有效的宽度值！\n（如：90%  200  300px  10cm）");
+		}
+
+		oControl.align			= sAlign;
+  		oControl.border			= sBorder;
+  		oControl.cellSpacing	= sCellSpacing;
+  		oControl.cellPadding	= sCellPadding;
+  		oControl.borderColor	= sBorderColor;
+  		oControl.bgColor		= sBgColor;
+
+	}else{
+		var sTable = "<table align='"+sAlign+"' border='"+sBorder+"' cellpadding='"+sCellPadding+"' cellspacing='"+sCellSpacing+"' width='"+sWidth+"' bordercolor='"+sBorderColor+"' bgcolor='"+sBgColor+"'>";
+		for (var i=1;i<=sRow;i++){
+			sTable = sTable + "<tr>";
+			for (var j=1;j<=sCol;j++){
+				sTable = sTable + "<td>&nbsp;</td>";
+			}
+			sTable = sTable + "</tr>";
+		}
+		sTable = sTable + "</table>";
+	}
+	window.returnValue = sTable;
+	window.close();
+</SCRIPT>
+
+</head>
+<body onLoad="InitDocument()">
+
+<table width="100%" height="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td height="25" bgcolor="#CCCCCC" class="title">
+	<SCRIPT>
+	document.write("<font style='color:red'>" + sTitle + "</font> 表格------表格属性");
+	</SCRIPT></td>
+  </tr>
+  <tr>
+    <td height="98%"><table border=0 cellpadding=0 cellspacing=0 align=center>
+      <tr>
+        <td height="49"><fieldset>
+          <legend>表格大小</legend>
+          <table border=0 cellpadding=0 cellspacing=0>
+            <tr>
+              <td colspan=9 height=5></td>
+            </tr>
+            <tr>
+              <td width=7></td>
+              <td>表格行数:</td>
+              <td width=5></td>
+              <td><input name="text" type=text id=d_row ONKEYPRESS="event.returnValue=IsDigit();" value="" size=10 maxlength=2></td>
+              <td width=40></td>
+              <td>表格列数:</td>
+              <td width=5></td>
+              <td><input name="text2" type=text id=d_col ONKEYPRESS="event.returnValue=IsDigit();" value="" size=10 maxlength=2></td>
+              <td width=7></td>
+            </tr>
+            <tr>
+              <td colspan=9 height=5></td>
+            </tr>
+          </table>
+        </fieldset></td>
+      </tr>
+      <tr>
+        <td height=5></td>
+      </tr>
+      <tr>
+        <td><fieldset>
+          <legend>表格布局</legend>
+          <table border=0 cellpadding=0 cellspacing=0>
+            <tr>
+              <td colspan=9 height=5></td>
+            </tr>
+            <tr>
+              <td width=7></td>
+              <td>对齐方式:</td>
+              <td width=5></td>
+              <td><select name="select" id="d_align" style="width:72px">
+                  <option value=''>默认</option>
+                  <option value='left'>左对齐</option>
+                  <option value='center'>居中</option>
+                  <option value='right'>右对齐</option>
+                </select>
+              </td>
+              <td width=40></td>
+              <td>边框粗细:</td>
+              <td width=5></td>
+              <td><input name="text2" type=text id=d_border ONKEYPRESS="event.returnValue=IsDigit();" value="" size=10></td>
+              <td width=7></td>
+            </tr>
+            <tr>
+              <td colspan=9 height=5></td>
+            </tr>
+            <tr>
+              <td width=7></td>
+              <td>单元间距:</td>
+              <td width=5></td>
+              <td><input name="text2" type=text id=d_cellspacing ONKEYPRESS="event.returnValue=IsDigit();" value="" size=10 maxlength=2></td>
+              <td width=40></td>
+              <td>单元边距:</td>
+              <td width=5></td>
+              <td><input name="text2" type=text id=d_cellpadding ONKEYPRESS="event.returnValue=IsDigit();" value="" size=10 maxlength=2></td>
+              <td width=7></td>
+            </tr>
+            <tr>
+              <td colspan=9 height=5></td>
+            </tr>
+          </table>
+        </fieldset></td>
+      </tr>
+      <tr>
+        <td height=5></td>
+      </tr>
+      <tr>
+        <td><fieldset>
+          <legend>表格宽度</legend>
+          <table border=0 cellpadding=0 cellspacing=0 width='100%'>
+            <tr>
+              <td colspan=9 height=5></td>
+            </tr>
+            <tr>
+              <td width=7></td>
+              <td onClick="d_check.click()" noWrap valign=middle><input name="checkbox" type="checkbox" id="d_check" onClick="d_widthvalue.disabled=(!this.checked);d_widthunit.disabled=(!this.checked);" value="1">
+                指定表格的宽度</td>
+              <td align=right width="60%"><input name="d_widthvalue" type="text" value="" size="5" ONKEYPRESS="event.returnValue=IsDigit();" maxlength="3">
+                  <select name="d_widthunit">
+                    <option value='px'>像素</option>
+                    <option value='%'>百分比</option>
+                  </select>
+              </td>
+              <td width=7></td>
+            </tr>
+            <tr>
+              <td colspan=9 height=5></td>
+            </tr>
+          </table>
+        </fieldset></td>
+      </tr>
+      <tr>
+        <td height=5></td>
+      </tr>
+      <tr>
+        <td><fieldset>
+          <legend>表格颜色</legend>
+          <table border=0 cellpadding=0 cellspacing=0>
+            <tr>
+              <td colspan=9 height=5></td>
+            </tr>
+            <tr>
+              <td width=7></td>
+              <td>边框颜色:</td>
+              <td width=5></td>
+              <td><input name="text2" type=text id=d_bordercolor value="" size=7></td>
+              <td><img border=0 src="rect.gif" width=18 style="cursor:pointer" id=s_bordercolor onClick="SelectColor('bordercolor')"></td>
+              <td width=40></td>
+              <td>背景颜色:</td>
+              <td width=5></td>
+              <td><input name="text2" type=text id=d_bgcolor value="" size=7></td>
+              <td><img border=0 src="rect.gif" width=18 style="cursor:pointer" id=s_bgcolor onClick="SelectColor('bgcolor')"></td>
+              <td width=7></td>
+            </tr>
+            <tr>
+              <td colspan=9 height=5></td>
+            </tr>
+          </table>
+        </fieldset></td>
+      </tr>
+      <tr>
+        <td height=5></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="2" align="right" bgcolor="#999999"></td>
+  </tr>
+  <tr>
+    <td height="25" align="right" bgcolor="#CCCCCC"><button id="Ok" type="submit">确 定</button>&nbsp;
+        <button onClick="window.close();">关 闭</button></td>
+  </tr>
+</table>
+</body>
+</html>
+

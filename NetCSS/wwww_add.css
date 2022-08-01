@@ -1,0 +1,9 @@
+*{ margin:0; padding:0;}
+#title{ width:100%;}
+.tit_right{ float:right; display: block; height:29px; width:14px;  _margin-left:-3px;}
+.tit_left{ float:left; display: block; height:29px; width:14px; _margin-right:-3px;}
+.tit_center{ background:url(../NetImages/bg_title.gif) repeat-x; width:100%; height:29px; _display:inline-block;}
+.tit_center ul{ list-style-type:none;}
+.tit_center ul li{ float:left;}
+.tit_center ul li a{ display:block; float:left; width:104px; height:25px; background:url(/NetImages/bg_title_check2.gif) no-repeat; margin-top:4px; margin-left:5px; font:bold 14px/25px "ËÎÌו"; text-align:center; color:#3366cc;}
+.tit_center ul li a.check{display:block; width:104px; height:25px; background:url(../NetImages/bg_title_check.gif) no-repeat; margin-top:4px; margin-left:5px; font:bold 14px/25px "ËÎÌו"; text-align:center; color:#3d99e6;}

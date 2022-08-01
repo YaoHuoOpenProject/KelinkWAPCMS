@@ -1,0 +1,4 @@
+User-agent:*
+Visit-time:0100-0700
+Request-rate:1/5 0100-0700
+Disallow: /admin/

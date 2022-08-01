@@ -1,0 +1,287 @@
+BODY {
+
+	SCROLLBAR-FACE-COLOR: #dee3e7; FONT-SIZE: 12px; MARGIN: 5px 2px 2px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #dee3e7; COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #d1d7dc; LINE-HEIGHT: 120%; SCROLLBAR-ARROW-COLOR: #006699; SCROLLBAR-TRACK-COLOR: #efefef; FONT-FAMILY: "宋体"; SCROLLBAR-DARKSHADOW-COLOR: #98aab1
+
+}
+.adminTable /* Admin table */
+{
+    border: 1px #7FCAFE solid;
+    background-color: #FFFFFF;
+}
+
+SELECT {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: "宋体"
+}
+A:link {
+	COLOR: #3366cc; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #3366cc; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #6699ff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff4400; TEXT-DECORATION: none
+}
+.TD_title1 {
+	BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/netimages/tab.gif); BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "宋体"
+}
+.TD_title2 {
+	BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/netimages/tab.gif); BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "宋体"
+}
+.TD_title3 {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/netimages/tab.gif); BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "宋体"
+}
+.TD_title4 {
+	BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #ffffff
+}
+.TD_title5 {
+	BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #ffffff
+}
+.TD_title6 {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #ffffff
+}
+.TD1 {
+	FONT-SIZE: 12px; BORDER-LEFT: #d2d2d2 1px solid; COLOR: #333333; BORDER-BOTTOM: #d2d2d2 1px solid; FONT-FAMILY: "宋体"
+}
+.TD2 {
+	FONT-SIZE: 12px; BORDER-LEFT: #d2d2d2 1px solid; COLOR: #333333; BORDER-BOTTOM: #d2d2d2 1px solid; FONT-FAMILY: "宋体"
+}
+.TD3 {
+	BORDER-RIGHT: #d2d2d2 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #d2d2d2 1px solid; COLOR: #333333; BORDER-BOTTOM: #d2d2d2 1px solid; FONT-FAMILY: "宋体"
+}
+.TD4 {
+	FONT-SIZE: 12px; BORDER-LEFT: #d2d2d2 1px solid; COLOR: #333333; BORDER-BOTTOM: #d2d2d2 1px solid; FONT-FAMILY: "宋体"
+}
+.TD5 {
+	FONT-SIZE: 12px; BORDER-LEFT: #d2d2d2 1px solid; COLOR: #333333; BORDER-BOTTOM: #d2d2d2 1px solid; FONT-FAMILY: "宋体"
+}
+.TD6 {
+	BORDER-RIGHT: #d2d2d2 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #d2d2d2 1px solid; COLOR: #333333; BORDER-BOTTOM: #d2d2d2 1px solid; FONT-FAMILY: "宋体"
+}
+A.p1 {
+	COLOR: #000000
+}
+A.p1:visited {
+	COLOR: #000000
+}
+A.p1:hover {
+	COLOR: #ff4400
+}
+A.p1:active {
+	COLOR: #ff6600
+}
+/*****************************************************
+Table Header and cell definitions
+*****************************************************/
+td.column /* td.column is the main heading row of the table, shows either the table title, or the column headings, such as 'Posts', 'Last Post' etc. Top row of all tables. */
+{
+    font-weight: bold; 
+    font-size: 9pt; 
+    
+    background-image: url(/images/tabs2.gif);
+    background-repeat: repeat-x; 
+    COLOR: black;
+}
+
+td.h1a /* td.h1a is the subheading row of the table, shows the names of Forum Groups on main page, or 'Announcements', 'Topics' on ShowForum page */
+{
+    color: #4455aa;
+    font-size: 9pt;
+    font-weight:bold;
+    text-decoration: none; 
+    background-image: url(/images/forumHeaderBackgroundAlternate.gif);
+    background-color: #E7E3E7;
+    background-repeat: repeat-x; 
+}
+.TABLE6 {
+	BORDER-RIGHT: #7fcafe 1px solid; BORDER-TOP: #7fcafe 1px solid; BORDER-LEFT: #7fcafe 1px solid; BORDER-BOTTOM: #7fcafe 1px solid; BACKGROUND-COLOR: #ffffff
+}
+td.h1 /* td.h1 was the old subheading row of the table. This should probably be deleted as I don't think it is used anymore. */
+{
+    color: white;
+    font-size: 9pt;
+    font-weight:bold;
+    background-image: url(/images/forumHeaderBackground.gif);
+    background-color: #4455aa
+}
+
+td.f /* Forums column cells on main page; last post, replies, view cells on ShowForums page (shaded cells?) */
+{
+    font-size: 9pt; 
+    background-color: #DDEEFF;
+	border-top: 0px solid #53A3E2;
+	COLOR: #333333;
+}
+td.f1 /*增加的,作为图标背景类*/
+{
+    font-size: 9pt; 
+    background-color: #FFFFFF;
+	border-top: 1px solid #53A3E2;
+	border-right: 1px solid #53A3E2;
+}
+td.f2
+{
+    font-size: 9pt;
+    background-color: #DDEEFF;
+}
+
+td.fh /* 论坛行高亮-例:论坛选项,论坛统计,在线列表forumRowHighlight - such as forumOptions, forumStatistics, WhoIsOnline boxes etc.*/
+{
+    font-size: 9pt; 
+    background-color: #FFFFFF; 
+    
+    /*background-image: url(/images/fhBg.gif); */
+    /*background-image: url(/images/fhBg.gif);*/
+    background-repeat: repeat-x;
+    COLOR: #333333;
+}
+td.fh1 /*新增用于主要行显示(论坛组那一栏)*/
+{
+    font-size: 9pt; 
+    background-color: #FFFFFF; 
+    /*background-image: url(/images/fhBg.gif); */
+    background-image: url(/images/hdr_bg.gif);
+    background-repeat: repeat-x;
+}
+
+TD.fh2 /* used in Forums Statistics box to control size of text*/
+{
+	font-size: 9pt; 
+}
+
+TD.fh3b /* TD.fh3 is Threads, Posts cells on main table, Thread cells on ShowForum page (not shaded?) */ 
+
+{
+	font-size: 9pt; 
+	background-color: #FFFFFF; 
+	border-top: 1px solid #DDEEFF;
+	border-left: 1px solid #DDEEFF;
+}
+
+TD.fh3 /* TD.fh3 is Threads, Posts cells on main table, Thread cells on ShowForum page (not shaded?) */ 
+{
+	font-size: 9pt; 
+	background-color: #FFFFFF; 
+	border-top: 1px solid #53A3E2;
+	border-left: 1px solid #53A3E2;
+}
+
+TD.fh3a /* TD.fh3a is Alternating table for Post Body in the PostView */ 
+{
+	font-size: 9pt; 
+	background-color: #F6FBFF; 
+	border-top: 1px solid #DDEEFF;
+	border-left: 1px solid #DDEEFF;
+}
+
+TD.fh4 /* TD.fh4 is Last Post cells on main table (not shaded?) */
+{
+	font-size: 9pt; 
+	background-color: #FFFFFF; 
+	border-top: 1px solid #DDEEFF;
+	border-left: 1px solid #DDEEFF;
+}
+.input {
+	BORDER-RIGHT: #ffa800 1px solid; BORDER-TOP: #ffa800 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #ffa800 1px solid; BORDER-BOTTOM: #ffa800 1px solid; FONT-FAMILY: "Tahoma","Arial", "Helvetica", "sans-serif"  margin: 0px; HEIGHT: 20px
+}
+.input1 {
+	BORDER-RIGHT: #ffa800 1px solid; BORDER-TOP: #ffa800 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #ffa800 1px solid; BORDER-BOTTOM: #ffa800 1px solid; FONT-FAMILY: "Tahoma","Arial", "Helvetica", "sans-serif"  margin: 0px; HEIGHT: 20px
+}
+.input2 {
+	BORDER-RIGHT: #f5f5f5 1px solid; BORDER-TOP: #f5f5f5 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #f5f5f5 1px solid; BORDER-BOTTOM: #f5f5f5 1px solid; FONT-FAMILY: "Tahoma","Arial", "Helvetica", "sans-serif"  margin: 0px; HEIGHT: 20px; BACKGROUND-COLOR: #f5f5f5
+}
+.input3 {
+	BORDER-RIGHT: #d1d7dc 1px solid; BORDER-TOP: #d1d7dc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #d1d7dc 1px solid; BORDER-BOTTOM: #d1d7dc 1px solid; FONT-FAMILY: "Tahoma","Arial", "Helvetica", "sans-serif"  margin: 0px; HEIGHT: 20px; BACKGROUND-COLOR: #dee3e7
+}
+.input4 {
+	BORDER-RIGHT: #d1d7dc 1px solid; BORDER-TOP: #d1d7dc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #d1d7dc 1px solid; BORDER-BOTTOM: #d1d7dc 1px solid; FONT-FAMILY: "Tahoma","Arial", "Helvetica", "sans-serif"  margin: 0px; HEIGHT: 20px; BACKGROUND-COLOR: #dee3e7
+}
+.area {
+	BORDER-RIGHT: #ffa800 1px solid; BORDER-TOP: #ffa800 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #ffa800 1px solid; BORDER-BOTTOM: #ffa800 1px solid; FONT-FAMILY: "Tahoma","Arial", "Helvetica", "sans-serif"  margin: 0px; HEIGHT: 32px
+}
+.Sub {
+	BORDER-RIGHT: #333333 1px ridge; BORDER-TOP: #d4d0c8 1px ridge; FONT-SIZE: 12px; MARGIN: 0px; BORDER-LEFT: #d4d0c8 1px ridge; BORDER-BOTTOM: #333333 1px ridge; HEIGHT: 18px; BACKGROUND-COLOR: #7fcafe
+}
+.TABLE5 {
+	BORDER-RIGHT: #d2d2d2 1px solid; BORDER-TOP: #009ace 2px solid; BORDER-LEFT: #d2d2d2 1px solid; BORDER-BOTTOM: #d2d2d2 1px solid; BACKGROUND-COLOR: #f5f5f5
+}
+.TABLE2 {
+	BORDER-TOP: #009ace 2px solid; BORDER-BOTTOM: #d2d2d2 1px solid; BACKGROUND-COLOR: #f5f5f5
+}
+.TABLE {
+	BORDER-BOTTOM: #009ace 1px solid; BACKGROUND-COLOR: #f5f5f5
+}
+.TABLE1 {
+	BORDER-TOP: #d2d2d2 1px solid; BORDER-BOTTOM: #d2d2d2 1px solid; BACKGROUND-COLOR: #f5f5f5
+}
+.TABLE9 {
+	BORDER-RIGHT: #7fcafe 1px solid; BORDER-TOP: #7fcafe 1px solid; BORDER-LEFT: #7fcafe 1px solid; BORDER-BOTTOM: #7fcafe 1px solid; BACKGROUND-COLOR: #e8f9ff
+}
+.MenuItem {
+	COLOR: #000000; BORDER-BOTTOM: #d2d2d2 1px solid; FONT-FAMILY: verdana
+}
+.MenuItemOver {
+	COLOR: #ff0000; BORDER-BOTTOM: #d2d2d2 1px solid; FONT-FAMILY: verdana; BACKGROUND-COLOR: #ddf7ff
+}
+.MenuItemOver2 {
+	 CURSOR: hand; COLOR: #ff0000; BORDER-BOTTOM: #d2d2d2 1px solid; FONT-FAMILY: verdana; BACKGROUND-COLOR: #ddf7ff
+}
+.button {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #ffffff 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #ffffff 1px solid; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; HEIGHT: 20px; BACKGROUND-COLOR: #7baad4
+}
+
+
+.dtree {
+	FONT-SIZE: 11px; COLOR: #666; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; WHITE-SPACE: nowrap
+}
+.dtree IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; VERTICAL-ALIGN: middle; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.dtree A {
+	COLOR: #333; TEXT-DECORATION: none
+}
+.dtree A.node {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; WHITE-SPACE: nowrap
+}
+.dtree A.nodeSel {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; WHITE-SPACE: nowrap
+}
+.dtree A.node:hover {
+	COLOR: #333; TEXT-DECORATION: underline
+}
+.dtree A.nodeSel:hover {
+	COLOR: #333; TEXT-DECORATION: underline
+}
+.dtree A.nodeSel {
+	BACKGROUND-COLOR: #c0d2ec
+}
+.dtree .clip {
+	OVERFLOW: hidden
+}
+
+/**********/
+.tableBorder 
+{
+  BORDER-RIGHT: #7fcafe 1px solid; BORDER-TOP: #7fcafe 1px solid; BORDER-LEFT: #7fcafe 1px solid; BORDER-BOTTOM: #7fcafe 1px solid; BACKGROUND-COLOR: #ffffff
+  
+}
+td.column /* td.column is the main heading row of the table, shows either the table title, or the column headings, such as 'Posts', 'Last Post' etc. Top row of all tables. */
+{
+    font-weight: bold; 
+    font-size: 9pt; 
+    
+    background-image: url(/netimages/tab.gif);
+    background-repeat: repeat-x; 
+    COLOR: black;
+}
+.bt {
+ CURSOR:pointer;BORDER-RIGHT: #99ccff 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #99ccff 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFFFFF, EndColorStr=#9DBCEA); BORDER-LEFT: #99ccff 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #99ccff 1px solid
+}

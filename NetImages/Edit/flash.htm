@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>插入图片</title>
+<Link rel="stylesheet" type="text/css" href="pop.css">
+<script event="onclick" for="Ok" language="JavaScript">
+	var s=path.value;
+	if (s.length<10)
+	{
+		alert("请输入正确的文件链接地址！");
+	}else{
+		window.returnValue = "[flash="+selwidth.value+","+selheight.value+"]"+path.value+"[/flash]"
+		window.close();
+	}
+</script>
+</head>
+<body>
+<table width="100%" height="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+	<tr>
+	  <td height="25" bgcolor="#CCCCCC" class="title">插入 Flash 文件</td>
+  </tr>
+	<tr>
+		<td height="98%">
+		<table border="0" cellpadding="5" cellspacing="0" align="center">
+	<tr>
+		<td>
+		文件地址 : <input id="path" size="30" value="http://"></td>
+	</tr>
+	<tr>
+		<td>文件宽度 : <input id="selwidth" size="4" value="400">&nbsp; 文件高度 :
+		<input id="selheight" size="4" value="300"></td>
+	</tr>
+</table></td>
+  </tr>  <tr>
+    <td height="2" align="right" bgcolor="#999999"></td>
+  </tr>
+
+	<tr>
+	  <td height="20" align="right" bgcolor="#CCCCCC"><button id="Ok" type="submit">确 定</button>&nbsp;
+		<button onClick="window.close();">关 闭</button>&nbsp;
+		</td>
+	</tr>
+
+</table>
+</body>
+
+</html>
+
+

@@ -1,0 +1,396 @@
+0|苹果绿|3DFF10|
+<style type="text/css">
+img    {border: none;}
+body   {font-size: 10.5pt;  color: #000000; background-color: #054D05; margin: 0px; text-align: center;}
+a      {text-decoration: none;color: #006400;}
+a:hover {color: #DE0000;text-decoration: underline}
+a:visited {color: #66CC00F;text-decoration: underline}
+input.ipma {background-color: #FFFFFF; color: #000000; width:240px;}
+textarea.ipmb {background-color: #FFFFFF; color: #000000; width:240px; height:167px;}
+form  {margin: 0px;display: inline;}
+font.z {color: #FF0000;}
+div   {width:[width]px;padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;word-break:break-all;word-wrap:break-word;}
+div.line1{padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.line2{padding: 5px;border: none;background-color:#EAEAEA;color: #000000; margin: auto; text-align:left;}
+div.title {padding: 5px;border: none;background-color:#BDDD9A;color: #000000; margin: auto; text-align:left;border: 1px solid #ffffff;}
+div.logo {padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.welcome {padding: 5px;border: none;background-color:#0CB90D;color: #FFFFFF; margin: auto; text-align:left;} 
+div.welcome  p{border-top:solid 1px #ffffff;border-bottom:solid 1px #ffffff;}
+div.welcome  a {color:#ffffff;text-decoration:none;}
+div.welcome a:hover, div.index a:active, div.index a:focus {color: #000000;text-decoration:none;}
+div.subtitle{padding: 5px;border: none;background-color:#66CC00;color: #FFFFFF; margin: auto; text-align:left;} 
+div.subtitle  p{border-top:solid 1px #ffffff;border-bottom:solid 1px #ffffff;}
+div.subtitle  a {color:#ffffff;text-decoration:none;}
+div.subtitle  a:hover, div.index a:active, div.index a:focus {color: #000000;text-decoration:none;}
+div.tip{padding: 5px;border: none;background-color:#FF2801;color: #FFFFFF; margin: auto; text-align:left;}
+div.content{padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.showpage{padding: 5px;border: none;background-color:#EAEAEA;color: #000000; margin: auto; text-align:left;}
+div.mylink{padding: 5px;border: none;background-color:#0CB90D;color: #000000; margin: auto; text-align:left;}
+div.nexttitle{padding: 5px;border: none;background-color:#e7e7e7;color: #000000; margin: auto;padding:5px 0px 5px 8px; background:#e7e7e7;}
+div.sysad{padding: 5px;border: none;background-color:#40BEFF ;color: #000000; margin: auto; text-align:left;padding:5px 0px 5px 12px; background:#7bd3ed;}
+.commentHolder{border-bottom:1px solid #aaa;}
+.comment{padding:5px 8px;background:#f8fcff;border:1px solid #aaa;font-size:14px;border-bottom:none;}
+.comment div{background:#ffe;padding:3px;border:1px solid #aaa;line-height:140%;margin-bottom:5px;}
+</style>
+
+-------------------------------------
+1|橙色活力|FFDD24|
+<style type="text/css">
+body   {font-size:14px; width:[width]px; margin:0 auto;background:#fff;color:#000;font-size:12px;}
+img    {border: none;}
+a      {color:#039;text-decoration:none;}
+a:hover {color: #DE0000;text-decoration: underline}
+a:visited {color: #C300E0;text-decoration: underline}
+input.ipma {background-color: #FFFFFF; color: #000000; width:[width];}
+textarea.ipmb {background-color: #FFFFFF; color: #000000; width:[width]; height:167px;}
+form  {margin: 0px;display: inline;}
+font.z {color: #FF0000;}
+div   {width: [width];padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.line1{padding: 5px;border: none;background-color:#ffffff;color: #000000; margin: auto; text-align:left;font-weight: bold;}
+div.line2{padding: 5px;border: none;background-color:#EAEAEA;color: #000000; margin: auto; text-align:left;}
+div.title {padding: 5px;border: none;background-color:#D2691E;color: #FFFFFF; margin: auto; text-align:left;}
+div.logo{padding: 5px;border: none;background-color:#FFFFFF;color: #FFFFFF; margin: auto; text-align:left;}
+div.welcome{background:url(/wapstyle/cssimg/dbaeebe5.jpg);background-repeat: repeat-x; background-color:#F8DE56;border-bottom:1px solid #FFCF0E;}
+div.tip{padding: 5px;border: none;background-color:#FF2801;color: #FFFFFF; margin: auto; text-align:left;}
+div.content{padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.subtitle{background:url(/wapstyle/cssimg/dbaeebe5.jpg);background-repeat: repeat-x; background-color:#F8DE56;border-bottom:1px solid #FFCF0E;}
+div.showpage{padding: 5px;border: none;background-color:#D0D0FF;color: #000000; margin: auto; text-align:left;}
+div.mylink{background:#ffee99; text-align:center;padding:8px 5px 0 5px; color:#aa5d0b;line-height:1.4em;}
+div.content{color : #110020;background-color : #FFFBF4;border-style : dotted;border-color : #EC4200;border-width : 1px;}
+div.topre{color : #110020;background-color : #FFFBF4;border-style : dotted;border-color : #B85CFF;border-width : 1px;}
+div.nexttitle{padding: 5px;border: none;background-color:#FFDD24;color: #000000; margin: auto; text-align:left;}
+div.sysad{padding: 5px;border: none;background-color:#FFDD24;color: #000000; margin: auto; text-align:left;}
+.commentHolder{border-bottom:1px solid #aaa;}
+.comment{padding:5px 8px;background:#f8fcff;border:1px solid #aaa;font-size:14px;border-bottom:none;}
+.comment div{background:#ffe;padding:3px;border:1px solid #aaa;line-height:140%;margin-bottom:5px;}
+</style>
+-------------------------------------
+2|蔚蓝天空|80FFF4|
+<style type="text/css">
+body  {font-size:14px; margin:0 auto; border:1px solid #c6c6c6;}
+img    {border: none;}
+a      {text-decoration: none;color: #000000;}
+a:hover {color: #FF7800;text-decoration: underline}
+a:visited {color: #B10000;text-decoration: underline}input.ipma {background-color: #FFFFFF; color: #000000; }
+textarea.ipmb {background-color: #FFFFFF; color: #000000; width:300px; height:275px;}
+form  {margin: 0px;display: inline;}
+font.z {color: #FF0000;}
+div   {width: [width]px;padding: 4px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.subtitle  {padding: 1px;background-color : #F8F8FF;color : #000A24;text-align : center;border-width : 1px;border-style : dotted;border-color : #4C73FF;}
+div.line1{background-color : #DFCCFF;	color : #000A24;	border-color : #4C73FF;}
+div.line2{	background-color : #F7FFEC;	color : #000A24;	border-color : #70A6FF;}
+div.title {padding: 1px;border: none;background-color:#D2691E;color: #FFFFFF; margin: auto; text-align:left;}
+div.logo {padding: 1px;	background-color : #FFFCFE;	color : #FFF664;	text-align : center;}
+div.welcome{padding: 1px;padding:1px 0 0 12px; background:#7bd3ed url(/wapstyle/cssimg/bg_main_nav2.png) no-repeat;}
+div.tip{padding: 1px;{	background-color : #FFF5F4;	color : #000A24;	text-align : center;	border-color : #70A6FF;}
+div.content{padding: 1px;	background-color : #FFF5F4;	color : #000A24;	border-width : 1px;	border-style : solid;	border-color : #2FBC00;}
+div.showpage{padding: 1px;padding:1px 0 0 12px; background:#7bd3ed url((/wapstyle/cssimg/bg_main_nav2.png) no-repeat;}
+div.mylink {padding: 1px;padding:1px 0 0 12px; background:#7bd3ed url((/wapstyle/cssimg/bg_main_nav2.png) no-repeat;text-align : center;}
+div.nexttitle{padding: 5px;border: none;background-color:#80FFF4;color: #000000; margin: auto; text-align:left;}
+div.sysad{padding: 5px;border: none;background-color:#80FFF4;color: #000000; margin: auto; text-align:left;}
+.commentHolder{border-bottom:1px solid #aaa;}
+.comment{padding:5px 8px;background:#f8fcff;border:1px solid #aaa;font-size:14px;border-bottom:none;}
+.comment div{background:#ffe;padding:3px;border:1px solid #aaa;line-height:140%;margin-bottom:5px;}
+</style>
+-------------------------------------
+3|大红|FF0C39|
+<style type="text/css">
+body  {font-size: 10.5pt; color: #000000; background-color: #808080; margin: 0px; text-align: center;}
+img    {border: none;}
+a       {text-decoration: none;color: #B10000;}
+a:hover {color: #FF7800;text-decoration: underline}
+a:visited {color: #B10000;text-decoration: underline}
+input.ipma {background-color: #FFFFFF; color: #000000; width:500px;}
+textarea.ipmb {background-color: #FFFFFF; color: #000000; width:550px; height:275px;}
+form  {margin: 0px;display: inline;}
+font.z {color: #FF0000;}
+div   {width: [width]px;padding: 4px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.line1 {
+	background-color : #FDFCFF;
+	color : #02000C;
+	border-color : #2FBC00;
+}
+div.line2  {
+	background-color : #E9E9E9;
+	color : #02000C;
+	border-color : #2FBC00;
+}
+div.title  {text-decoration: none;color: #B10000;}
+div.logo{
+	background-color : #F5F5F5;
+	color : #FFFAF4;
+	text-align : center;
+	border-color : #2FBC00;
+}
+div.welcome {
+	background-color : #FF0C39;
+	color : #F2E8FF;
+	border-color : #FF0148;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.tip {
+	background-color : #FFF6D8;
+	color : #FF2610;
+	text-align : center;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.showpage{
+	background-color : #6E6E6E;
+	color : #FFF0FC;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.mylink{
+	background-color : #F1F1F1;
+	color : #18000B;
+	text-align : center;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.subtitle{
+	background-color : #8C001A;
+	color : #FFEA8C;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.content{
+	background-color : #F1F1F1;
+	color : #18000B;
+	border-width : 1px;
+	border-style : dotted;
+	border-color : #FF0148;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.topre{
+	background-color : #F1F1F1;
+	color : #18000B;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+
+div.nexttitle{padding: 5px;border: none;background-color:#FFE0EB;color: #FFFFFF; margin: auto; text-align:left;}
+div.sysad{padding: 5px;border: none;background-color:#FF0C39;color: #FFFFFF; margin: auto; text-align:left;}
+.commentHolder{border-bottom:1px solid #aaa;}
+.comment{padding:5px 8px;background:#f8fcff;border:1px solid #aaa;font-size:14px;border-bottom:none;}
+.comment div{background:#ffe;padding:3px;border:1px solid #aaa;line-height:140%;margin-bottom:5px;}
+</style>
+-------------------------------------
+4|深蓝|0D70D3|
+<style type="text/css">
+body{text-align:left;margin:0 auto; padding:0;background: #FFF;font-size:13px;background-color:#fff;font-family:arial,sans-serif;}
+img    {{border: none;}
+a {color:#000;text-decoration:none}
+a:hover {color:#FF0000;text-decoration:underline;}
+a:visited {color: #4169E1;text-decoration: underline}
+input.ipma {background-color: #FFFFFF; color: #000000; width:[width]px;}
+textarea.ipmb {background-color: #FFFFFF; color: #000000; width:[width]px; height:275px;}
+form  {margin: 0px;display: inline;}
+font.z {color: #FF0000;}
+div   {width: [width]px;padding: 4px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.line1 {
+	background-color : #FDFCFF;
+	color : #02000C;
+	border-color : #2FBC00;
+}
+div.line2  {
+	background-color : #E9E9E9;
+	color : #02000C;
+	border-color : #2FBC00;
+}
+div.top  {
+	background-color : #FFFDF0;
+	color : #100003;
+	text-align : center;
+	border-color : #FF0148;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.title  {text-decoration: none;color: #B10000;}
+div.logo{
+	background-color : #F5F5F5;
+	color : #FFFAF4;
+	text-align : center;
+	border-color : #2FBC00;
+}
+div.welcome {text-align:center;color:#FFFFFF;background-color:#00A0F4;font-weight:bold; margin-top:1px;}
+div.tip {
+	background-color : #FFF6D8;
+	color : #FF2610;
+	text-align : center;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.showpage{
+	background-color : #6E6E6E;
+	color : #FFF0FC;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.mylink{text-align:center;color:#FFFFFF;background-color:#333333;}
+div.subtitle{width: [width]px;padding: 4px;border: none;background-color:#0E71D4;color: #FFFFFF; margin: auto; text-align:left;font-weight: bold; background-image: url(/wapstyle/cssimg/bg1_a.png);}
+div.content{
+	background-color : #F1F1F1;
+	color : #18000B;
+	border-width : 1px;
+	border-style : dotted;
+	border-color : #FF0148;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.topre{
+	background-color : #F1F1F1;
+	color : #18000B;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.nexttitle{padding: 5px;border: none;background-color:#0D70D3;color: #000000; margin: auto; text-align:left;}
+div.sysad{padding: 5px;border: none;background-color:#0D70D3;color: #000000; margin: auto; text-align:left;}
+.commentHolder{border-bottom:1px solid #aaa;}
+.comment{padding:5px 8px;background:#f8fcff;border:1px solid #aaa;font-size:14px;border-bottom:none;}
+.comment div{background:#ffe;padding:3px;border:1px solid #aaa;line-height:140%;margin-bottom:5px;}
+</style>						      
+-------------------------------------
+5|悠蓝|00008B|
+<style type="text/css">
+body  {font-size: 10.5pt; color: #000000; background-color: #00008B; margin: 0px; text-align: center;}
+img    {{border: none;}
+a       {text-decoration: none;color: #0A63BB;}
+a:hover {color: #DE0000;text-decoration: underline}
+a:visited {color: #4169E1;text-decoration: underline}
+input.ipma {background-color: #FFFFFF; color: #000000; width:[width]px;}
+textarea.ipmb {background-color: #FFFFFF; color: #000000; width:[width]px; height:275px;}
+form  {margin: 0px;display: inline;}
+font.z {color: #FF0000;}
+div   {width: [width]px;padding: 4px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.line1 {
+	background-color : #FDFCFF;
+	color : #02000C;
+	border-color : #2FBC00;
+}
+div.line2  {
+	background-color : #E9E9E9;
+	color : #02000C;
+	border-color : #2FBC00;
+}
+div.title  {text-decoration: none;color: #B10000;}
+div.logo{
+	background-color : #F5F5F5;
+	color : #FFFAF4;
+	text-align : center;
+	border-color : #2FBC00;
+}
+div.welcome {width: [width]px;padding: 4px;border: none;background-color:#0E71D4;color: #FFFFFF; margin: auto; text-align:left;font-weight: bold; background-image: url(/wapstyle/cssimg/bg1_a.png);}
+div.tip {
+	background-color : #FFF6D8;
+	color : #FF2610;
+	text-align : center;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.showpage{
+	background-color : #6E6E6E;
+	color : #FFF0FC;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.mylink{
+	background-color : #F1F1F1;
+	color : #18000B;
+	text-align : center;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.subtitle{width: [width]px;padding: 4px;border: none;background-color:#0E71D4;color: #FFFFFF; margin: auto; text-align:left;font-weight: bold; background-image: url(/wapstyle/cssimg/bg1_a.png);}
+div.content{
+	background-color : #F1F1F1;
+	color : #18000B;
+	border-width : 1px;
+	border-style : dotted;
+	border-color : #FF0148;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.topre{
+	background-color : #F1F1F1;
+	color : #18000B;
+	border-color : #2FBC00;
+	word-spacing : 1;
+	letter-spacing : 1;
+	text-indent : 0;
+}
+div.nexttitle{padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+div.sysad{padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;}
+.commentHolder{border-bottom:1px solid #aaa;}
+.comment{padding:5px 8px;background:#f8fcff;border:1px solid #aaa;font-size:14px;border-bottom:none;}
+.comment div{background:#ffe;padding:3px;border:1px solid #aaa;line-height:140%;margin-bottom:5px;}
+</style>
+-------------------------------------
+6|粉红经典|EC6396|
+<style type="text/css">
+body   {font-size : 14px;color: #000000; background-color: #ecf8ff ; margin: 0px; text-align: center;}
+img    {border: none;}
+a {color:#EC6396;text-decoration:none;}
+a:hover, a:active, a:focus {color: #8E1D22;text-decoration:none;}
+input.ipma {background-color: #FFFFFF; color: #000000; }
+textarea.ipmb {background-color: #FFFFFF; color: #000000;  height:167px;}
+form  {margin: 0px;display: inline;}
+font.z {color: #000000;}
+div.sysad{width:[width]px;text-align:left;background-color:#EC6396;color:#ffffff;padding-top:1px;padding-bottom:1px;border: 1px solid #EC6396;}
+div.sysad p{border-top:solid 1px #ffffff;border-bottom:solid 1px #ffffff;}
+div.sysad a {color:#ffffff;text-decoration:none;}
+div.sysad a:hover, div.index a:active, div.index a:focus {color: #000000;text-decoration:none;}
+div.welcome{background-color:#EC6396;color:#ffffff;text-align:left;padding-top:1px;padding-bottom:1px;border: 1px solid #EC6396;}
+div.welcome p{border-top:solid 1px #ffffff;border-bottom:solid 1px #ffffff;}
+div.welcome a {color:#ffffff;text-decoration:none;}
+div.welcome a:hover, div.index a:active, div.index a:focus {color: #000000;text-decoration:none;}
+div   {width:[width]px;padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;word-break:break-all;word-wrap:break-word;}
+div.line1{ text-align:left;color:#000000; border-bottom:1px solid #cccccc;  border-top:1px solid #cccccc; background:#FA2C00; background:#f1f1f1;border: 1px solid #EC6396;}
+div.line2{ text-align:left;color:#000000; border-bottom:1px solid #cccccc;  border-top:1px solid #cccccc; background:#FA2C00; background:#FFFFFF;border: 1px solid #EC6396;}
+div.title{ text-align:left;color:#EC6396; border-bottom:1px solid #cccccc;  border-top:1px solid #cccccc; background:#FA2C00; background:#f1f1f1;border: 1px solid #EC6396;}
+div.subtitle{background-color:#EC6396;color:#ffffff;text-align:left;padding-top:1px;padding-bottom:1px;border: 1px solid #EC6396;}
+div.subtitle p{border-top:solid 1px #ffffff;border-bottom:solid 1px #ffffff;}
+div.subtitle a {color:#ffffff;text-decoration:none;}
+div.subtitle a:hover, div.index a:active, div.index a:focus {color: #000000;text-decoration:none;}
+div.logo{padding: 5px;border: none;background-color:#FFFFFF;color: #FFFFFF; margin: auto; text-align:center;}
+div.tip{padding: 5px;border: none;background-color:#FAFFC0;color: #000000; margin: auto; text-align:left;border: 1px solid #EC6396;}
+div.topre {padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;border: 1px solid #EC6396;}
+div.content{padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;border: 1px solid #EC6396;}
+div.showpage{padding: 5px;border: none;background-color:#FFFFFF;color: #000000; margin: auto; text-align:left;border: 1px solid #EC6396;}
+div.mylink{ text-align:left;color:#000000; border-bottom:1px solid #cccccc;  border-top:1px solid #cccccc; background:#FA2C00; background:#f1f1f1;border: 1px solid #EC6396;}
+div.nexttitle { text-align:left;color:#000000; border-bottom:1px solid #cccccc;  border-top:1px solid #cccccc; background:#FA2C00; background:#FFFFFF;border: 1px solid #EC6396;}
+.comment{padding:5px 8px;background:#f8fcff;border:1px solid #aaa;font-size:14px;border-bottom:none;border: 1px solid #EC6396;}
+.comment div{background:#ffe;padding:3px;border:1px solid #aaa;line-height:140%;margin-bottom:5px;}
+.search-box{  text-align:left;padding:3px 0 3px 35px; background:#e0eef3;border: 1px solid #EC6396;}
+.search-box 
+.ipt-txt{  text-align:left; height:18px; margin:0 3px 0 0; border:1px solid #b1d5e5;}
+</style>

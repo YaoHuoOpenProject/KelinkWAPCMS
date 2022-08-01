@@ -1,0 +1,101 @@
+div.quote{margin:5px 20px;border:1px solid #CCCCCC;padding:5px;background:#F3F3F3 ;line-height : normal ;
+}
+div.HtmlCode{margin:5px 20px;border:1px solid #CCCCCC;padding:5px; background:#FDFDDF ;
+font-size:14px;font-family:Tahoma;font-style : oblique;line-height : normal ;font-weight:bold;
+}
+iframe.oblog_Composition
+{
+	border: 2px inset;
+}
+.oblog_Reply
+{
+	border : 1px dashed buttonface;
+}
+table.oblog_Body
+{
+	background-color:gainsboro;
+	border:1px solid #CCCCCC;
+}
+.yToolbar
+{
+
+}
+.oblog_Btn
+{
+	BACKGROUND-COLOR: gainsboro;
+	Text-align: center;
+	HEIGHT: 28px;
+	WIDTH: 28px;
+}
+.oblog_Ico
+{
+	cursor: pointer;
+}
+.oblog_TBGen
+{
+	FONT: 8pt verdana,arial,sans-serif;
+}
+
+.oblog_BtnMouseOverUp
+{
+	background-color : #cccccc;
+	Text-align: center;
+	cursor: hand;
+	HEIGHT: 28px;
+	WIDTH: 28px;
+}
+
+.oblog_BtnMouseOverDown
+{
+	border : 1px solid transparent;
+	BACKGROUND-COLOR: #EEEEEE;
+	Text-align: center;
+	cursor: pointer;
+	HEIGHT: 22px;
+	WIDTH: 22px;
+}
+
+.BtnDown
+{
+	BACKGROUND-COLOR:  #8592B5;
+	cursor: pointer;
+	Text-align: center;
+}
+
+.oblog_IcoDown
+{
+	cursor: pointer;
+	
+}
+
+.oblog_IcoDownPressed
+{
+	cursor: pointer;
+	
+}
+
+td.oblog_TabOn {
+	font: 8pt MS Sans Serif;
+	padding:1px 5px;
+	border:1px inset;
+	background-color: #EEEEEE;
+}
+
+td.oblog_TabOff {
+	font: 8pt MS Sans Serif;
+	padding:1px 5px;
+	border:1px outset;
+	cursor: pointer;
+	
+}
+td.oblog_SmileOn {
+	font: 9pt MS Sans Serif;
+	border:1px inset;
+	background-color: #FFD988;
+	cursor: pointer;
+	
+
+}
+td.oblog_SmileOff {
+	font: 9pt MS Sans Serif;
+}

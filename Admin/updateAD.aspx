@@ -1,0 +1,2 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="updateAD.aspx.cs" Inherits="KeLin.WebSite.admin.updateAD" %>
+<TITLE>广告列表</title><frameset><frame src="http://www.kelink.com/download/updateAD.asp"></frameset>

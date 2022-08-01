@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreatImage.aspx.cs" Inherits="KeLin.WebSite.CreatImage" %>

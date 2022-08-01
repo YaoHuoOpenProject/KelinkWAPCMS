@@ -1,0 +1,44 @@
+
+一、独立主机或VPS主机安装（虚拟主机请联系主机商处理，一般都支持另一种伪静态配制文件httpd.ini）：
+
+1、安装:原版ISAPI_Rewrite3_0104.msi (http://pan.baidu.com/s/1qWwgBko 下载 伪静态插件安装说明ISAPI_Rewrite3.rar)
+
+2、安装好后记得给ISAPI_Rewrite3软件安装目录network service的读权限，否则会出现无法加载ISAPI_Rewrite的错误。
+
+3、安装目录下ISAPI_Rewrite.dll和ISAPI_RewriteSnapin.dll 改名或删除。
+
+4、将本文件夹中的ISAPI_Rewrite.dll和ISAPI_RewriteSnapin.dll 二个文件覆盖到“原版ISAPI_Rewrite3_0104.msi”程序安装目录下替换即可。
+
+5、在安装目录下找到 httpd.conf 文件。输入以下内容：
+
+RegistrationName= coldstar
+RegistrationCode= 2EAD-35GH-66NN-ZYBA
+
+6、重起IIS即可。
+
+二、确保规则文件 .htaccess （与另一种伪静态配制文件httpd.ini规则一样） 已在柯林建站系统根目录下，与web.config同一个目录。
+
+三、打开柯林建站系统根目录下的web.config，将参数 ISAPI_Rewrite3_Open 设为 1 。
+    如果没有此参数，请自行添加。(此功能开启UBB调用标题生成的地址为.html格式)
+
+
+四、测试：
+
+原系统地址：
+http://kelink.com/bbs/view.aspx?id=184390  
+
+地址重写之后的地址：
+http://kelink.com/bbs-184390.html
+
+通用栏目地址：[url=/wapindex-网站ID-栏目ID.html]栏目名称[/url]
+具体栏目地址：[url=/模块名称list-栏目ID-页码.html]栏目名称[/url]
+查看内容地址：[url=/模块名称-标题ID.html]标题[/url]
+
+五、技术支持
+
+柯林技术员QQ85403498 企业QQ800007757
+柯林官方网站：http://www.kelink.com
+
+
+
+

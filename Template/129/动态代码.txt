@@ -1,0 +1,198 @@
+====================头部里要有的内容=================================
+
+页面综合排版-->编辑css 中，务必要有：
+<script  src="/Template/129/jquery.min.js"  type="text/javascript"></script>
+
+====================body里的内容一:显示倒计时，配合内容五=================================
+<TABLE class="counter_time" >
+  <TBODY>
+  <TR>
+    <TD style="height: 160px;" id="counter_msg" 
+      class="counter_msg pink">
+      <SPAN>限时秒杀，剩余时间<BR></SPAN><SPAN style="display: none;" 
+      id="f_hh"></SPAN><SPAN style="display: none;" id="f_mm"></SPAN><SPAN 
+      style="font-size: 3em; font-weight: bold;" id="f_ss"></SPAN>秒              
+         <SPAN style="color: rgb(0, 0, 0);" id="shuzi"><BR>1054 
+      人正在等待秒杀开始</SPAN></TD></TR></TBODY> </TABLE>
+
+====================body里的内容二：显示按钮，配合内容五=================================
+
+<!--定义了三组按钮，显示按钮的地方,复制每一行到不同地方-->
+<span id="showpic0"></span>
+<span id="showpic1"></span>
+<span id="showpic2"></span>
+
+====================body里的内容三：显示客户留言滚动=================================
+ <div  class="box_comment"  id="marquee">
+            <ul  class="list_comm"  style="top: -378.625px;">
+                <li>
+                    <p>手机昨天到货了，用了一下，还不错，是全新的手机。</p>
+                    <p  class="user_name">186****5929 朱先生发表评论</p>
+                </li>
+
+                <li>
+                    <p>亲，我终于拿到了想了很久的土豪金的，没有想到可以这五折活动价买到，我太兴奋了，不过之前也是有顾虑的我拿去专卖店验证了，没有失望的确实是正品港行货的！亲们放心抢购吧！</p>
+                    <p  class="user_name">186****5934 吴先生发表评论</p>
+                </li>
+                <li>
+                    <p>还可以,不错！！！</p>
+                    <p  class="user_name">134****9052 郑先生发表评论</p>
+                </li>
+                <li>
+                    <p>手机相当给力，是正品港版，没问题，价格比朋友在别的地方买的要便宜很多让他那个羡慕嫉妒恨啊！哈哈！！</p>
+                    <p  class="user_name">136****7813 周先生发表评论</p>
+                </li>
+                <li>
+                    <p>货已经收到了，商家效率好，服务也很到位，手机很不错！</p>
+                    <p  class="user_name">186****2619 黄先生发表评论</p>
+                </li>
+
+                <li>
+                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
+                    <p  class="user_name">134****4223 沈先生发表评论</p>
+                </li>
+
+                <li>
+                    <p>手机不错，大大滴给个赞,这样的团购活动真爽！！！</p>
+                    <p  class="user_name">135****3923 李先生发表评论</p>
+                </li>
+              
+                <li>
+                    <p>想不到手机这么好，正品港版，值得信赖！！！</p>
+                    <p  class="user_name">136****7623 高先生发表评论</p>
+                </li>
+
+
+
+                <li>
+                    <p>手机上网速度很快，拍照也很清晰，不错，支持港版。</p>
+                    <p  class="user_name">136****7828 蓝先生发表评论</p>
+                </li>
+                
+                <li>
+                    <p>物流很给力，才两天就收到了，手机上网很不错，支持港货。</p>
+                    <p  class="user_name">186****8893 孙先生发表评论</p>
+                </li>
+                <li>
+                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
+                    <p  class="user_name">134****4223 沈先生发表评论</p>
+                </li>
+                <li>
+                    <p>前天收到的货，不错，值得购买。</p>
+                    <p  class="user_name">135****7623 马先生发表评论</p>
+                </li>
+
+            <li>
+                    <p>手机昨天到货了，用了一下，还不错，是全新的手机。</p>
+                    <p  class="user_name">186****5929 朱先生发表评论</p>
+                </li><li>
+                    <p>亲，我终于拿到了想了很久的土豪金的，没有想到可以这五折活动价买到，我太兴奋了，不过之前也是有顾虑的我拿去专卖店验证了，没有失望的确实是正品港行货的！亲们放心抢购吧！</p>
+                    <p  class="user_name">186****5934 吴先生发表评论</p>
+                </li><li>
+                    <p>还可以,不错！！！</p>
+                    <p  class="user_name">134****9052 郑先生发表评论</p>
+                </li><li>
+                    <p>手机相当给力，是正品港版，没问题，价格比朋友在别的地方买的要便宜很多让他那个羡慕嫉妒恨啊！哈哈！！</p>
+                    <p  class="user_name">136****7813 周先生发表评论</p>
+                </li><li>
+                    <p>货已经收到了，商家效率好，服务也很到位，手机很不错！</p>
+                    <p  class="user_name">186****2619 黄先生发表评论</p>
+                </li><li>
+                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
+                    <p  class="user_name">134****4223 沈先生发表评论</p>
+                </li><li>
+                    <p>手机不错，大大滴给个赞,这样的团购活动真爽！！！</p>
+                    <p  class="user_name">135****3923 李先生发表评论</p>
+                </li><li>
+                    <p>想不到手机这么好，正品港版，值得信赖！！！</p>
+                    <p  class="user_name">136****7623 高先生发表评论</p>
+                </li><li>
+                    <p>手机上网速度很快，拍照也很清晰，不错，支持港版。</p>
+                    <p  class="user_name">136****7828 蓝先生发表评论</p>
+                </li><li>
+                    <p>物流很给力，才两天就收到了，手机上网很不错，支持港货。</p>
+                    <p  class="user_name">186****8893 孙先生发表评论</p>
+                </li><li>
+                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
+                    <p  class="user_name">134****4223 沈先生发表评论</p>
+                </li><li>
+                    <p>前天收到的货，不错，值得购买。</p>
+                    <p  class="user_name">135****7623 马先生发表评论</p>
+                </li></ul>
+        </div>
+<script  charset="gb2312"  src="/Template/129/marquee.js"></script> 
+
+====================body里的内容四：最近购买订单滚动记录=================================
+<div  id="wffahuo"><p><span>[最新购买]：</span>赵**（139****1955）在7分钟前订购了红米1S双卡双待 <font  color="#FF0000">√</font></p><p><span>[最新购买]：</span>刘**（180****6999）在11分钟前订购了红米NOTE增强版 <font  color="#FF0000">√</font></p></div>
+<script  type="text/javascript"  src="/Template/129/wffh.js"></script>
+
+====================body里的内容五：js调用，放到页面最后=================================
+<!--以下为js文件不能随意改动，注意下面调用html代码中的ID-->
+
+<SCRIPT type="text/javascript">
+ var nMsDjs = "10";  //设置倒计时
+ var toEndTime="2019/08/04 23:32:59";  //设置秒杀结束时间
+ var vMsContent = "<p  class='el_leave'>目前已有<span  class='el_red'  id='renshu_0'>11765</span>人参与秒杀，离秒杀结束还有<span  class='el_red hour'>00</span>时<span  class='el_red minute'>00</span>分<span  class='el_red second'>00</span>秒</p>"; 
+ var vMsContent2 = "本次秒杀活动已结束！但由于我们与腾讯网、3G、环球等各大知名网站合作，以上网友恭喜你还有一次秒杀的机会！";
+ 
+ var orderpic_false="<DIV style='text-align: center;'><IMG alt='图' src='/Template/129/tel1.jpg'><IMG alt='图' src='/Template/129/tel2.jpg'></DIV>";
+ var orderpic_true ="<DIV style='text-align: center;'><A href='#order'><IMG alt='图' src='/Template/129/2014072121320782819149.jpg'></A><A href='tel:4000188956'><IMG alt='图' src='/Template/129/2014072121320782814852.jpg'></A></DIV>";
+ 
+ document.getElementById('showpic0').innerHTML= orderpic_false;
+ document.getElementById('showpic1').innerHTML= orderpic_false;
+ document.getElementById('showpic2').innerHTML= orderpic_false;
+ //document.formedit.bt.disabled = true; //倒计时关闭按钮
+ 
+ function TimeOutShow(){ 
+ //倒计时完后显示
+ document.getElementById('counter_msg').innerHTML = vMsContent;
+ //document.formedit.bt.disabled = false;//显示按钮
+ document.getElementById('showpic0').innerHTML = orderpic_true;
+ document.getElementById('showpic1').innerHTML = orderpic_true;
+ document.getElementById('showpic2').innerHTML = orderpic_true;
+ 
+ }
+
+ 
+<!--倒计时-->
+$(function(){
+	countDown(toEndTime,".hour",".minute",".second"); 
+});
+function countDown(time,hour_elem,minute_elem,second_elem){
+	var end_time = new Date(time).getTime(),
+	sys_second = (end_time-new Date().getTime())/1000;
+	
+	var timer = setInterval(function(){
+	    sys_second -= 1;
+		if (sys_second > 0) {
+			
+			var hour = Math.floor((sys_second / 3600) % 24);
+			var minute = Math.floor((sys_second / 60) % 60);
+			var second = Math.floor(sys_second % 60);
+			$(hour_elem).text(hour<10?"0"+hour:hour);//计算小时
+			$(minute_elem).text(minute<10?"0"+minute:minute);//计算分
+			$(second_elem).text(second<10?"0"+second:second);// 计算秒
+		} else { 
+		  nMsDjs=0;
+		  document.getElementById('counter_msg').innerHTML = vMsContent2;
+			clearInterval(timer);
+		}
+	}, 1000);
+} 
+<!--倒计时 end-->
+$(function(){
+	if($("#marquee li").length > 3){
+			$.marquee2("#marquee","top");
+	}
+})
+</script>
+
+<script  charset="gb2312"  src="/Template/129/ms.js"></script> <!--倒计时js-->
+
+<!--第三方的在线客服系统-->
+<!--
+<script type='text/javascript' src='/Template/129/menu.js'></script>
+-->
+<!--点击发送短信代码
+<a href="sms:13088888888?body=请问"><img src="/Template/129/kf.png" alt="在线聊天"/></a>
+-->

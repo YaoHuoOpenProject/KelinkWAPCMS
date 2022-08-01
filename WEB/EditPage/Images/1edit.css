@@ -1,0 +1,97 @@
+iframe.Dvbbs_Composition
+{
+	border: 2px inset;
+}
+.Dvbbs_Reply
+{
+	border : 1px dashed buttonface;
+}
+table.Dvbbs_Body
+{
+	background-color:gainsboro;
+	border:1px solid #CCCCCC;
+}
+.yToolbar
+{
+
+}
+.Dvbbs_Btn
+{
+	BACKGROUND-COLOR: gainsboro;
+	Text-align: center;
+	HEIGHT: 28px;
+	WIDTH: 28px;
+}
+.Dvbbs_Ico
+{
+	cursor: pointer;
+}
+.Dvbbs_TBGen
+{
+	FONT: 8pt verdana,arial,sans-serif;
+}
+
+.Dvbbs_BtnMouseOverUp
+{
+	border : 1px solid #6595D6;
+	background-color : buttonface;
+	Text-align: center;
+	cursor: pointer;
+	HEIGHT: 22px;
+	WIDTH: 26px;
+}
+
+.Dvbbs_BtnMouseOverDown
+{
+	border : 1px solid transparent;
+	BACKGROUND-COLOR: #EEEEEE;
+	Text-align: center;
+	cursor: pointer;
+	HEIGHT: 22px;
+	WIDTH: 22px;
+}
+
+.BtnDown
+{
+	BACKGROUND-COLOR:  #8592B5;
+	cursor: pointer;
+	Text-align: center;
+}
+
+.Dvbbs_IcoDown
+{
+	cursor: pointer;
+	
+}
+
+.Dvbbs_IcoDownPressed
+{
+	cursor: pointer;
+	
+}
+
+td.Dvbbs_TabOn {
+	font: 8pt MS Sans Serif;
+	padding:1px 5px;
+	border:1px inset;
+	background-color: #EEEEEE;
+}
+
+td.Dvbbs_TabOff {
+	font: 8pt MS Sans Serif;
+	padding:1px 5px;
+	border:1px outset;
+	cursor: pointer;
+	
+}
+td.Dvbbs_SmileOn {
+	font: 9pt MS Sans Serif;
+	border:1px inset;
+	background-color: #FFD988;
+	cursor: pointer;
+	
+
+}
+td.Dvbbs_SmileOff {
+	font: 9pt MS Sans Serif;
+}

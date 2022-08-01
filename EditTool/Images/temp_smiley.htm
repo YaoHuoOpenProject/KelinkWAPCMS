@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta HTTP-EQUIV=Expires CONTENT=0>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<TITLE>多功能编辑器</TITLE>
+<Link rel="stylesheet" type="text/css" href="pop.css">
+<style type="text/css">
+				.Disactive { border-right: 1px solid; border-top: 1px solid; border-left: 1px solid; width: 1%; cursor: hand; border-bottom: 1px solid; background-color: #dedbd6; text-align: center; }
+				.Active { cursor: hand; background-color: #ffffcc; text-align: center; }
+				.MainTable { border-right: #e8e8e8 5px solid; border-top: #e8e8e8 5px solid; border-left: #e8e8e8 5px solid; border-bottom: #e8e8e8 5px solid; }
+				.Sample { border-right: 1px solid; border-top: 1px solid; font-size: 24px; border-left: 1px solid; border-bottom: 1px solid; background-color: #dedbd6; }
+				.Empty { border-right: 1px solid; border-top: 1px solid; border-left: 1px solid; width: 1%; cursor: default; border-bottom: 1px solid; background-color: #dedbd6; }
+</style>
+<script language="javascript">
+<!--
+var oSample ;
+var code;
+var n
+function insertChar(td)
+{
+	window.returnValue = td.innerHTML+"*"+td.title || "" ;
+	window.close();
+}
+
+function over(td)
+{
+	oSample.innerHTML = td.innerHTML ;
+	td.className = 'Active' ;
+	code.innerHTML = td.title;
+}
+function out(td)
+{
+	oSample.innerHTML = "&nbsp;" ;
+	td.className = 'Disactive' ;
+	code.innerHTML = "";
+}
+
+function CloseWindow()
+{
+	window.returnValue = null ;
+	window.close() ;
+}
+//-->
+</script>
+</head>
+<body topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" bgcolor="menu">
+<table cellpadding="0" cellspacing="10" width="100%" height="100%">
+<tr><td rowspan="2" width="90%">
+<table class="MainTable" cellpadding="2" cellspacing="1" align="center" border="1" width="100%" height="100%">
+<script language="javascript">
+<!--
+
+var sBasePath = '/Skins/Default/emot/' ;
+var aImages   = 'em01.gif,em02.gif,em03.gif,em04.gif,em05.gif,em06.gif,em01.gif,em02.gif,em03.gif,em04.gif,em05.gif,em06.gif,em01.gif,em02.gif,em03.gif,em04.gif,em05.gif,em06.gif,em01.gif,em02.gif,em03.gif,em04.gif,em05.gif,em06.gif' ;
+aImages		  = aImages.split(",");
+var cols      = 8 ;
+
+var i = 0 ;
+while (i < aImages.length)
+{
+	document.write("<TR>") ;
+	for(var j = 0 ; j < cols ; j++) 
+	{
+		if (aImages[i])
+		{
+			if (i<9)
+			{ii='0'+(i+1)}
+			else
+			{ii=i+1}
+			document.write("<TD title=[em"+ii+"] class='Disactive' align=center onclick='insertChar(this)' onmouseover='over(this);' onmouseout='out(this)'>") ;
+			document.write("<img src='" + sBasePath + aImages[i] + "' border='0'>") ;
+		}
+		else
+			document.write("<TD width='10%' class='Empty'>&nbsp;") ;
+		document.write("</TD>") ;
+		i++ ;
+	}
+	document.write("</TR>") ;
+}
+//-->
+</script>
+</table>
+</td>
+<td valign="top" width="10%" align="center">
+<table class="MainTable" align="center" cellspacing="2">
+<tr><td id="SampleTD" width="80" height="80" align="center" class="Sample">&nbsp;
+</td></tr></table>
+<div id=code></div>
+</td>
+</tr>
+<tr><td align=center height=1><BUTTON onclick=window.close();>关闭</BUTTON></td></tr>
+</table>
+</body>
+</html>
+<script language="javascript">
+<!--
+oSample = document.getElementById("SampleTD") ;
+code = document.getElementById("code") ;
+//-->
+</script>
+
+

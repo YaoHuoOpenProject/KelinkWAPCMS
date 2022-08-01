@@ -1,0 +1,271 @@
+<div><div  id="div_ad_1_14"  style="WIDTH:320px; HEIGHT:1px; margin: 0 auto; border:solid 1px #aaccee"><div  style="text-align:center;"><img  alt="图"  src="/Template/129/2014073022371153863641.jpg"></div><div  style="text-align:center;"><img  alt="图"  src="/Template/129/2014073022372066468342.jpg"></div><div  style="font-size:24px;color:#000000;font-weight:bold;text-align:center;">【三星Galaxy S5】限时秒杀</div>
+<div  class="counter"> <table  class="discount">     <tbody>         <tr>             <td  width="105">市场价</td>             <td  width="90">折扣</td>             <td>节省</td>         </tr>         <tr>             <td  class="pink">￥4899</td>             <td  class="pink">3.4折</td>             <td  class="pink">￥3211</td>         </tr>     </tbody> </table> <h5  class="counter_h5">     <span  class="counter_price">￥<strong>1688</strong></span>  </h5> 
+
+<TABLE class="counter_time" >
+  <TBODY>
+  <TR>
+    <TD style="height: 160px;" id="counter_msg" 
+      class="counter_msg pink">
+      <SPAN>限时秒杀，剩余时间<BR></SPAN><SPAN style="display: none;" 
+      id="f_hh"></SPAN><SPAN style="display: none;" id="f_mm"></SPAN><SPAN 
+      style="font-size: 3em; font-weight: bold;" id="f_ss"></SPAN>秒              
+         <SPAN style="color: rgb(0, 0, 0);" id="shuzi"><BR>1054 
+      人正在等待秒杀开始</SPAN></TD></TR></TBODY> 
+</TABLE></div><span id="showpic0"></span>
+<div  style="text-align:center;"><img  alt="图"  src="/Template/129/2014073022454328191361.jpg"></div><div  style="font-size:14px;">年度旗舰产品三星GALAXY S5震撼降临！！！<br> 拥有5.1英寸全高清炫丽屏带来开阔视野，完美感官体验“跃然”掌间；强大的2.5GHz四核处理器+ 2GB RAM，1600万像素的主摄像头以及第五代双通道快速WLAN，让用户畅享无与伦比的极速上网体验。</div><div  style="font-size:16px;color:#FFFFFF;background-color:#E40B0B;font-weight:bold;text-align:center;">无忧购物 三大保证</div><div  style="font-size:14px;"><b>① 正规发票</b><br> 全新原装手机，开具正规机打发票，购物有保障。<br> <b>② 无忧退货</b><br> 根据国家三包政策，可以享受30天包退换货服务。<br> <b>③ 顺丰包邮</b><br> 全国顺丰包邮，安全快捷配送，支持货到再付款。</div><div  style="font-size:16px;color:#FFFFFF;background-color:#D50000;font-weight:bold;text-align:center;">三星Galaxy S5详细介绍</div><div  style="font-size:16px;font-weight:bold;">指纹识别：HOME键下方的安全锁</div><div  style="text-align:center;"><img  alt="图"  src="/Template/129/2014072113514875968342.jpg"></div><div  style="font-size:14px;">Samsung GALAXY S5支持指纹识别，有效地提高了安全性，为您的隐私安全保驾护航。您可通过指纹识别传感器来进行屏幕解锁进入私密模式。</div><div  style="font-size:16px;font-weight:bold;">皮革质感 | 加固机身</div><div  style="text-align:center;"><img  alt="图"  src="/Template/129/2014072113523309494044.jpg"></div><div  style="font-size:14px;">三星GALAXY S5背部采用聚碳酸酯材质模仿皮革质感,打破以往简单的色调,一改沉闷的风格,换来了金属机身无法复制的抢眼色泽.将绚丽多姿绝然不凡的色彩演绎得更加灵动鲜活.</div><div  style="font-size:16px;font-weight:bold;">一切都快 | 耗电除外</div><div  style="text-align:center;"><img  alt="图"  src="/Template/129/2014072113535627428746.jpg"></div><div  style="font-size:14px;">三星GALAXY S5搭载高通骁龙四核CPU,设计极为高效节能,可以在一整天里尽情使用三星GALAXY S5的所有功能和上网浏览,却不必为电池使用时间而担心.</div><div  style="font-size:16px;font-weight:bold;">IP67级防尘防水</div><div  style="text-align:center;"><img  alt="图"  src="/Template/129/2014072113551391554448.jpg"></div><div  style="font-size:14px;">IP67级防尘防水:本设备具备IEC60529国际标准中界定的IP67级防尘防水功能.请注意该款手机并非针对水面或水下作业而设计,仅具备IP67防护等级中要求的特定环境下的防尘防水能力.请严格按照本设备说明书中有关防尘防水的说明而使用,否则由此造成的设备损坏由使用者自行承担责任.</div><div  style="font-size:16px;color:#FFFFFF;background-color:#E40B0B;font-weight:bold;text-align:center;">主要参数介绍</div><table  class="table1">
+      <tbody><tr>
+        <td  width="3%"  valign="middle"  class="STYLE34"><strong>基<br>本<br>参<br>数</strong></td>
+        <td  width="80%"><table  width="100%"  cellspacing="0"  cellpadding="1"  bordercolor="#999999"  border="1">
+          <tbody><tr><td  width="80"><strong>手机类型： </strong></td><td>4G手机，智能手机，拍照手机</td></tr>
+          <tr><td><strong>网络制式：</strong></td><td>联通4G(WCDMA)，移动/联通3G(GSM)</td></tr>
+          <tr><td><strong>主屏尺寸：</strong></td><td>5.1英寸</td></tr>
+          <tr><td><strong>触摸屏：</strong></td><td>电容屏，多点触控</td></tr>
+          <tr><td><strong>主屏材质：</strong></td><td>IPS</td></tr>
+          <tr><td><strong>主屏分辨率：</strong></td><td>1920x1080像素</td></tr>
+          <tr><td><strong>CPU型号：</strong></td><td>高通 骁龙801（MSM8974AC）</td></tr>
+          <tr><td><strong>CPU频率：</strong></td><td>八核 2560MHz</td></tr>
+          <tr><td><strong>电池类型：</strong></td><td>可拆卸式电池</td></tr>
+          <tr><td><strong>电池容量：</strong></td><td>2800mAh</td></tr>
+          <tr><td><strong>可选颜色：</strong></td><td>星空黑、皓月白</td></tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td  width="3%"  valign="middle"  class="STYLE34"><strong>容<br>量</strong></td>
+        <td  width="97%"><table  width="100%"  cellspacing="0"  cellpadding="1"  bordercolor="#999999"  border="1">
+           <tbody><tr><td  width="80"><strong>RAM容量：</strong></td>
+           <td>2G</td></tr>
+           <tr><td><strong>ROM容量：</strong></td>
+           <td>16G/32G</td></tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td  width="3%"  valign="middle"  class="STYLE34"><strong>拍<br>照<br>功<br>能</strong></td>
+        <td  width="97%"><table  width="100%"  cellspacing="0"  cellpadding="1"  bordercolor="#999999"  border="1">
+          <tbody><tr><td  width="80"><strong>摄像头：</strong></td><td>内置双摄像头（前后）</td></tr>
+          <tr><td><strong>摄像头像素：</strong></td><td>前：200万像素，后：1600万像素</td></tr>
+          <tr><td><strong>闪光灯：</strong></td><td>LED补光灯</td></tr>
+          <tr><td><strong>自动对焦：</strong></td><td>支持</td></tr>
+          <tr><td><strong>视频拍摄：</strong></td><td>支持</td></tr>
+        </tbody></table></td>
+      </tr>
+    </tbody></table>
+    
+<span id="showpic1"></span>
+
+<div  style="font-size:16px;color:#FFFFFF;background-color:#E40B0B;font-weight:bold;text-align:center;">选择我们的四大理由</div><div  style="font-size:14px;"><b>① 港行正品</b><br> 
+香港总店直接供货，只出售全新港行正品手机。<br> 
+<b>② 正规发票</b><br> 
+开具香港正规的机打发票，严格保障您的权益。<br> 
+<b>③ 无忧退货</b><br> 
+根据国家三包政策，非质量问题不影响二次销售的前提下，享受30天包退换货服务。<br> 
+<b>④ 顺丰包邮</b><br>
+签约顺丰VIP大客户合同，手机顺丰包邮配送,专业、安全、快捷，支持货到再付款。``</div><div  style="font-size:16px;color:#FFFFFF;background-color:#E40B0B;font-weight:bold;text-align:center;">正品保障，无忧购物</div><div  style="font-size:16px;font-weight:bold;">提供正规港行发票</div><div  style="text-align:center;"><img  alt="图"  src="/Template/129/2014072114024271279553.jpg"></div><div  style="font-size:14px;">郑重承诺：我们所售手机均享受30天包退包换。在这此期间您手机遇到什么问题都可以随时联系我们的在线客服，我们坚信，售前只是开始，售后才是王道，坚决抵制一锤子买卖！</div><div  style="font-size:16px;color:#FFFFFF;background-color:#E40B0B;font-weight:bold;text-align:center;">顾客评价</div>
+
+
+<div  class="box_comment"  id="marquee">
+            <ul  class="list_comm"  style="top: -378.625px;">
+                <li>
+                    <p>手机昨天到货了，用了一下，还不错，是全新的手机。</p>
+                    <p  class="user_name">186****5929 朱先生发表评论</p>
+                </li>
+
+                <li>
+                    <p>亲，我终于拿到了想了很久的土豪金的，没有想到可以这五折活动价买到，我太兴奋了，不过之前也是有顾虑的我拿去专卖店验证了，没有失望的确实是正品港行货的！亲们放心抢购吧！</p>
+                    <p  class="user_name">186****5934 吴先生发表评论</p>
+                </li>
+                <li>
+                    <p>还可以,不错！！！</p>
+                    <p  class="user_name">134****9052 郑先生发表评论</p>
+                </li>
+                <li>
+                    <p>手机相当给力，是正品港版，没问题，价格比朋友在别的地方买的要便宜很多让他那个羡慕嫉妒恨啊！哈哈！！</p>
+                    <p  class="user_name">136****7813 周先生发表评论</p>
+                </li>
+                <li>
+                    <p>货已经收到了，商家效率好，服务也很到位，手机很不错！</p>
+                    <p  class="user_name">186****2619 黄先生发表评论</p>
+                </li>
+
+                <li>
+                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
+                    <p  class="user_name">134****4223 沈先生发表评论</p>
+                </li>
+
+                <li>
+                    <p>手机不错，大大滴给个赞,这样的团购活动真爽！！！</p>
+                    <p  class="user_name">135****3923 李先生发表评论</p>
+                </li>
+              
+                <li>
+                    <p>想不到手机这么好，正品港版，值得信赖！！！</p>
+                    <p  class="user_name">136****7623 高先生发表评论</p>
+                </li>
+
+
+
+                <li>
+                    <p>手机上网速度很快，拍照也很清晰，不错，支持港版。</p>
+                    <p  class="user_name">136****7828 蓝先生发表评论</p>
+                </li>
+                
+                <li>
+                    <p>物流很给力，才两天就收到了，手机上网很不错，支持港货。</p>
+                    <p  class="user_name">186****8893 孙先生发表评论</p>
+                </li>
+                <li>
+                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
+                    <p  class="user_name">134****4223 沈先生发表评论</p>
+                </li>
+                <li>
+                    <p>前天收到的货，不错，值得购买。</p>
+                    <p  class="user_name">135****7623 马先生发表评论</p>
+                </li>
+
+            <li>
+                    <p>手机昨天到货了，用了一下，还不错，是全新的手机。</p>
+                    <p  class="user_name">186****5929 朱先生发表评论</p>
+                </li><li>
+                    <p>亲，我终于拿到了想了很久的土豪金的，没有想到可以这五折活动价买到，我太兴奋了，不过之前也是有顾虑的我拿去专卖店验证了，没有失望的确实是正品港行货的！亲们放心抢购吧！</p>
+                    <p  class="user_name">186****5934 吴先生发表评论</p>
+                </li><li>
+                    <p>还可以,不错！！！</p>
+                    <p  class="user_name">134****9052 郑先生发表评论</p>
+                </li><li>
+                    <p>手机相当给力，是正品港版，没问题，价格比朋友在别的地方买的要便宜很多让他那个羡慕嫉妒恨啊！哈哈！！</p>
+                    <p  class="user_name">136****7813 周先生发表评论</p>
+                </li><li>
+                    <p>货已经收到了，商家效率好，服务也很到位，手机很不错！</p>
+                    <p  class="user_name">186****2619 黄先生发表评论</p>
+                </li><li>
+                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
+                    <p  class="user_name">134****4223 沈先生发表评论</p>
+                </li><li>
+                    <p>手机不错，大大滴给个赞,这样的团购活动真爽！！！</p>
+                    <p  class="user_name">135****3923 李先生发表评论</p>
+                </li><li>
+                    <p>想不到手机这么好，正品港版，值得信赖！！！</p>
+                    <p  class="user_name">136****7623 高先生发表评论</p>
+                </li><li>
+                    <p>手机上网速度很快，拍照也很清晰，不错，支持港版。</p>
+                    <p  class="user_name">136****7828 蓝先生发表评论</p>
+                </li><li>
+                    <p>物流很给力，才两天就收到了，手机上网很不错，支持港货。</p>
+                    <p  class="user_name">186****8893 孙先生发表评论</p>
+                </li><li>
+                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
+                    <p  class="user_name">134****4223 沈先生发表评论</p>
+                </li><li>
+                    <p>前天收到的货，不错，值得购买。</p>
+                    <p  class="user_name">135****7623 马先生发表评论</p>
+                </li></ul>
+        </div>
+<script  charset="gb2312"  src="/Template/129/marquee.js"></script> 
+
+
+
+<div  style="font-size:16px;color:red;background-color:#C3FDFD;font-weight:bold;text-align:center;">赠送惊喜大礼包</div><div  style="font-size:14px;"><span  class="red">想要更优惠？预付100立即减100,预付200即减200！</span>（活动时间:7月31月-8月31日）<br><span  class="red">*【优惠1】</span>手机必备礼品：专用钢化贴膜,剪卡器,手机外壳；<br> <span  class="red">*【优惠2】</span>中国移动300元移动充值卡免费赠送，购机不愁没话费<br> <span  class="red">*【优惠3】</span>预付定金50元即可赠送价值320元的充电宝；<br> <span  class="red">*【优惠4】</span>预付全款~即可领取由深圳旅游公司所带领的5天4夜港澳游旅游票一张,小伙伴们还在等什么?<br> </div>
+
+
+<span id="showpic2"></span>
+<div  style="font-size:16px;color:#FFFFFF;background-color:#4574FF;line-height:40px;text-align:center;">恭喜你订购成功,请点击进去填写信息</div><div  style="font-size:14px;">标配：两电一充、耳机、数据线、说明书<br> <font  color="#FF6F00">赠送：剪卡器、保护壳、保护膜、港行发票、三包凭证、保修卡</font></div><a  id="order"  name="order"></a>
+
+[getform]2[/getform]
+
+
+<div  style="font-size:14px;color:red;">提交订单不会扣除话费，我们的客服人员会尽快和您确认订单信息并发货。</div>
+
+<div  id="wffahuo"><p><span>[最新购买]：</span>赵**（139****1955）在7分钟前订购了红米1S双卡双待 <font  color="#FF0000">√</font></p><p><span>[最新购买]：</span>刘**（180****6999）在11分钟前订购了红米NOTE增强版 <font  color="#FF0000">√</font></p></div>
+<script  type="text/javascript"  src="/Template/129/wffh.js"></script>
+
+<div  style="font-size:14px;"><img  alt="图"  src="/Template/129/2014072115533146008484.jpg"> QQ在线订购：XXX</div><div  style="font-size:14px;"><img  alt="图"  src="/Template/129/2014072115535075724187.jpg"> QQ在线订购：XXX</div><div  style="font-size:14px;"><img  alt="图"  src="/Template/129/2014072115541217618888.jpg"> QQ在线订购：2696246624</div><div  style="font-size:14px;"><img  alt="图"  src="/Template/129/2014072713333723887939.jpg"> QQ在线订购：XXX</div><div  class="rmc">
+   <div  class="rmc-table">
+      <div  class="rmc-row">
+          <a  class="rmc-cell c1"  href="http://#/product/1093.html"  style="background-color: #02E402">苹果5S</a>
+          <a  class="rmc-cell c1"  href="http://#/product/1095.html"  style="background-color: #DA02DA">三星S5</a>
+          <a  class="rmc-cell c1"  href="http://#/product/1096.html"  style="background-color: #FF8000">三星S4</a>
+      </div>
+   </div>
+</div>
+<div  class="rmc">
+   <div  class="rmc-table">
+      <div  class="rmc-row">
+          <a  class="rmc-cell c1"  href="http://#/product/1097.html"  style="background-color: #FF8000">红米Note</a>
+          <a  class="rmc-cell c1"  href="http://#/product/1098.html"  style="background-color: #02E402">三星Note 3</a>
+          <a  class="rmc-cell c1"  href="http://#/product/1099.html"  style="background-color: #DA02DA">苹果5代</a>
+      </div>
+   </div>
+</div><div  style="text-align:center;"><a  href="http://#/product/1095.html"><img  alt="图"  src="/Template/129/2014072114150004805255.png"></a></div><div  style="text-align:center;"><img  alt="图"  src="/Template/129/2014072114161864109957.jpg"></div><div  style="font-size:12px;color:#000000;text-align:center;">客服中心工作时间：早上9:00 - 下午8:00 (周一至周日)<br> 订单处理工作时间：10:00 - 20:00 (周一至周日)</div>
+
+  
+</div>
+
+
+<!--以下为js文件不能随意改动，注意下面调用html代码中的ID-->
+
+<SCRIPT type="text/javascript">
+ var nMsDjs = "10";  //设置倒计时
+ var toEndTime="2019/08/04 23:32:59";  //设置秒杀结束时间
+ var vMsContent = "<p  class='el_leave'>目前已有<span  class='el_red'  id='renshu_0'>11765</span>人参与秒杀，离秒杀结束还有<span  class='el_red hour'>00</span>时<span  class='el_red minute'>00</span>分<span  class='el_red second'>00</span>秒</p>"; 
+ var vMsContent2 = "本次秒杀活动已结束！但由于我们与腾讯网、3G、环球等各大知名网站合作，以上网友恭喜你还有一次秒杀的机会！";
+ 
+ var orderpic_false="<DIV style='text-align: center;'><IMG alt='图' src='/Template/129/tel1.jpg'><IMG alt='图' src='/Template/129/tel2.jpg'></DIV>";
+ var orderpic_true ="<DIV style='text-align: center;'><A href='#order'><IMG alt='图' src='/Template/129/2014072121320782819149.jpg'></A><A href='tel:4000188956'><IMG alt='图' src='/Template/129/2014072121320782814852.jpg'></A></DIV>";
+ 
+ document.getElementById('showpic0').innerHTML= orderpic_false;
+ document.getElementById('showpic1').innerHTML= orderpic_false;
+ document.getElementById('showpic2').innerHTML= orderpic_false;
+ //document.formedit.bt.disabled = true; //倒计时关闭按钮
+ 
+ function TimeOutShow(){ 
+ //倒计时完后显示
+ document.getElementById('counter_msg').innerHTML = vMsContent;
+ //document.formedit.bt.disabled = false;//显示按钮
+ document.getElementById('showpic0').innerHTML = orderpic_true;
+ document.getElementById('showpic1').innerHTML = orderpic_true;
+ document.getElementById('showpic2').innerHTML = orderpic_true;
+ 
+ }
+
+ 
+<!--倒计时-->
+$(function(){
+	countDown(toEndTime,".hour",".minute",".second"); 
+});
+function countDown(time,hour_elem,minute_elem,second_elem){
+	var end_time = new Date(time).getTime(),
+	sys_second = (end_time-new Date().getTime())/1000;
+	
+	var timer = setInterval(function(){
+	    sys_second -= 1;
+		if (sys_second > 0) {
+			
+			var hour = Math.floor((sys_second / 3600) % 24);
+			var minute = Math.floor((sys_second / 60) % 60);
+			var second = Math.floor(sys_second % 60);
+			$(hour_elem).text(hour<10?"0"+hour:hour);//计算小时
+			$(minute_elem).text(minute<10?"0"+minute:minute);//计算分
+			$(second_elem).text(second<10?"0"+second:second);// 计算秒
+		} else { 
+		  nMsDjs=0;
+		  document.getElementById('counter_msg').innerHTML = vMsContent2;
+			clearInterval(timer);
+		}
+	}, 1000);
+} 
+<!--倒计时 end-->
+$(function(){
+	if($("#marquee li").length > 3){
+			$.marquee2("#marquee","top");
+	}
+})
+</script>
+
+<script  charset="gb2312"  src="/Template/129/ms.js"></script> <!--倒计时js-->
+
+<!--第三方的在线客服系统-->
+<!--
+<script type='text/javascript' src='/Template/129/menu.js'></script>
+-->
+<!--点击发送短信代码
+<a href="sms:13088888888?body=请问"><img src="/Template/129/kf.png" alt="在线聊天"/></a>
+-->

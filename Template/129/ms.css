@@ -1,0 +1,36 @@
+.counter {
+	background-position: 10px top; margin: 0px auto; width: 320px; height: 300px; color: rgb(51, 51, 51); padding-top: 7px; font-family: "Microsoft Yahei" ,Arial,Helvetica,sans-serif, "ËÎÌו"; font-size: 14px; position: relative; background-color: rgb(248, 248, 248);
+}
+.counter {
+	background-image: url("/Template/129/bg_ms.png"); background-repeat: no-repeat;
+}
+.discount {
+	width: 290px; text-align: center; line-height: 1em; margin-left: 5px;
+}
+.pink {
+	color: rgb(212, 31, 40);
+}
+.counter_h5 {
+	margin: 0px; padding: 3px 25px; height: 64px;
+}
+.counter_price {
+	width: 150px; text-align: center; color: rgb(249, 245, 244); line-height: normal; overflow: hidden; padding-top: 5px; font-size: 30px; float: left;
+}
+.counter_price strong {
+	font-size: 38px;
+}
+.counter_btn {
+	width: 82px; height: 42px; margin-top: 12px; float: right;
+}
+.counter_btn_pending {
+	background-image: url("/Template/129/bg_wks.png"); background-repeat: no-repeat;
+}
+.counter_btn_buy {
+	background-image: url("/Template/129/bg_gm.png"); background-repeat: no-repeat;
+}
+.counter_time {
+	margin: 0px auto; width: 260px; color: rgb(102, 102, 102); font-size: 16px;
+}
+.counter_msg {
+	height: 80px; text-align: center; line-height: normal;
+}
