@@ -1,3 +1,0 @@
-<%
-response.redirect "index.htm"
-%>

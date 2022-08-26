@@ -133,10 +133,7 @@ else //2.0界面
     //显示输入框
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<form name=\"re\" action=\"" + http_start + "games/chat/book_re.aspx\" method=\"post\">");
-
-    strhtml.Append("<textarea name=\"content\" rows=\"5\" class=\"KL_textarea\" style=\"width:100%\"></textarea><br/>");
-
-
+    strhtml.Append("<textarea name=\"content\" required=\"required\" rows=\"5\" class=\"KL_textarea\" style=\"width:96.6%\"></textarea><br/>");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"add\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"nid\" value=\"" + id + "\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
@@ -144,7 +141,7 @@ else //2.0界面
     strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"backurl\" value=\"" + HttpUtility.UrlEncode("games/chat/book_re.aspx?actoin=class&siteid=" + siteid + "&classid=" + classid + "&id=" + id) + "\"/>");
-    strhtml.Append("<input type=\"submit\" name=\"go\" class=\"btn\" value=\"提交\"/></form> ");
+    strhtml.Append("<input type=\"submit\" name=\"go\" class=\"btn\" value=\"发 言\"/></form> ");
    
     strhtml.Append("</div>");
 

@@ -217,27 +217,6 @@
                                                 <td>
                                                    
       
-      <table id="Table4" class="tableBorder" cellspacing="1" border="0" width="100%">
-                                                        <tr>
-                                                            <td class="column" width="10%"> 统计报表 </td>
-                                                        </tr>
-        
-                                                        <tr>
-                                                            <td class="fh" width="10%"> 
-                                                            <div id="chartdiv" align="center"> 请稍后，3D图型报表加载中... </div>
-
-                                                             <script type="text/javascript">
-                                                                 var chart = new FusionCharts("Charts/FCF_MSColumn3D.swf", "ChartId", "700", "350");
-                                                                 chart.setDataXML("<%=this.xmldata %>");
-                                                                 chart.render("chartdiv");
-                                                             </script>
-                                                             </td>
-                                                        </tr>
-                                                    </table>
-      
- </td>
- </tr>
- </table>
                                     <table cellspacing="7" width="100%" id="table14">
                                         <tbody>
                                             <tr>

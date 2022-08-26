@@ -82,9 +82,9 @@ if (ver == "1")
         strhtml.Append("<div class=\"content\">");
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "xinzhang/book_view_mod.aspx\" method=\"post\">");
         strhtml.Append("勋章名称：<input type=\"text\" name=\"title\" value=\"" + bookVo.XinZhangMingChen + "\"/><br/>");
-        strhtml.Append("购买价格：<input type=\"text\" name=\"jiage\" value=\"" + bookVo.XinZhangJiaGe + "\" size=\"8\"/>"+ siteVo.sitemoneyname +"<br/>");
+        strhtml.Append("购买价格：<input type=\"text\" name=\"jiage\" value=\"" + bookVo.XinZhangJiaGe + "\" size=\"13\"/> "+ siteVo.sitemoneyname +"<br/>");
        
-        strhtml.Append("我的密码:<input type=\"text\" name=\"pw\" value=\"" + pw + "\" size=\"8\"/><br/>");
+        strhtml.Append("我的密码：<input type=\"text\" name=\"pw\" value=\"" + pw + "\" size=\"13\"/><br/>");
         strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
         strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
         strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + (bookVo.ID) + "\" />");

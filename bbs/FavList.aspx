@@ -3,7 +3,7 @@
     string title = "";
     if (favtypeid == "0")
     {
-        title = this.GetLang("默认分类所有||");
+        title = this.GetLang("默认收藏夹||");
     }
     else if(bookVo!=null)
     {
@@ -17,7 +17,7 @@ if (ver == "1")
     strhtml.Append("<a href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a><br/>");
 
    
-        strhtml.Append("关键字:<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"5\"/>");
+        strhtml.Append("关键字：<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"5\"/>");
         strhtml.Append("<anchor><go href=\"" + http_start + "bbs/favlist.aspx\" method=\"get\" accept-charset=\"utf-8\">");
         strhtml.Append("<postfield name=\"action\" value=\"class\" />");
         strhtml.Append("<postfield name=\"siteid\" value=\"" + siteid + "\" />");
@@ -73,11 +73,9 @@ else //2.0界面
 
     strhtml.Append("<div class=\"subtitle\">" + title + "</div>");
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("<a href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a><br/>");
 
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/favlist.aspx\" method=\"post\">");
-    strhtml.Append("关键字:<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"5\"/>");
-  
+    strhtml.Append("关键字 <input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"22\"/> ");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"class\" />");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
@@ -111,7 +109,7 @@ else //2.0界面
         {
             strhtml.Append("<a href=\"" + http_start + listVo[i].url + "" + "\">" + listVo[i].title + "</a>");
         }
-        strhtml.Append("[<a href=\"" + http_start + "bbs/favlist_change.aspx?action=del&amp;siteid=" + this.siteid + "&amp;classid=0&amp;favtypeid=" + this.favtypeid + "&amp;id=" + listVo[i].id + "&amp;page=" + this.CurrentPage + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">转移</a>.<a href=\"" + http_start + "bbs/favlist_del.aspx?action=del&amp;siteid=" + this.siteid + "&amp;classid=0&amp;favtypeid=" + this.favtypeid + "&amp;id=" + listVo[i].id + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">删除</a>]<br/>");
+        strhtml.Append(" [<a href=\"" + http_start + "bbs/favlist_del.aspx?action=del&amp;siteid=" + this.siteid + "&amp;classid=0&amp;favtypeid=" + this.favtypeid + "&amp;id=" + listVo[i].id + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">删除</a>]<br/>");
         strhtml.Append("(" + listVo[i].adddate + ")</div>");
     }
     if (listVo == null)
@@ -127,29 +125,18 @@ else //2.0界面
         //string strhtml_list = strhtml.ToString();
         //int s = strhtml_list.IndexOf("<div class=\"title\">");
         //strhtml_list = strhtml_list.Substring(s, strhtml_list.Length - s);
-
         Response.Clear();
         Response.Write(WapTool.ToWML(isWebHtml, wmlVo).Replace("[view]", strhtml.ToString()));
         Response.End();
     }
-
     strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/favlist_add.aspx?siteid=" + this.siteid + "&amp;classid=0&amp;favtypeid=" + this.favtypeid + "" + "\">添加本分类收藏</a> ");
-    strhtml.Append("<a href=\"" + http_start + "bbs/favlist_del.aspx?action=delall&amp;siteid=" + this.siteid + "&amp;classid=0&amp;favtypeid=" + this.favtypeid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">清空" + title + "</a> ");
-    strhtml.Append("<a href=\"" + http_start + "bbs/myfav.aspx?siteid=" + this.siteid + "&amp;classid=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">返回上级</a> ");
+    //strhtml.Append("<a href=\"" + this.http_start + "bbs/favlist_add.aspx?siteid=" + this.siteid + "&amp;classid=0&amp;favtypeid=" + this.favtypeid + "" + "\">添加收藏</a> ");
+    strhtml.Append("<a href=\"" + http_start + "bbs/favlist_del.aspx?action=delall&amp;siteid=" + this.siteid + "&amp;classid=0&amp;favtypeid=" + this.favtypeid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">清空收藏</a>");
+    //strhtml.Append("<a href=\"" + http_start + "bbs/myfav.aspx?siteid=" + this.siteid + "&amp;classid=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">返回上级</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
-
     strhtml.Append("</div></div>");
-
-
     Response.Write(strhtml);
-
-
-
 }
-                                                                                                                                                                               
-Response.Write(ERROR);                                                                                                                                                                              
+Response.Write(ERROR);
 //显示底部
 Response.Write(WapTool.showDown(wmlVo)); %>
-
-

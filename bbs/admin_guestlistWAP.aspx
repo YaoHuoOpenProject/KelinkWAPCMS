@@ -3,7 +3,6 @@ Response.Write(WapTool.showTop(this.GetLang("论坛回贴|论坛回贴|re of the
 if (ver == "1")
 {
     strhtml.Append("<p align=\"left\">");
-    
     strhtml.Append("<a href=\"" + this.http_start + "bbs/admin_userlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">内容管理</a>.回贴管理<br/>");
     strhtml.Append("<b>" + classVo.classname + "</b><br/>");
     
@@ -68,22 +67,22 @@ else //2.0界面
 
 
     strhtml.Append("<div class=\"subtitle\">" + classVo.classname + "</div>");
-    strhtml.Append("<div class=\"tip\">请在WAP前台或WEB后台管理！</b></div>");
+    //strhtml.Append("<div class=\"tip\">请在WAP前台或WEB后台管理！</b></div>");
     //显示搜索
 
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/admin_userlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">内容管理</a>.回贴管理<br/>");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs/admin_userlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">内容管理</a> 回贴管理<br/>");
     
     strhtml.Append("<form id=\"form1\" action=\"" + http_start + "bbs/admin_guestlistWAP.aspx\" method=\"get\">");
-    strhtml.Append("关键字：<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"5\"/>");
-    strhtml.Append("栏目ID：<input type=\"text\" name=\"classid\" value=\"" + classid + "\" size=\"5\"/><br/>");
+    strhtml.Append("关键字 <input type=\"text\" name=\"key\" value=\"" + key + "\" style=\"width:60%\"/><br/>");
+    strhtml.Append("栏目ID <input type=\"text\" name=\"classid\" value=\"" + classid + "\"  style=\"width:30%\"/><br/>");
     strhtml.Append("<input type=\"submit\" value=\"搜索\" />");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"class\" />");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
     strhtml.Append("</form>");
     strhtml.Append("<br/>");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/admin_guestlistWAP.aspx?action=gocheckall&amp;state=0&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">审核所有</a>.<a href=\"" + this.http_start + "bbs/admin_guestlistWAP.aspx?action=gocheckall&amp;state=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">取消所有审核</a><br/>");
+    //strhtml.Append("<a href=\"" + this.http_start + "bbs/admin_guestlistWAP.aspx?action=gocheckall&amp;state=0&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">审核所有</a>.<a href=\"" + this.http_start + "bbs/admin_guestlistWAP.aspx?action=gocheckall&amp;state=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">取消所有审核</a><br/>");
      
     strhtml.Append("</div>");
 

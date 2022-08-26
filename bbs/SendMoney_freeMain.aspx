@@ -66,10 +66,10 @@ else //2.0界面
     Response.Write("</div>");
     Response.Write("<div class=\"content\">");
     Response.Write("<form name=\"f\" aciont=\"" + this.http_start + "bbs/sendmoney_freeMain.aspx\" method=\"post\">");
-    Response.Write("我当前币有：" + userVo.money + "个<br/>");
-    Response.Write("输入奖励给会员ID:"+touserid+"币值*:<br/>");
-    Response.Write("<input type=\"text\"  name=\"sendmoney\" value=\"\" /><br/>");
-    Response.Write("理由:<br/><input type=\"text\"  name=\"remark\" value=\"\" /><br/>");   
+    Response.Write("我当前有 " + userVo.money + " 个妖晶<br/>");
+    Response.Write("奖励给会员ID "+touserid+" 币值:<br/>");
+    Response.Write("<input type=\"text\" size=\"33\" name=\"sendmoney\" value=\"\" /><br/>");
+    Response.Write("奖励原因：<br/><input type=\"text\" size=\"33\" name=\"remark\" value=\"\" /><br/>");   
     Response.Write("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
     Response.Write("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
     Response.Write("<input type=\"hidden\" name=\"reid\" value=\"" + reid + "\"/>");

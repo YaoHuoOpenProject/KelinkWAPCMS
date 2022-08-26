@@ -220,9 +220,6 @@ function checkSelectNo(chkAllID)
                                                         &nbsp;
                                                         <input id="Button4" name="" type="button" value=" 删 除 " onclick="DoDel()" class="bt" />
                                                         &nbsp;
-                                                        <input id="Button2" name="" type="button" value="删除查询结果" onclick="DoDelAll()" class="bt" />
-                                                         &nbsp;
-                                                        <input id="Button1" name="" type="button" value="清空所有" onclick="DoDelAllNULL()" class="bt" />
                                                     </td>
                                                 </tr>
                                             </table>

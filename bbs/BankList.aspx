@@ -44,7 +44,6 @@ if (ver == "1")
     strhtml.Append("<td width=\"85\">交易数量</td>");
     strhtml.Append("<td width=\"105\">帐户余额</td>");
     strhtml.Append("<td width=\"106\">操作者</td>");
-    strhtml.Append("<td width=\"101\">备注</td>");
     strhtml.Append("<td width=\"80\">流水ID</td>");
     strhtml.Append("<td width=\"104\">时间</td>");
     strhtml.Append("<td width=\"80\">当事ID</td>");
@@ -82,10 +81,9 @@ if (ver == "1")
         strhtml.Append("</td>");
         strhtml.Append("<td width=\"105\">" + listVo[i].leftMoney + "</td>");
         strhtml.Append("<td width=\"106\"><a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].opera_userid + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;key=" + HttpUtility.UrlEncode(key)) + "" + "\">" + listVo[i].opera_nickname + "</a><br/>(ID:" + listVo[i].opera_userid + ")</td>");
-        strhtml.Append("<td width=\"101\">" + listVo[i].remark + "</td>");
         strhtml.Append("<td width=\"80\">" + listVo[i].id + "</td>");
         strhtml.Append("<td width=\"104\">" + listVo[i].addtime + "</td>");
-        strhtml.Append("<td width=\"80\">ID:<a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;key=" + HttpUtility.UrlEncode(key)) + "" + "\">" + listVo[i].userid + "</a><br/>IP:" + listVo[i].ip + "</td>");
+        strhtml.Append("<td width=\"80\">ID:<a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;key=" + HttpUtility.UrlEncode(key)) + "" + "\">" + listVo[i].userid + "</a></td>");
         strhtml.Append("</tr>");
 
 
@@ -132,20 +130,18 @@ else //2.0界面
 
    
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/banklist.aspx\" method=\"post\">");
-        
-        strhtml.Append("年份:<input type=\"text\" name=\"toyear\" value=\"" + toyear + "\" size=\"4\"/>");
-        strhtml.Append("月份:<input type=\"text\" name=\"tomonth\" value=\"" + tomonth + "\" size=\"4\"/><br/>");
-        strhtml.Append("当事ID:<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"5\"/><br/>");
-        
+        strhtml.Append("年份：<input type=\"text\" name=\"toyear\" value=\"" + toyear + "\" size=\"8\"/><br/>");
+        strhtml.Append("月份：<input type=\"text\" name=\"tomonth\" value=\"" + tomonth + "\" size=\"8\"/><br/>");
+        strhtml.Append("ID号：<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"8\"/><br/>");
         strhtml.Append("<select name=\"typeid\">");
         strhtml.Append("<option value=\"" + typeid + "\">" + typeid + "</option>");    
-        strhtml.Append("<option value=\"1\">1_项目名称</option>");
-        strhtml.Append("<option value=\"2\">2_操作ID</option>");
-        strhtml.Append("<option value=\"3\">3_操作昵称</option>");
-        strhtml.Append("<option value=\"4\">4_备注</option>");
-        strhtml.Append("<option value=\"5\">5_流水ID</option>");
+        strhtml.Append("<option value=\"1\">1.项目名称</option>");
+        strhtml.Append("<option value=\"2\">2.操作人ID</option>");
+        strhtml.Append("<option value=\"3\">3.操作昵称</option>");
+        //strhtml.Append("<option value=\"4\">4_备注</option>");
+        //strhtml.Append("<option value=\"5\">5_流水ID</option>");
         strhtml.Append("</select>");
-        strhtml.Append("关键字:<input type=\"text\" name=\"typekey\" value=\"" + typekey + "\" size=\"5\"/><br/>");
+        strhtml.Append(" 关键字：<input type=\"text\" name=\"typekey\" value=\"" + typekey + "\" size=\"10\"/><br/>");
         strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"search\" />");
         strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
         strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
@@ -159,17 +155,14 @@ else //2.0界面
     strhtml.Append(linkTOP);
     //显示列表
     //strhtml.Append("<div class=\"content\">");
-    strhtml.Append("<table border=\"1\" width=\"700\" id=\"table1\">");
+    strhtml.Append("<table border=\"1\" width=\"100%\" id=\"table1\">");
     strhtml.Append("<tr align=\"center\">");
-    strhtml.Append("<td width=\"46\">币种</td>");
-    strhtml.Append("<td width=\"109\">项目</td>");
-    strhtml.Append("<td width=\"85\">交易数量</td>");
-    strhtml.Append("<td width=\"105\">帐户余额</td>");
-    strhtml.Append("<td width=\"106\">操作者</td>");
-    strhtml.Append("<td width=\"101\">备注</td>");
-    strhtml.Append("<td width=\"80\">流水ID</td>");
+    //strhtml.Append("<td width=\"46\">币种</td>");
+    strhtml.Append("<td width=\"20%\">项目</td>");
+    strhtml.Append("<td width=\"25%\">交易数量</td>");
+    strhtml.Append("<td width=\"25%\">帐户余额</td>");
+    strhtml.Append("<td width=\"30%\">操作者</td>");
     strhtml.Append("<td width=\"104\">时间</td>");
-    strhtml.Append("<td width=\"80\">当事ID</td>");
     strhtml.Append("</tr>");
     
     for (int i = 0; (listVo != null && i < listVo.Count); i++)
@@ -186,9 +179,9 @@ else //2.0界面
         
         //index = index + kk;
        // strhtml.Append(index + ".");
-        strhtml.Append("<td width=\"46\">"+siteVo.sitemoneyname+"</td>");
-        strhtml.Append("<td width=\"109\">"+listVo[i].actionName+"</td>");
-        strhtml.Append("<td width=\"85\">");
+        //strhtml.Append("<td width=\"46\">"+siteVo.sitemoneyname+"</td>");
+        strhtml.Append("<td align=\"center\" width=\"20%\">"+listVo[i].actionName+"</td>");
+        strhtml.Append("<td align=\"center\" width=\"25%\">");
         if (listVo[i].money.IndexOf("-") >= 0)
         {
             strhtml.Append("<font color=\"FF0000\">");
@@ -199,15 +192,12 @@ else //2.0界面
         {
             strhtml.Append("<font color=\"008000\">");
             strhtml.Append(listVo[i].money);
-            strhtml.Append("</font>");
+            strhtml.Append(" 妖晶</font>");
         }
         strhtml.Append("</td>");
-        strhtml.Append("<td width=\"105\">"+listVo[i].leftMoney+"</td>");
-        strhtml.Append("<td width=\"106\"><a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].opera_userid + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;key=" + HttpUtility.UrlEncode(key)) + "" + "\">" + listVo[i].opera_nickname + "</a><br/>(ID:"+listVo[i].opera_userid+")</td>");
-        strhtml.Append("<td width=\"101\">"+listVo[i].remark+"</td>");
-        strhtml.Append("<td width=\"80\">"+listVo[i].id+"</td>");
+        strhtml.Append("<td align=\"center\" width=\"25%\">"+listVo[i].leftMoney+"</td>");
+        strhtml.Append("<td align=\"center\" width=\"30%\"><a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].opera_userid + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;key=" + HttpUtility.UrlEncode(key)) + "" + "\">" + listVo[i].opera_nickname + "</a><br/>(ID:"+listVo[i].opera_userid+")</td>");
         strhtml.Append("<td width=\"104\">"+listVo[i].addtime+"</td>");
-        strhtml.Append("<td width=\"80\">ID:<a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;key=" + HttpUtility.UrlEncode(key)) + "" + "\">" + listVo[i].userid + "</a><br/>IP:" + listVo[i].ip + "</td>");
         strhtml.Append("</tr>");
         
         

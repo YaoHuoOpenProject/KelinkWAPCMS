@@ -99,14 +99,14 @@ else
     strhtml.Append("<input name=\"classid\"  type=\"hidden\" value=\"" + this.classid + "\"  />");
     strhtml.Append("<input name=\"sid\"  type=\"hidden\" value=\"" + this.sid + "\"  />");
     strhtml.Append("原密码：<br />");
-    strhtml.Append("<input type=\"password\" name=\"txtoldPW\"  class=\"txt\" maxlength=\"50\" /><br/>");
+    strhtml.Append("<input type=\"password\" style=\"width:70%\" name=\"txtoldPW\"  class=\"txt\" maxlength=\"50\" /><br/>");
     strhtml.Append("新密码：<br />");
-    strhtml.Append("<input type=\"password\" name=\"txtnewPW\"  class=\"txt\" maxlength=\"50\" /><br/>");
+    strhtml.Append("<input type=\"password\" style=\"width:70%\" name=\"txtnewPW\"  class=\"txt\" maxlength=\"50\" /><br/>");
     strhtml.Append("确认新密码：<br />");
-    strhtml.Append("<input type=\"password\" name=\"txtrePW\"  class=\"txt\" maxlength=\"50\" /><br/>");
+    strhtml.Append("<input type=\"password\" style=\"width:70%\" name=\"txtrePW\"  class=\"txt\" maxlength=\"50\" /><br/>");
     strhtml.Append("<input type=\"submit\" id=\"submit\" name=\"submit\" class=\"btn\"  value=\"修 改\" /><br/><br/>");
     
-    strhtml.Append("注意：修改密码后，旧书签地址将无效，请登录后重新加入书签！");
+    strhtml.Append("建议使用 字母+数字 作为密码，且长度不小于8位。不能使用<b>特殊符号</b>。");
     strhtml.Append("</form>");
     strhtml.Append("</div>");
     

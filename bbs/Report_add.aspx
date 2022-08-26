@@ -13,8 +13,6 @@ if (ver == "1")
     }
     else
     {
-
-
         //选择
         Response.Write("举报理由:<br/>");
         Response.Write("<select name=\"reporttype\">");
@@ -26,7 +24,6 @@ if (ver == "1")
         Response.Write("</select><br/>");
         Response.Write("其它:<br/>");
         Response.Write("<input type=\"text\" name=\"reportwhy\" value=\"\"/><br/>");
-
         Response.Write("<anchor><go href=\"" + http_start + "bbs/Report_add.aspx\" method=\"post\" accept-charset=\"utf-8\">");
         Response.Write("<postfield name=\"action\" value=\"gomod\"/>");
         Response.Write("<postfield name=\"id\" value=\"" + id + "\"/>");
@@ -37,11 +34,9 @@ if (ver == "1")
         Response.Write("<postfield name=\"reportwhy\" value=\"$(reportwhy)\"/>");
         Response.Write("<postfield name=\"sid\" value=\"" + sid + "\"/>");
         Response.Write("</go>" + this.GetLang("提 交|提 交|Submit") + "</anchor><br/><br/>");
-
     }
     Response.Write("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "\">" + this.GetLang("返回贴子|返回貼子|Back to post") + "</a> ");
     Response.Write("<a href=\"" + this.http_start + "bbs/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a><br/>");
-   
     Response.Write("</p>");
 }
 else //2.0界面
@@ -56,15 +51,13 @@ else //2.0界面
         Response.Write("举报成功！");
         Response.Write("</b>");
         Response.Write("</div>");
-
     }
     else
     {
-
         //选择
         Response.Write("<div class=\"content\">");
         Response.Write("<form name=\"f\" action=\"" + http_start + "bbs/Report_add.aspx\" method=\"post\">");
-        Response.Write("举报理由:<br/>");
+        Response.Write("违规类别:<br/>");
         Response.Write("<select name=\"reporttype\">");
         Response.Write("<option value=\"外站网址\">外站网址</option>");
         Response.Write("<option value=\"色情信息\">色情信息</option>");
@@ -72,10 +65,8 @@ else //2.0界面
         Response.Write("<option value=\"恶意刷币\">恶意刷币</option>");
         Response.Write("<option value=\"其他违规\">其他违规</option>");
         Response.Write("</select><br/>");
-        Response.Write("其它:<br/>");
-        Response.Write("<input type=\"text\" name=\"reportwhy\" value=\"\"/><br/>");
-
-
+        Response.Write("举报内容:<br/>");
+        Response.Write("<input type=\"text\" name=\"reportwhy\" style=\"width:98%\" value=\"\"/><br/>");
         Response.Write("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
         Response.Write("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
         Response.Write("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
@@ -86,15 +77,9 @@ else //2.0界面
         Response.Write("</div>");
     }
     Response.Write("<div class=\"btBox\"><div class=\"bt2\">");
-    Response.Write("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "\">" + this.GetLang("返回贴子|返回貼子|Back to post") + "</a> ");
+    Response.Write("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "\">" + this.GetLang("返回帖子|返回帖子|Back to post") + "</a> ");
     Response.Write("<a href=\"" + this.http_start + "bbs/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a>");
     Response.Write("</div></div>");
-    
-
 }
-                                                                                                                                                                               
-                                                                                                                                                                             
 //显示底部
 Response.Write(WapTool.showDown(wmlVo)); %>
-
-

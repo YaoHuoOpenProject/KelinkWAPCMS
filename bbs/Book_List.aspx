@@ -45,7 +45,7 @@ if (ver == "1")
             ranktypes = "bbs/marksix/rank.aspx?";
         }
         
-         strhtml.Append("<a href=\"" + this.http_start + addtypes+ "page=" + this.CurrentPage + "&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">发贴</a>.<a href=\"" + this.http_start + "bbs/showadmin.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">版务</a>.<a href=\"" + this.http_start + "bbs/book_list.aspx?action=good&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">精华</a>.<a href=\"" + this.http_start + "bbs/showTopic.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">专题</a>.");
+         strhtml.Append("<a href=\"/wapindex.aspx?siteid=" + siteid + "&amp;classid=206\">发帖</a>.<a href=\"" + this.http_start + "bbs/showadmin.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">版务</a>.<a href=\"" + this.http_start + "bbs/book_list.aspx?action=good&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">精华</a>.<a href=\"" + this.http_start + "bbs/showTopic.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">专题</a>.");
         
          strhtml.Append(" <a href=\"" + this.http_start + ranktypes + "classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">排行</a><br/>");
        
@@ -296,7 +296,7 @@ else //2.0界面
             addtypes = "bbs/marksix/doit.aspx?mymarksix=" + WapTool.getArryString(classVo.smallimg, '|', 39) + "&amp;";
             ranktypes = "bbs/marksix/rank.aspx?";
         }
-        strhtml_list.Append("<div class=\"btBox\"><div class=\"bt5\"><a href=\"" + this.http_start + addtypes + "page=" + this.CurrentPage + "&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">发贴</a> <a href=\"" + this.http_start + "bbs/showadmin.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">版务</a> <a href=\"" + this.http_start + "bbs/book_list.aspx?action=good&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">精华</a> <a href=\"" + this.http_start + "bbs/showTopic.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">专题</a> <a href=\"" + this.http_start + ranktypes + "classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">排行</a>");
+        strhtml_list.Append("<div class=\"btBox\"><div class=\"bt4\"><a href=\"/wapindex.aspx?siteid=" + siteid + "&amp;classid=206\">发帖</a> <a href=\"" + this.http_start + "bbs/showadmin.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">版务</a> <a href=\"" + this.http_start + "bbs/book_list.aspx?action=good&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">精华</a> <a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;type=days&amp;key=365\">新帖</a></div>");
 
         strhtml_list.Append("</div></div>");
     }
@@ -329,11 +329,11 @@ else //2.0界面
     {
         if (i % 2 == 0)
         {
-            strhtml_list.Append("<div class=\"line1\">");
+            strhtml_list.Append("<div class=\"listdata line1\">");
         }
         else
         {
-            strhtml_list.Append("<div class=\"line2\">");
+            strhtml_list.Append("<div class=\"listdata line2\">");
         }
         if (listVoTop[i].book_top == 1)
         {
@@ -345,7 +345,6 @@ else //2.0界面
         }
         if (listVoTop[i].topic != 0 && this.stype == "")
         {
-            strhtml_list.Append("<b>[专]</b>");
 
         }
         if (listVoTop[i].book_click >= long.Parse(this.hots))
@@ -418,26 +417,25 @@ else //2.0界面
     {
         if (i % 2 == 0)
         {
-            strhtml_list.Append("<div class=\"line1\">");
+            strhtml_list.Append("<div class=\"listdata line1\">");
         }
         else
         {
-            strhtml_list.Append("<div class=\"line2\">");
+            strhtml_list.Append("<div class=\"listdata line2\">");
         }
         
         index = index + kk;
+        strhtml_list.Append(index + ".");
         //strhtml_list.Append("<span class=\"KL_num\">" +index + ".</span>");
         
      ;
       
         if (listVo[i].topic != 0 && this.stype == "")
         {
-            strhtml_list.Append("<b>[专]</b>");
 
         }
         if (listVo[i].book_click  >= long.Parse(this.hots))
         {
-            strhtml_list.Append("<img src=\"" + this.http_start + "NetImages/huo.gif\" alt=\"火\"/>");
 
         }
         if (listVo[i].book_good == 1)
@@ -487,7 +485,6 @@ else //2.0界面
         }
         if (WapTool.ISAPI_Rewrite3_Open == "1")
         {
-            if (lpagetemp == "") { stypelink = stypelink.Replace("&amp;", "?"); }
             strhtml_list.Append("<a href=\"" + http_start + "bbs-" + listVo[i].id +".html"+ lpagetemp + stypelink + "" + "\">" + listVo[i].book_title + "</a><br/>" + ShowNickName_color(long.Parse(listVo[i].book_pub), listVo[i].book_author) + "/<a href=\"" + this.http_start + "bbs/book_re.aspx?actoin=class&amp;siteid=" + this.siteid + "&amp;classid=" + listVo[i].book_classid + "&amp;id=" + listVo[i].id + "&amp;getTotal=" + listVo[i].book_re + "&amp;lpage=" + this.CurrentPage + "\">" + listVo[i].book_re + "</a>回/" + listVo[i].book_click + "阅 <span class=\"right\">" + WapTool.ShowTime(listVo[i].book_date) + "<span></div>");
         
         }
@@ -513,7 +510,7 @@ else //2.0界面
     //显示固定按钮
     if ((this.action == "" || this.action == "class") && this.stype == "")
     {
-        strhtml_list.Append("<div class=\"btBox\"><div class=\"bt5\"><a href=\"" + this.http_start + "bbs/book_search.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">搜索</a> <a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;type=days&amp;key=1\">今日</a> <a href=\"" + this.http_start + "bbs/Log_List.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">日志</a> <a href=\"" + this.http_start + "bbs/onlist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">在线</a> <a href=\"" + this.http_start + "bbs/lockuser_list.aspx?action=class&amp;backurlid=3&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">监狱</a></div></div>");
+        strhtml_list.Append("<div class=\"btBox\"><div class=\"bt4\"><a href=\"" + this.http_start + "bbs/book_search.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">搜索</a> <a href=\"" + this.http_start + "bbs/Log_List.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">日志</a> <a href=\"" + this.http_start + "bbs/lockuser_list.aspx?action=class&amp;backurlid=3&amp;siteid=" + this.siteid + "&amp;classid=0\">监狱</a> <a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;type=days&amp;key=365\">新帖</a></div></div>");
 
     }
 
@@ -531,19 +528,13 @@ else //2.0界面
 
     
 
-    //显示广告
-    if (adVo.secondShowDown != "")
-    {
-        strhtml.Append(adVo.secondShowDown );
-    }
-    
     //导航按钮
    
     if (action == "search")
     {
-        strhtml.Append("<div class=\"bt1\">");
+        strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");
         strhtml.Append("<a href=\"" + this.http_start + "bbs/book_search.aspx?siteid=" + siteid + "&amp;classid=" + classid + "" + "\">返回搜索</a> ");
-        strhtml.Append("</div>");
+        strhtml.Append("</div></div>");
     }
     else if (action == "good" && this.classid != "0")
     {
@@ -558,21 +549,20 @@ else //2.0界面
     }
     else
     {
-        strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
         if (WapTool.ISAPI_Rewrite3_Open == "1")
         {
-            strhtml.Append("<a href=\"" + this.http_start + "wapindex-" + siteid + "-" + classVo.childid + ".html" + "\">返回上级</a> ");
-            strhtml.Append("<a href=\"" + this.http_start + "wapindex-" + siteid + "-0.html" + "\">返回首页</a>");
-
         }
         else
         {
-            strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid + "" + "\">返回上级</a> ");
-            strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
         }
-        strhtml.Append("</div></div>");
     }
    
+    //显示广告
+    if (adVo.secondShowDown != "")
+    {
+        strhtml.Append(adVo.secondShowDown );
+    }
+    
     
     strhtml.Append(WapTool.GetVS(wmlVo));
 

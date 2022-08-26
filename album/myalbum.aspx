@@ -78,12 +78,12 @@ else //2.0界面
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<a href=\"" + http_start + "album/albumlist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;smalltypeid=0" + "&amp;touserid=" + this.touserid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">默认分类所有</a><br/>");
-    for (int i = 0; (sublistVo != null && i < sublistVo.Count); i++)
-    {
+    //for (int i = 0; (sublistVo != null && i < sublistVo.Count); i++)
+    //{
 
-        strhtml.Append("<a href=\"" + http_start + "album/albumlist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;smalltypeid=" + sublistVo[i].id.ToString() + "&amp;touserid=" + this.touserid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">" + sublistVo[i].subjectname + "</a><br/>");
+        //strhtml.Append("<a href=\"" + http_start + "album/albumlist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;smalltypeid=" + sublistVo[i].id.ToString() + "&amp;touserid=" + this.touserid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">" + sublistVo[i].subjectname + "</a><br/>");
 
-    }
+    //}
     if (sublistVo == null)
     {
         strhtml.Append("还没有建分类。<br/>");
@@ -95,9 +95,9 @@ else //2.0界面
     if (this.userid == this.touserid)
     {
         strhtml.Append("<a href=\"" + this.http_start + "album/admin_WAPadd.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "" + "\">上传相片</a> ");
-        strhtml.Append("<a href=\"" + this.http_start + "album/myalbum_admin.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "" + "\">添加分类</a><br/>");
+        //strhtml.Append("<a href=\"" + this.http_start + "album/myalbum_admin.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "" + "\">添加分类</a><br/>");
     }
-    strhtml.Append("<a href=\"" + this.http_start + "album/book_list.aspx?siteid=" + this.siteid + "&amp;classid=0" + "\">查看所有</a> ");
+    //strhtml.Append("<a href=\"" + this.http_start + "album/book_list.aspx?siteid=" + this.siteid + "&amp;classid=0" + "\">查看所有</a> ");
 
 
     

@@ -19,7 +19,7 @@ if (ver == "1")
     }
     else
     {
-        strhtml.Append("<a href=\"" + this.http_start + "games/rank/book_list.aspx?type=0&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">赢家排行</a>|赚币排行");
+        strhtml.Append("<a href=\"" + this.http_start + "games/rank/book_list.aspx?type=0&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">赢家排行</a> | 赚币排行");
         strhtml.Append("<br/>排行榜按照在" + GamesClassManager.Tool.GetGameCN(id) + "游戏净赚金币数排名<br/>");
     
     }
@@ -70,13 +70,13 @@ else //2.0界面
     strhtml.Append("<div class=\"content\">");
     if (type == "0")
     {
-        strhtml.Append("赢家排行|<a href=\"" + this.http_start + "games/rank/book_list.aspx?type=1&amp;nid=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">赚币排行</a>");
+        strhtml.Append("赢家排行 | <a href=\"" + this.http_start + "games/rank/book_list.aspx?type=1&amp;nid=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">赚币排行</a>");
         strhtml.Append("<br/>排行榜按照净胜局数排列,比如赢20局输5局,则净胜15局");
     }
     else
     {
-        strhtml.Append("<a href=\"" + this.http_start + "games/rank/book_list.aspx?type=0&amp;nid=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">赢家排行</a>|赚币排行");
-        strhtml.Append("<br/>排行榜按照在" + GamesClassManager.Tool.GetGameCN(id) + "游戏净赚金币数排名");
+        strhtml.Append("<a href=\"" + this.http_start + "games/rank/book_list.aspx?type=0&amp;nid=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">赢家排行</a> | 赚币排行");
+        strhtml.Append("<br/>排行榜按" + GamesClassManager.Tool.GetGameCN(id) + "游戏净赚妖晶数量排名");
     }
     strhtml.Append("</div>");
 

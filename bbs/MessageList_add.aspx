@@ -216,14 +216,13 @@ else //2.0界面
         strhtml.Append("</div>");
         
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/messagelist_add.aspx\" method=\"post\">");
-        strhtml.Append(this.GetLang("对方会员ID|对方会员|to userID") + "*:<br/>");
-        strhtml.Append("<input type=\"text\" name=\"touseridlist\" value=\"" + this.touseridlistall + "\"/><br/>");
-        strhtml.Append("(多个用户用点号.隔开)<br/>");
+        strhtml.Append(this.GetLang("对方ID号|对方|to userID") + "<br/>");
+        strhtml.Append("<input type=\"text\" style=\"width:97%\" name=\"touseridlist\" value=\"" + this.touseridlistall + "\"/><br/>");
 
-        strhtml.Append(this.GetLang("内容|內容|Content") + "*:<br/>");
-        strhtml.Append("<textarea name=\"content\" rows=\"5\" style=\"width:100%\">" + this.content + "</textarea><br/>");
-        strhtml.Append(this.GetLang("标题(可留空)|標題|Title") + ":<br/>");
-        strhtml.Append("<input type=\"text\" name=\"title\" class=\"txt\" value=\"" + this.title + "\"/><br/>");
+        strhtml.Append(this.GetLang("私信内容|私信內容|Content") + "<br/>");
+        strhtml.Append("<textarea name=\"content\" rows=\"5\" style=\"width:97%\">" + this.content + "</textarea><br/>");
+        strhtml.Append(this.GetLang("私信标题|標題|Title") + "<br/>");
+        strhtml.Append("<input type=\"text\" name=\"title\" style=\"width:97%\" class=\"txt\" value=\"" + this.title + "\"/><br/>");
         if (this.needpwFlag == "1")
         {
             strhtml.Append("我的密码*:<input type=\"text\" name=\"needpw\" value=\"" + needpw + "\" size=\"10\" /><br/>");

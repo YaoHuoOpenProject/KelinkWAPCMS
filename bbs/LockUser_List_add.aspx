@@ -20,12 +20,12 @@ if (ver == "1")
     }
 
 
-    strhtml.Append(this.GetLang("被锁会员ID|被锁会员ID|To Lock User ID") + "*:<br/>");
+    strhtml.Append(this.GetLang("被锁会员ID|被锁会员ID|To Lock User ID") + ":<br/>");
     strhtml.Append("<input type=\"text\"  name=\"touserid" + r + "\" value=\"" + this.touserid + "\" /><br/>");
-    strhtml.Append(this.GetLang("栏目ID|栏目ID|Classid ID") + "*:<br/>");
+    strhtml.Append(this.GetLang("栏目ID|栏目ID|Classid ID") + ":<br/>");
     strhtml.Append("<input type=\"text\"  name=\"toclassid" + r + "\" value=\"" + this.toclassid + "\" /><br/>");
     strhtml.Append("(默认值或0为所有栏目)<br/>");
-    strhtml.Append(this.GetLang("加黑天数|加黑天数|Lock Days") + "*:<br/>");    
+    strhtml.Append(this.GetLang("加黑天数|加黑天数|Lock Days") + ":<br/>");    
     strhtml.Append("<input type=\"text\"  name=\"lockdate" + r + "\" value=\"" + this.lockdate + "\" /><br/>");
     strhtml.Append("(0为无期限)<br/>");
     strhtml.Append("<anchor><go href=\"" + http_start + "bbs/lockuser_list_add.aspx\" method=\"post\" accept-charset=\"utf-8\">");
@@ -66,14 +66,12 @@ else //2.0界面
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/lockuser_list_add.aspx\" method=\"post\">");
-    strhtml.Append(this.GetLang("被锁会员ID|被锁会员ID|To Lock User ID") + "*:<br/>");
-    strhtml.Append("<input type=\"text\"  name=\"touserid\" value=\"" + this.touserid + "\" /><br/>");
-    strhtml.Append(this.GetLang("栏目ID|栏目ID|Classid ID") + "*:<br/>");
-    strhtml.Append("<input type=\"text\"  name=\"toclassid\" value=\"" + this.toclassid + "\" /><br/>");
-    strhtml.Append("(默认值或0为所有栏目)<br/>");
-    strhtml.Append(this.GetLang("加黑天数|加黑天数|Lock Days") + "*:<br/>");
-    strhtml.Append("<input type=\"text\"  name=\"lockdate\" value=\"" + this.lockdate + "\" /><br/>");
-    strhtml.Append("(0为无期限)<br/>");    
+    strhtml.Append(this.GetLang("加黑ID号|被锁会员ID|To Lock User ID") + "<br/>");
+    strhtml.Append("<input type=\"text\" size=\"35\" name=\"touserid\" value=\"" + this.touserid + "\" /><br/>");
+    strhtml.Append("<input type=\"hidden\"  name=\"toclassid\" value=\"0" + this.toclassid + "\" />");
+    strhtml.Append(this.GetLang("加黑天数|加黑天数|Lock Days") + "<br/>");
+    strhtml.Append("<input type=\"text\" size=\"35\" name=\"lockdate\" value=\"3" + "\" /><br/>");
+    strhtml.Append("(初犯3天，二次7-15天)<br/>");    
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"backurlid\" value=\"" + backurlid + "\"/>");

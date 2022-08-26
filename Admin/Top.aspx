@@ -34,7 +34,6 @@ A:hover {
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin:0; padding:0;">
     <div style="position: absolute; top: 5; left: 15; width: 130px; height: 52px;">
-        <img src="<%=strLogo %>" width="120" height="50">
     </div>
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>

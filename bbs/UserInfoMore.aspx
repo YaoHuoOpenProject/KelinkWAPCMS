@@ -19,28 +19,26 @@ if (ver == "1")
 
 
 
-Response.Write("【用户ID】:"+toUserVo.userid+WapTool.GetOLtimePic(this.http_start,siteVo.lvlTimeImg,toUserVo.LoginTimes)+"<br/>");
-Response.Write("【昵称】:"+toUserVo.nickname+"<br/>");
-Response.Write("【" + WapTool.GetSiteMoneyName(siteVo.sitemoneyname, lang) + "】:" + toUserVo.money + "<br/>");
-Response.Write("【经验】:"+toUserVo.expr+"<br/>");
-Response.Write("【等级】:"+WapTool.GetLevl(siteVo.lvlNumer,toUserVo.expr,toUserVo.money,type)+"<br/>");
-Response.Write("【头衔】:"+WapTool.GetHandle(siteVo.lvlNumer,toUserVo.expr,toUserVo.money,type)+"<br/>");
-Response.Write("【身份】:"+WapTool.GetMyID(toUserVo.idname,this.lang)+"<br/>");    
-Response.Write("【权限】:"+idtype+"<br/>");
-Response.Write("【勋章】:"+WapTool.GetMedal(toUserVo.moneyname,this.http_start)+"<br/>");
-Response.Write("【性别】:");
+Response.Write("【用户ID】："+toUserVo.userid+WapTool.GetOLtimePic(this.http_start,siteVo.lvlTimeImg,toUserVo.LoginTimes)+"<br/>");
+Response.Write("【昵称】："+toUserVo.nickname+"<br/>");
+Response.Write("【" + WapTool.GetSiteMoneyName(siteVo.sitemoneyname, lang) + "】：" + toUserVo.money + "<br/>");
+Response.Write("【经验】："+toUserVo.expr+"<br/>");
+Response.Write("【等级】："+WapTool.GetLevl(siteVo.lvlNumer,toUserVo.expr,toUserVo.money,type)+"<br/>");
+Response.Write("【头衔】："+WapTool.GetHandle(siteVo.lvlNumer,toUserVo.expr,toUserVo.money,type)+"<br/>");
+Response.Write("【身份】："+WapTool.GetMyID(toUserVo.idname,this.lang)+"<br/>");    
+Response.Write("【权限】："+idtype+"<br/>");
+Response.Write("【勋章】："+WapTool.GetMedal(toUserVo.moneyname,this.http_start)+"<br/>");
+Response.Write("【性别】：");
 if (toUserVo.sex==1){Response.Write(this.GetLang("男|男|Male")); }else{ Response.Write(this.GetLang("女|女|Female"));}
 Response.Write("<br/>");  
-Response.Write("【年龄】:"+toUserVo.age+"<br/>");
-Response.Write("【地区】:"+toUserVo.city+"<br/>");
-Response.Write("【状态】:"+WapTool.GetOnline(this.http_start,toUserVo.isonline.ToString(),toUserVo.sex.ToString())+"<br/>");
-Response.Write("【积时】:"+WapTool.DateToString(toUserVo.LoginTimes,this.lang,0)+"<br/>");
-Response.Write("【注册时间】:" + toUserVo.RegTime + "<br/>");
-Response.Write("【最后活动时间】:"+toUserVo.LastLoginTime+"<br/>");
-    
+Response.Write("【年龄】："+toUserVo.age+"岁<br/>");
+Response.Write("【地区】："+toUserVo.city+"<br/>");
+Response.Write("【状态】："+WapTool.GetOnline(this.http_start,toUserVo.isonline.ToString(),toUserVo.sex.ToString())+"<br/>");
+Response.Write("【积时】："+WapTool.DateToString(toUserVo.LoginTimes,this.lang,0)+"<br/>");
+Response.Write("【注册时间】：" + toUserVo.RegTime + "<br/>");
 toUserVo.aihao = toUserVo.aihao + "__";
 string [] arryqq = toUserVo.aihao.Split('_');
-Response.Write("【QQ】:");
+Response.Write("【QQ】：");
 
 if (seeRight.IndexOf(",0,") >= 0 || (seeRight.IndexOf("," + userVo.SessionTimeout + ",") >= 0 && WapTool.showIDEndTime(siteVo.siteid, userVo.userid, userVo.endTime) > 0))
 {
@@ -51,26 +49,14 @@ else
     Response.Write("<a href=\"" + seeInfo + "\">升级VIP会员查看</a><br/>");
 }
     
-Response.Write("【身高】:"+toUserVo.shenggao+"<br/>");
-Response.Write("【体重】:"+toUserVo.tizhong+"<br/>");
-Response.Write("【星座】:"+toUserVo.xingzuo+"<br/>");
-Response.Write("【爱好】:" + arryqq[0] + "<br/>");
-Response.Write("【婚否】:"+toUserVo.fenfuo+"<br/>");
-Response.Write("【职业】:"+toUserVo.zhiye+"<br/>");
-Response.Write("【城市】:"+toUserVo.city+"<br/>");
-Response.Write("【手机】:");
-if (seeRight.IndexOf(",0,") >= 0 || (seeRight.IndexOf("," + userVo.SessionTimeout + ",") >= 0 && WapTool.showIDEndTime(siteVo.siteid, userVo.userid, userVo.endTime) > 0))
-{
-    Response.Write(toUserVo.mobile + "<br/>");
-}
-else
-{
-    Response.Write("<a href=\"" + seeInfo + "\">升级VIP会员查看</a><br/>");
-}
-   
-
-Response.Write("【型号】:" + this.myua + "<br/>");
-Response.Write("【Email】:");
+Response.Write("【身高】："+toUserVo.shenggao+"<br/>");
+Response.Write("【体重】："+toUserVo.tizhong+"<br/>");
+Response.Write("【星座】："+toUserVo.xingzuo+"<br/>");
+Response.Write("【爱好】：" + arryqq[0] + "<br/>");
+Response.Write("【婚否】："+toUserVo.fenfuo+"<br/>");
+Response.Write("【职业】："+toUserVo.zhiye+"<br/>");
+Response.Write("【城市】："+toUserVo.city+"<br/>");
+Response.Write("【邮箱】：");
 if (seeRight.IndexOf(",0,") >= 0 || (seeRight.IndexOf("," + userVo.SessionTimeout + ",") >= 0 && WapTool.showIDEndTime(siteVo.siteid, userVo.userid, userVo.endTime) > 0))
 {
     Response.Write(toUserVo.email + "<br/>");
@@ -79,9 +65,6 @@ else
 {
     Response.Write("<a href=\"" + seeInfo + "\">升级VIP会员查看</a><br/>");
 }
-Response.Write("【状态】:");
-    if (toUserVo.LockUser==1){ Response.Write(this.GetLang("锁定|鎖定|Locked"));}else{Response.Write(this.GetLang("正常|正常|normal"));}
-    
 
     
 Response.Write("<br/><a href=\""+this.http_start+"bbs/userinfo.aspx?siteid="+this.siteid+"&amp;touserid="+this.touserid+"&amp;backurl="+HttpUtility.UrlEncode(backurl)+"&amp;sid="+this.sid+"\">返回上级</a> ");
@@ -104,30 +87,26 @@ else //2.0界面
 
 
 
-    Response.Write("【用户ID】:" + toUserVo.userid + WapTool.GetOLtimePic(this.http_start, siteVo.lvlTimeImg, toUserVo.LoginTimes) + "<br/>");
-    Response.Write("【昵称】:" + toUserVo.nickname + "<br/>");
-    Response.Write("【" + WapTool.GetSiteMoneyName(siteVo.sitemoneyname, lang) + "】:" + toUserVo.money + "<br/>");
-    Response.Write("【经验】:" + toUserVo.expr + "<br/>");
-    Response.Write("【等级】:" + WapTool.GetLevl(siteVo.lvlNumer, toUserVo.expr,toUserVo.money,type) + "<br/>");
-    Response.Write("【头衔】:" + WapTool.GetHandle(siteVo.lvlNumer, toUserVo.expr,toUserVo.money,type) + "<br/>");
-    Response.Write("【身份】:" + WapTool.GetMyID(toUserVo.idname, this.lang) + "<br/>");
-    Response.Write("【权限】:" + idtype + "<br/>");
-    Response.Write("【勋章】:" + WapTool.GetMedal(toUserVo.moneyname, this.http_start) + "<br/>");
-    Response.Write("【性别】:");
+    Response.Write("【用户ID】：" + toUserVo.userid + WapTool.GetOLtimePic(this.http_start, siteVo.lvlTimeImg, toUserVo.LoginTimes) + "<br/>");
+    Response.Write("【昵称】：" + toUserVo.nickname + "<br/>");
+    Response.Write("【" + WapTool.GetSiteMoneyName(siteVo.sitemoneyname, lang) + "】：" + toUserVo.money + "<br/>");
+    Response.Write("【经验】：" + toUserVo.expr + "<br/>");
+    Response.Write("【等级】：" + WapTool.GetLevl(siteVo.lvlNumer, toUserVo.expr,toUserVo.money,type) + "<br/>");
+    Response.Write("【头衔】：" + WapTool.GetHandle(siteVo.lvlNumer, toUserVo.expr,toUserVo.money,type) + "<br/>");
+    Response.Write("【身份】：" + WapTool.GetMyID(toUserVo.idname, this.lang) + "<br/>");
+    Response.Write("【权限】：" + idtype + "<br/>");
+    Response.Write("【勋章】：" + WapTool.GetMedal(toUserVo.moneyname, this.http_start) + "<br/>");
+    Response.Write("【性别】：");
     if (toUserVo.sex == 1) { Response.Write(this.GetLang("男|男|Male")); } else { Response.Write(this.GetLang("女|女|Female")); }
     Response.Write("<br/>");
-    Response.Write("【年龄】:" + toUserVo.age + "<br/>");
-    Response.Write("【地区】:" + toUserVo.city + "<br/>");
-    Response.Write("【状态】:" + WapTool.GetOnline(this.http_start, toUserVo.isonline.ToString(), toUserVo.sex.ToString()) + "<br/>");
-    Response.Write("【积时】:" + WapTool.DateToString(toUserVo.LoginTimes, this.lang,0) + "<br/>");
-    Response.Write("【注册时间】:" + toUserVo.RegTime + "<br/>");
-    Response.Write("【最后活动时间】:" + toUserVo.LastLoginTime + "<br/>");
-    
-
+    Response.Write("【年龄】：" + toUserVo.age + "岁<br/>");
+    //Response.Write("【地区】：" + toUserVo.city + "<br/>");
+    Response.Write("【状态】：" + WapTool.GetOnline(this.http_start, toUserVo.isonline.ToString(), toUserVo.sex.ToString()) + "<br/>");
+    Response.Write("【积时】：" + WapTool.DateToString(toUserVo.LoginTimes, this.lang,0) + "<br/>");
+    Response.Write("【注册时间】：" + toUserVo.RegTime + "<br/>");
     toUserVo.aihao = toUserVo.aihao + "__";
     string[] arryqq = toUserVo.aihao.Split('_');
-
-    Response.Write("【QQ】:");
+    Response.Write("【QQ号】：");
     if (seeRight.IndexOf(",0,") >= 0 || (seeRight.IndexOf("," + userVo.SessionTimeout + ",") >= 0 && WapTool.showIDEndTime(siteVo.siteid ,userVo.userid, userVo.endTime) > 0))
     {
         
@@ -137,27 +116,14 @@ else //2.0界面
     {
         Response.Write("<a href=\"" + seeInfo + "\">升级VIP会员查看</a><br/>");
     }
-   
-    Response.Write("【身高】:" + toUserVo.shenggao + "<br/>");
-    Response.Write("【体重】:" + toUserVo.tizhong + "<br/>");
-    Response.Write("【星座】:" + toUserVo.xingzuo + "<br/>");
-    Response.Write("【爱好】:" + arryqq[0] + "<br/>");
-    Response.Write("【婚否】:" + toUserVo.fenfuo + "<br/>");
-    Response.Write("【职业】:" + toUserVo.zhiye + "<br/>");
-    Response.Write("【城市】:" + toUserVo.city + "<br/>");
-    Response.Write("【手机】:");
-    if (seeRight.IndexOf(",0,") >= 0 || (seeRight.IndexOf("," + userVo.SessionTimeout + ",") >= 0 && WapTool.showIDEndTime(siteVo.siteid, userVo.userid, userVo.endTime) > 0))
-    {
-        Response.Write(toUserVo.mobile + "<br/>");
-    }
-    else
-    {
-        Response.Write("<a href=\"" + seeInfo + "\">升级VIP会员查看</a><br/>");
-    }
-   
-
-    Response.Write("【型号】:" + this.myua + "<br/>");
-    Response.Write("【Email】:");
+    Response.Write("【身高】：" + toUserVo.shenggao + "<br/>");
+    Response.Write("【体重】：" + toUserVo.tizhong + "<br/>");
+    Response.Write("【星座】：" + toUserVo.xingzuo + "<br/>");
+    Response.Write("【爱好】：" + arryqq[0] + "<br/>");
+    Response.Write("【婚否】：" + toUserVo.fenfuo + "<br/>");
+    Response.Write("【职业】：" + toUserVo.zhiye + "<br/>");
+    Response.Write("【城市】：" + toUserVo.city + "<br/>");
+    Response.Write("【邮箱】：");
     if (seeRight.IndexOf(",0,") >= 0 || (seeRight.IndexOf("," + userVo.SessionTimeout + ",") >= 0 && WapTool.showIDEndTime(siteVo.siteid, userVo.userid, userVo.endTime) > 0))
     {
         Response.Write(toUserVo.email + "<br/>");
@@ -166,9 +132,6 @@ else //2.0界面
     {
         Response.Write("<a href=\"" + seeInfo + "\">升级VIP会员查看</a><br/>");
     }
-    Response.Write("【状态】:");
-    if (toUserVo.LockUser == 1) { Response.Write(this.GetLang("锁定|鎖定|Locked")); } else { Response.Write(this.GetLang("正常|正常|normal")); }
-
 
     Response.Write("</div>");
     Response.Write("<div class=\"btBox\"><div class=\"bt2\">");

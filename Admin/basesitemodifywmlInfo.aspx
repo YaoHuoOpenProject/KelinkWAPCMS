@@ -118,7 +118,7 @@ else //2.0界面
         
        %>
 <form name="f" action="<%=http_start%>admin/BaseSiteModifyWMLInfo.aspx" method="post">
- <div class=\"content\">
+ <div class="content">
 
 <%
     Response.Write(WapTool.GetSiteVIP(siteVo.siteVIP)); 

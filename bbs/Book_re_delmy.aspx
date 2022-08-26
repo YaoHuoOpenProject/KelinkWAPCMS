@@ -88,8 +88,8 @@ else //2.0界面
 
         Response.Write("<form name=\"f\" action=\"" + http_start + "bbs/book_re_delmy.aspx\" method=\"post\">");
 
-        Response.Write("删贴理由:<input type=\"text\" name=\"why\" value=\"" + why + "\" /><br/>");
-        Response.Write("我的密码:<input type=\"text\" name=\"pw\" value=\"" + pw + "\" /><br/>");
+        Response.Write("删贴理由：<input type=\"text\" name=\"why\" value=\"" + why + "\" /><br/>");
+        Response.Write("我的密码：<input type=\"text\" name=\"pw\" value=\"" + pw + "\" /><br/>");
         Response.Write("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
         Response.Write("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
         Response.Write("<input type=\"hidden\" name=\"reid\" value=\"" + (this.reid) + "\" />");

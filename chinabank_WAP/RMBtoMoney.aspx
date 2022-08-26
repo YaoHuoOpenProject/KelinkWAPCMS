@@ -51,7 +51,7 @@ if (ver == "1")
 
     if (this.INFO != "OK" && this.INFO!="CLOSE")
     {
-        strhtml.Append("我当前RMB:￥" + userVo.RMB.ToString("f2") + "<br/>当前" + siteVo.sitemoneyname + ":" + userVo.money + "<br/>");
+        strhtml.Append("我当前RMB:￥" + userVo.RMB.ToString("f2") + " [<a href=\"" + http_start + "chinabank_wap/selbank_wap.aspx?siteid=" + siteid +"\">充值账户</a>]<br/>当前" + siteVo.sitemoneyname + ":" + userVo.money + "<br/>");
         strhtml.Append("<b>￥:1.00 = " + STATE + " 个" + siteVo.sitemoneyname + "</b><br/>");
         
         strhtml.Append("输入金额￥：<br/>");
@@ -135,8 +135,8 @@ else //2.0界面
         
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "chinabank_wap/rmbtomoney.aspx\" method=\"post\">");
        
-        strhtml.Append("我当前RMB:￥" + userVo.RMB.ToString("f2") + "<br/>当前" + siteVo.sitemoneyname + ":" + userVo.money + "<br/>");
-        strhtml.Append("<b>￥:1.00 = " + STATE + " 个" + siteVo.sitemoneyname + "</b><br/>");
+        strhtml.Append("我的RMB：￥" + userVo.RMB.ToString("f2") + " [<a href=\"" + http_start + "chinabank_wap/selbank_wap.aspx?siteid=" + siteid +"\">充值</a>]<br/>当前" + siteVo.sitemoneyname + "：" + userVo.money + "<br/>");
+        strhtml.Append("<b>￥ 1 元 = " + STATE + " " + siteVo.sitemoneyname + "</b><br/>");
 
         strhtml.Append("输入金额(整数)￥：<br/>");
         strhtml.Append("<input type=\"text\" class=\"txt\" name=\"tomoney\" value=\"" + this.tomoney + "\"/><br/>");

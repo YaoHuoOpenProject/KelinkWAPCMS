@@ -121,7 +121,7 @@ else //2.0界面
     strhtml.Append("<br/>我的<a href=\"" + this.http_start + "games/shoot/book_list.aspx?type=0&amp;touserid=" + this.userid + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">挑战记录</a>|<a href=\"" + this.http_start + "games/shoot/book_list.aspx?type=1&amp;touserid=" + this.userid + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">应战记录</a>");
     strhtml.Append("<br/><a href=\"" + this.http_start + "games/shoot/add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\"><img src=\"ball.gif\" alt=\"PIC\"/>我要公开挑战</a>");
     strhtml.Append("</div>");
-    strhtml.Append("<div class=\"subtitle\">最新挑战-<a href=\""+this.http_start+"games/shoot/index.aspx?siteid="+this.siteid+"&amp;classid="+this.classid+"&amp;r="+this.r+"&amp;sid="+this.sid+"\">刷新</a></div>");
+    strhtml.Append("<div class=\"subtitle\">最新挑战-<a href=\""+this.http_start+"games/shoot/index.aspx?siteid="+this.siteid+"&amp;classid="+this.classid+"&amp;r="+this.r+"\">刷新</a></div>");
     //显示列表    
     for (int i = 0; (listVo != null && i < listVo.Count); i++)
     {
@@ -141,25 +141,23 @@ else //2.0界面
             del = "[<a href=\"" + this.http_start + "games/shoot/index.aspx?action=del&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + listVo[i].id + "\">删</a>]";
         }
         
-        strhtml.Append((i+1)+"."+del+"<a href=\""+this.http_start+"games/shoot/doit.aspx?siteid="+this.siteid+"&amp;classid="+this.classid+"&amp;id="+listVo[i].id+"&amp;sid="+this.sid+"\">"+listVo[i].nickName+"(ID"+listVo[i].userid+")公开挑战("+listVo[i].myMoney+siteVo.sitemoneyname+")</a></div>");
+        strhtml.Append((i+1)+"."+del+"<a href=\""+this.http_start+"games/shoot/doit.aspx?siteid="+this.siteid+"&amp;classid="+this.classid+"&amp;id="+listVo[i].id+"\">"+listVo[i].nickName+"(ID"+listVo[i].userid+")公开挑战("+listVo[i].myMoney+siteVo.sitemoneyname+")</a></div>");
     }
 
     if (listVo == null)
     {
         strhtml.Append("<div class=\"tip\">暂无挑战记录！</div>");
     }
-    strhtml.Append("<div class=\"subtitle\">聊天交流 <a class=\"urlbtn\" href=\"" + this.http_start + "games/shoot/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;r=" + this.r + "\">刷新</a></div>");
+    strhtml.Append("<div class=\"subtitle\">聊天交流区</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "games/chat/book_re.aspx\" method=\"post\">");
-    strhtml.Append("<textarea name=\"content\" rows=\"5\" class=\"KL_textarea\" style=\"width:100%\"></textarea><br/>");
-
+    strhtml.Append("<textarea name=\"content\" required=\"required\" rows=\"5\" class=\"KL_textarea\" style=\"width:96.6%\"></textarea><br/>");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"add\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"classid\" value=\"" + classid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"siteid\" value=\"" + siteid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"sid\" value=\"" + sid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"nid\" value=\"shoot\"/>");
-    strhtml.Append("<br/><input type=\"submit\" name=\"g\" class=\"btn\" value=\"" + this.GetLang("发言|发言|submit") + "\"/>");
-
+    strhtml.Append("<input type=\"submit\" name=\"g\" class=\"btn\" value=\"" + this.GetLang("发 言|发言|submit") + "\"/>");
     strhtml.Append("</form><br/>");
     if (showRe > 0)
     {
@@ -187,7 +185,7 @@ else //2.0界面
         }
         else
         {
-            strhtml.Append("<div class=\"bt1\"><a href=\"" + http_start + "games/chat/book_re.aspx?nid=shoot&amp;classid=" + classid + "&amp;siteid=" + siteid + "" + "\">查看更多...</a></div>");
+            strhtml.Append("<div class=\"more\"><a href=\"" + http_start + "games/chat/book_re.aspx?nid=shoot&amp;classid=" + classid + "&amp;siteid=" + siteid + "" + "\">查看更多</a></div>");
 
         }
 

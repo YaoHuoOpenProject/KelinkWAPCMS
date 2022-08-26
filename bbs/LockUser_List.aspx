@@ -82,16 +82,15 @@ else //2.0界面
     strhtml.Append("<div class=\"subtitle\">"+this.GetLang("黑名单列表|黑名单列表|Lock User List")+"</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/lockuser_list.aspx\" method=\"post\">");
-    strhtml.Append("会员ID:<input type=\"text\" name=\"touserid\" value=\"" + this.touserid + "\" size=\"5\"/>");
-    strhtml.Append("栏目ID:<input type=\"text\" name=\"toclassid\" value=\"" + this.toclassid + "\" size=\"5\"/><br/>");
-   
+    strhtml.Append("会员ID <input type=\"text\" required=\"required\" name=\"touserid\" value=\"" + this.touserid + "\"  style=\"height:19px;\" size=\"15\"/>");
+    //strhtml.Append("栏目ID <input type=\"text\" name=\"toclassid\" value=\"" + this.toclassid + "\" size=\"5\"/><br/>");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"class\" />");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + id + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"backurlid\" value=\"" + backurlid + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
-    strhtml.Append("<input type=\"submit\" name=\"g\" value=\"" + this.GetLang("搜索|搜索|Search") + "\"/> ");
+    strhtml.Append("<input type=\"submit\" name=\"g\" value=\"" + this.GetLang("查询|搜索|Search") + "\"/>");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/lockuser_list_add.aspx?action=go&amp;backurlid="+this.backurlid+"&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;toclassid=" + this.toclassid + "&amp;touserid=" + this.touserid + "\">加黑</a>");
     strhtml.Append("</form></div>");
     //显示列表
@@ -109,7 +108,7 @@ else //2.0界面
         index = index + kk;
 
         strhtml.Append(index + ".ID:<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + this.siteid + "&amp;touserid=" + listVo[i].lockuserid + "\">" + listVo[i].lockuserid + "</a>(<a href=\"" + this.http_start + "bbs/LockUser_List_del.aspx?action=go&amp;delid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;backurlid=" + this.backurlid + "&amp;touserid=" + this.touserid + "&amp;toclassid=" + this.toclassid + "\">解除</a>)<br/>");
-        strhtml.Append("加黑天数:" + listVo[i].lockdate + "<br/>");
+        //strhtml.Append("加黑天数:" + listVo[i].lockdate + "<br/>");
         strhtml.Append("开始时间:" + listVo[i].operdate + "<br/>");
         strhtml.Append("过期时间:");
         if (listVo[i].lockdate == 0)
@@ -120,8 +119,8 @@ else //2.0界面
         {
             strhtml.Append(listVo[i].lockdate + "天<br/>");
         }
-        strhtml.Append("限制栏目ID:" + listVo[i].classid + "<br/>");
-        strhtml.Append("操作人ID:" + listVo[i].operuserid + "");
+        //strhtml.Append("限制栏目ID:" + listVo[i].classid + "<br/>");
+        //strhtml.Append("操作人ID:" + listVo[i].operuserid + "");
         
         strhtml.Append("</div>");
     }
@@ -154,7 +153,7 @@ else //2.0界面
     }
     else
     {
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "" + "\">返回列表</a><br/>");
+        strhtml.Append("<a href=\"javascript:history.go(-1)\">返回上页</a> ");
     }
 
 

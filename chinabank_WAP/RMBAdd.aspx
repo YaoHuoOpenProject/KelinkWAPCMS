@@ -164,13 +164,13 @@ else //2.0界面
         Response.Write("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
         Response.Write("<input type=\"hidden\" name=\"backurl\" value=\"" + backurl + "\" />");
         Response.Write("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
-        Response.Write("用户ID：<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"5\"/>");
+        Response.Write("用户ID <input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" style=\"height:18px;\" size=\"20\"/>");
         Response.Write("<input type=\"submit\" value=\"查询\" /></form><br/>");
-        Response.Write("查询结果：<br/>");
+        //Response.Write("查询结果：<br/>");
         if (touserid != "")
         {
-
-            Response.Write("会员:" + this.touserid + "当前拥有RMB:￥" + this.toRMB);
+            //Response.Write("会员:" + this.touserid + "当前拥有RMB:￥" + this.toRMB);
+            Response.Write("当前拥有￥" + this.toRMB);
         }
 
 
@@ -182,15 +182,14 @@ else //2.0界面
         Response.Write("<input type=\"hidden\" name=\"touserid\" value=\"" + touserid + "\" />");
         Response.Write("<input type=\"hidden\" name=\"backurl\" value=\"" + backurl + "\" />");
         Response.Write("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
-        Response.Write("输入金额：<br/><input type=\"text\" name=\"addrmb\" value=\"" + addrmb + "\" size=\"25\"/><br/>");
-
-        Response.Write("说明：<br/><input type=\"text\" name=\"remark\" value=\"" + remark + "\" size=\"25\"/><br/>");
-        Response.Write("方式:<select name=\"state\">");
+        Response.Write("输入金额 <br/><input type=\"text\" name=\"addrmb\" value=\"" + addrmb + "\" size=\"44\"/><br/>");
+        Response.Write("说明原因 <br/><input type=\"text\" name=\"remark\" value=\"感谢支持" + remark + "\" size=\"44\"/><br/>");
+        Response.Write("方式 <select name=\"state\">");
         Response.Write("<option value=\"0\">手工入款</option>");
         Response.Write("<option value=\"1\">手工扣款</option>");
         Response.Write("</select><br/>");
-        Response.Write("我的密码：<br/>");
-        Response.Write("<input type=\"password\" name=\"changePW\" value=\"\"/><br/>");
+        Response.Write("我的密码<br/>");
+        Response.Write("<input type=\"password\" style=\"width:96%\" name=\"changePW\" value=\"\"/><br/>");
         Response.Write("<input type=\"submit\" value=\"确定\" />");
         Response.Write("</form>");
         Response.Write("</div>");

@@ -37,17 +37,15 @@
         }
         
         strhtml.Append("<div class=\"content\">");
-        strhtml.Append("将已过期的VIP会员，重置成普通会员。<br/>");
-
-        
+        //strhtml.Append("将已过期的VIP会员，重置成普通会员。<br/>");
         strhtml.Append("<Form name=\"f\" action=\"" + http_start + "bbs/ResetVIP.aspx\" method=\"post\">");
         strhtml.Append("<input name=\"action\"  type=\"hidden\" value=\"godoit\" />");
         strhtml.Append("<input name=\"siteid\"  type=\"hidden\" value=\"" + this.siteid + "\"  />");
         strhtml.Append("<input name=\"classid\"  type=\"hidden\" value=\"" + this.classid + "\"  />");
         strhtml.Append("<input name=\"sid\"  type=\"hidden\" value=\"" + this.sid + "\"  />");
         strhtml.Append("<input name=\"backurl\"  type=\"hidden\" value=\"" + this.backurl + "\"  />");
-        strhtml.Append("我的密码：<br />");
-        strhtml.Append("<input type=\"text\" name=\"topw\" value=\"\" maxlength=\"50\" /><br/>");
+        strhtml.Append("输入密码<br />");
+        strhtml.Append("<input type=\"text\" name=\"topw\" style=\"width:97%\" value=\"\" maxlength=\"50\" /><br/>");
         strhtml.Append("<input type=\"submit\" id=\"submit\" class=\"btn\" name=\"submit\" value=\"确认执行\" />");
         strhtml.Append("</Form><br/>");
 

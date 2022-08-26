@@ -79,14 +79,14 @@ else //2.0界面
     strhtml.Append("<b>经验获取:</b><br/>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("1.在线一分钟增加"+lvlmoney+"个。<br/>");
-    strhtml.Append("2.站长设置规则:<br/>");
-    strhtml.Append("发贴奖励数:" + WapTool.getLvLRegular(siteVo.lvlRegular, 0) + "个<br/>");
-    strhtml.Append("回贴奖励数:" + WapTool.getLvLRegular(siteVo.lvlRegular, 1) + "个<br/>");
-    strhtml.Append("加精奖励数:" + WapTool.getLvLRegular(siteVo.lvlRegular, 2) + "个<br/>");
-    strhtml.Append("置顶奖励数:" + WapTool.getLvLRegular(siteVo.lvlRegular, 3) + "个<br/>");
-    strhtml.Append("推荐奖励:" + WapTool.getLvLRegular(siteVo.lvlRegular, 4) + "个<br/>");
-    strhtml.Append("3.站长直接增加或兑换等<br/>");
+    //strhtml.Append("1.在线一分钟增加"+lvlmoney+"个。<br/>");
+    //strhtml.Append("2.站长设置规则:<br/>");
+    strhtml.Append("发贴奖励数：" + WapTool.getLvLRegular(siteVo.lvlRegular, 0) + "个<br/>");
+    strhtml.Append("回贴奖励数：" + WapTool.getLvLRegular(siteVo.lvlRegular, 1) + "个<br/>");
+    strhtml.Append("加精奖励数：" + WapTool.getLvLRegular(siteVo.lvlRegular, 2) + "个<br/>");
+    //strhtml.Append("置顶奖励数：" + WapTool.getLvLRegular(siteVo.lvlRegular, 3) + "个<br/>");
+    //strhtml.Append("推荐奖励：" + WapTool.getLvLRegular(siteVo.lvlRegular, 4) + "个<br/>");
+    //strhtml.Append("3.站长直接增加或兑换等<br/>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"subtitle\">");
     if (WapTool.GetSiteDefault(siteVo.Version, 27) == "1")
@@ -95,7 +95,7 @@ else //2.0界面
     }
     else
     {
-        strhtml.Append("<b>经验-头衔-等级</b><br/>");
+        strhtml.Append("<b>等级-头衔-经验</b><br/>");
     }
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
@@ -114,11 +114,11 @@ else //2.0界面
         {
             if (i == lvl0.Length - 1)
             {
-                strhtml.Append(string.Format("{0}:{1}:{2}<br/>", Convert.ToInt64(lvl0[i]) + 1, lvl1[i], lvl2[i]));
+                strhtml.Append(string.Format("{2}：{1}：{0}<br/>", Convert.ToInt64(lvl0[i]) + 1, lvl1[i], lvl2[i]));
             }
             else
             {
-                strhtml.Append(string.Format("{0}-{1}:{2}:{3}<br/>", Convert.ToInt64(lvl0[i]) + 1, lvl0[i + 1], lvl1[i], lvl2[i]));
+                strhtml.Append(string.Format("{3}：{2}：{0}-{1}<br/>", Convert.ToInt64(lvl0[i]) + 1, lvl0[i + 1], lvl1[i], lvl2[i]));
             }
         }
     }
@@ -134,12 +134,11 @@ else //2.0界面
     }
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"mylink\">");
-    strhtml.Append("(1)<a href=\"" + this.http_start + "bbs/tomoneyinfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">充值金币规则</a> ");
-    strhtml.Append("(2)<a href=\"" + this.http_start + "bbs/totimeinfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">在线时间规则</a> ");
+    strhtml.Append("(1)<a href=\"" + this.http_start + "bbs/tomoneyinfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">充值金币规则</a><br/>");
+    strhtml.Append("(2)<a href=\"" + this.http_start + "bbs/totimeinfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">在线时间规则</a><br/>");
     strhtml.Append("(3)经验头衔等级规则<br/>");
-    strhtml.Append("(4)<a href=\"" + this.http_start + "bbs/toXunZhangInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">自动奖励勋章规则</a> ");
-    
-    strhtml.Append("(5)<a href=\"" + this.http_start + "bbs/toGroupInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">用户身份级别规则</a> ");
+    //strhtml.Append("(4)<a href=\"" + this.http_start + "bbs/toXunZhangInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">自动奖励勋章规则</a>");
+    //strhtml.Append("(5)<a href=\"" + this.http_start + "bbs/toGroupInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">用户身份级别规则</a>");
 
     
     strhtml.Append("</div>");

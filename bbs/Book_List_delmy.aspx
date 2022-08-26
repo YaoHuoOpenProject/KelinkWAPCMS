@@ -89,8 +89,8 @@ else //2.0界面
        // Response.Write("<a href=\"" + this.http_start + "bbs/book_list_delmy.aspx?action=godel&amp;reid=" + this.reid + "&amp;touserid=" + this.touserid + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.page + "&amp;ot=" + this.ot + "\">" + this.GetLang("确定要清空此回复吗？是！|確定要刪除此回複嗎？是！|Are you sure? YES") + "</a><br/>");
         Response.Write("<form name=\"f\" action=\"" + http_start + "bbs/book_list_delmy.aspx\" method=\"post\">");
 
-        Response.Write("删贴理由:<input type=\"text\" name=\"why\" value=\"" + why + "\" /><br/>");
-        Response.Write("我的密码:<input type=\"text\" name=\"pw\" value=\"" + pw + "\" /><br/>");
+        Response.Write("删贴理由：<input type=\"text\" name=\"why\" value=\"" + why + "\" /><br/>");
+        Response.Write("我的密码：<input type=\"text\" name=\"pw\" value=\"" + pw + "\" /><br/>");
         Response.Write("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
         Response.Write("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
         Response.Write("<input type=\"hidden\" name=\"reid\" value=\"" + (this.reid) + "\" />");

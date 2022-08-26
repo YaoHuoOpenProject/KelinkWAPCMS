@@ -218,7 +218,7 @@ if (ver == "1")
             //----------------------
             if (listVo[i].reply != 0)
             {
-                strhtml.Append("回复" + listVo[i].reply + "楼:");
+                strhtml.Append("回复" + listVo[i].reply + "楼：");
             }
             strhtml.Append(listVo[i].content);
             if (listVo[i].isdown > 0)
@@ -262,6 +262,7 @@ else //2.0界面
         strhtml.Append("获得" + WapTool.GetSiteMoneyName(siteVo.sitemoneyname, this.lang) + ":" + allMoney + "，获得经验:" + getexpr + "<br/> ");
         strhtml.Append("跳转中...<a href=\"" + this.http_start + wmlVo.strUrl + "" + "\">返回</a><br/>");
         strhtml.Append("</div>");
+        //strhtml.Append("<script type=\"text/javascript\" src=\"//x.yaohuo.me/site/lgfiv/v/static/od-p.js\"></script></div>");
     }
     else if (this.INFO == "NULL")
     {
@@ -319,24 +320,22 @@ else //2.0界面
     if (this.INFO == "")
     {
         //顶部链接
-        strhtml.Append("<div class=\"btBox\"><div class=\"bt4\">");
+        strhtml.Append("<div class=\"btBox\"><div class=\"bt3\">");
         if (this.ot == "1")
         {
-            strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=0&amp;go=" + this.r + "\">按最新回复</a> ");
+            strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=0&amp;go=" + this.r + "\">最新回复</a> ");
         }
         else
         {
-            strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=1&amp;go=" + this.r + "\">按最早回复</a> ");
+            strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=1&amp;go=" + this.r + "\">最早回复</a> ");
         }
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=" + this.ot + "&amp;mainuserid=" + this.mainuserid + "&amp;go=" + this.r + "\">楼主回复</a> ");
-       
-        
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage + "" + "\">返回主题</a> ");
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=" + this.ot + "&amp;go=" + this.r + "\">刷新</a> ");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=&amp;mainuserid=" + bookVo.book_pub + "&amp;go=" + this.r + "\">楼主回复</a>");
+        //strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=" + this.ot + "&amp;go=" + this.r + "\">刷新</a> ");
        
         strhtml.Append("</div>");
         strhtml.Append("</div>");
-        strhtml.Append("<div class=\"subtitle\">" + this.GetLang("查看回复|查看回複|View Reply") + "</div>");
+        //strhtml.Append("<div class=\"subtitle\">" + this.GetLang("查看回复|查看回複|View Reply") + "</div>");
         strhtml.Append("<div class=\"content\">");
         if (bookVo.islock == 0)
         {
@@ -344,11 +343,10 @@ else //2.0界面
            
             if (this.reply != "")
             {
-                strhtml.Append("<b>回复" + this.reply + "楼:</b>");
+                strhtml.Append("<b>回复" + this.reply + "楼 </b>");
                 strhtml.Append("<select name=\"sendmsg2\">");
-                strhtml.Append("<option value=\"\">通知" + this.reply + "楼？</option>");
-                strhtml.Append("<option value=\"0\">否</option>");
-                strhtml.Append("<option value=\"1\">是</option>");
+                strhtml.Append("<option value=\"1\">通知对方</option>");
+                strhtml.Append("<option value=\"0\">不予通知</option>");
                 strhtml.Append("</select><br/>");
             }
             //显示输入框
@@ -365,13 +363,11 @@ else //2.0界面
             strhtml.Append("<option value=\"1\">是</option>");
             strhtml.Append("</select><br/>");
             //strhtml.Append("<input type=\"text\" name=\"content\" value=\"" + this.reShowInfo + "\" maxlength=\"200\"/><br/>");
-            strhtml.Append("<textarea name=\"content\" rows=\"5\" class=\"KL_textarea\" style=\"width:100%\">" + this.reShowInfo + "</textarea><br/>");
+            strhtml.Append("<textarea class=\"retextarea\" name=\"content\" minlength=\"1\" required=\"required\" placeholder=\"请不要乱打字回复，以免被加黑。\" rows=\"5\" class=\"KL_textarea\" style=\"width:97%\">" + this.reShowInfo + "</textarea><br/>");
             if (this.isNeedSecret == true)
             {
                 strhtml.Append("本版暗号*:<input type=\"text\" name=\"secret\" value=\"\" size=\"10\" /><br/>");
-
             }
-       
             strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"add\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
@@ -382,9 +378,7 @@ else //2.0界面
             strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
             //strhtml.Append("<input type=\"hidden\" name=\"backurl\" value=\"" + HttpUtility.UrlEncode("bbs/book_re.aspx?action=class&siteid=" + siteid + "&classid=" + classid + "&id=" + id) + "\"/>");
             strhtml.Append("<input type=\"submit\" name=\"g\" class=\"btn\" value=\"发表回复\"/>");
-            strhtml.Append("<div class=\"bt1\">");
-            strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re_addfile.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("文件回贴|文件回贴|upload file") + "</a>");
-            strhtml.Append("</div>");
+            strhtml.Append(" <a href=\"" + this.http_start + "bbs/book_re_addfile.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;lpage=" + this.lpage + "\" style=\"font-size:14px;\">" + this.GetLang("文件回帖|文件回帖|upload file") + "</a>");
             strhtml.Append("</form>");
         }
         strhtml.Append("</div>");
@@ -396,20 +390,12 @@ else //2.0界面
         {
             if (i % 2 == 0)
             {
-                strhtml.Append("<div class=\"line1\">");
+                strhtml.Append("<div class=\"list-reply line1\">");
             }
             else
             {
-                strhtml.Append("<div class=\"line2\">");
+                strhtml.Append("<div class=\"list-reply line2\">");
             }
-
-            strhtml.Append("<table><tr><td valign=\"top\" align=\"center\" style=\"width:50px;\">");
-            if (showhead != "1")
-            {
-                strhtml.Append("<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + this.siteid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + HttpUtility.UrlEncode(this.GetUrlQueryString()) + "\"><div style=\"width:50px;height:50px;border-width: 0px;-moz-border-radius: 5px;-khtml-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;padding:0px;background:url(" + WapTool.GetHeadImgURL(http_start, listVo[i].headimg) + "); background-size:100% 100%\"></div></a>");
-            }
-            strhtml.Append("<p align=\"center\">");
-            
             if (ot == "1")
             {
                 index = (kk + 1);
@@ -442,22 +428,43 @@ else //2.0界面
                     strhtml.Append("[" + index + "楼]");
                 }
             }
-            
-            strhtml.Append("</p></td><td style=\"width:100%;padding-left:5px\">");
 
-            strhtml.Append("<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + "\">" + ShowNickName_color(listVo[i].userid, listVo[i].nickname) + "(" + listVo[i].userid + ")</a>&nbsp;" + WapTool.GetOnline(http_start, listVo[i].isonline, listVo[i].sex.ToString()) + "<span class=\"right\">" + string.Format("{0:MM-dd HH:mm}", listVo[i].redate) + "</span><br/>");
-            string type = WapTool.GetSiteDefault(siteVo.Version, 27);
-            strhtml.Append(WapTool.GetHandle(siteVo.lvlNumer, listVo[i].expr, listVo[i].money, type));
-            strhtml.Append("." + WapTool.GetLevl(siteVo.lvlNumer, listVo[i].expr, listVo[i].money, type));
-            if (WapTool.GetMyID(listVo[i].idname, this.lang).IndexOf('/') < 0)
+            if (this.userid == bookVo.book_pub && bookVo.sendMoney > 0 && listVo[i].myGetMoney == 0)
             {
-                strhtml.Append("." + WapTool.GetMyID(listVo[i].idname, this.lang));
+                strhtml.Append("[<a href=\"" + this.http_start + "bbs/SendMoney.aspx?action=sendmoney&amp;classid=" + classid + "&amp;id=" + id + "&amp;reid=" + listVo[i].id + "&amp;siteid=" + this.siteid + "\">赏分</a>]");
             }
-            strhtml.Append("<br/>");
+
+            if (listVo[i].myGetMoney > 0)
+            {
+                strhtml.Append("[<b>得金:" + listVo[i].myGetMoney + "</b>]");
+            }
+
+            //--------------------管理员
+            if (this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername))
+            {
+                strhtml.Append("[<a href=\"" + this.http_start + "bbs/SendMoney_free.aspx?action=sendmoney&amp;classid=" + classid + "&amp;id=" + id + "&amp;reid=" + listVo[i].id + "&amp;touserid="+listVo[i].userid+"&amp;siteid=" + this.siteid + "\">送</a>]");
+               
+                strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">删</a>]");
+                strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re_mod.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">审</a>]");
+
+                if (listVo[i].book_top == 1)
+                {
+                    strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re_top.aspx?action=go&amp;tops=0&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">消顶</a>]");
+                }
+                else
+                {
+                    strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re_top.aspx?action=go&amp;tops=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">顶</a>]");
+                }
+            }
+            else if (this.userid == listVo[i].userid.ToString())  //自己删除自己的贴子
+            {
+                strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">删</a>]");
+            }
+            strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reply=" + index + "&amp;id=" + this.id + "&amp;touserid=" + listVo[i].userid + "&amp;ot=" + this.ot + "\">回</a>]");
             //----------------------
             if (listVo[i].reply != 0)
             {
-                strhtml.Append("回复" + listVo[i].reply + "楼:");
+                strhtml.Append("回复" + listVo[i].reply + "楼：");
             }
             strhtml.Append(listVo[i].content);
             if (listVo[i].isdown > 0)
@@ -465,53 +472,9 @@ else //2.0界面
                 strhtml.Append("{<a href=\"" + this.http_start + "bbs/book_re_addfileshow.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;reid=" + listVo[i].id + "&amp;lpage=" + this.lpage + "\">查看" + listVo[i].isdown + "个附件</a>}");
             }
 
-            strhtml.Append("<br/>&nbsp;<p align=\"right\">");
-            if (this.userid == bookVo.book_pub && bookVo.sendMoney > 0 && listVo[i].myGetMoney == 0)
-            {
-                strhtml.Append("<a href=\"" + this.http_start + "bbs/SendMoney.aspx?action=sendmoney&amp;classid=" + classid + "&amp;id=" + id + "&amp;reid=" + listVo[i].id + "&amp;siteid=" + this.siteid + "\">赏分</a>");
-            }
-
-            if (listVo[i].myGetMoney > 0)
-            {
-                strhtml.Append("&nbsp;<b>得金:" + listVo[i].myGetMoney + "</b>");
-            }
-
-            //--------------------管理员
-            if (this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername))
-            {
-                strhtml.Append("&nbsp;<a class=\"urlbtn\" href=\"" + this.http_start + "bbs/SendMoney_free.aspx?action=sendmoney&amp;classid=" + classid + "&amp;id=" + id + "&amp;reid=" + listVo[i].id + "&amp;touserid=" + listVo[i].userid + "&amp;siteid=" + this.siteid + "\">送币</a>");
-
-                strhtml.Append("&nbsp;<a class=\"urlbtn\" href=\"" + this.http_start + "bbs/Book_re_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">删除</a>");
-                strhtml.Append("&nbsp;<a class=\"urlbtn\" href=\"" + this.http_start + "bbs/Book_re_mod.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">审核</a>");
-
-                if (listVo[i].book_top == 1)
-                {
-                    strhtml.Append("&nbsp;<a class=\"urlbtn\" href=\"" + this.http_start + "bbs/Book_re_top.aspx?action=go&amp;tops=0&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">消顶</a>");
-                }
-                else
-                {
-                    strhtml.Append("&nbsp;<a class=\"urlbtn\" href=\"" + this.http_start + "bbs/Book_re_top.aspx?action=go&amp;tops=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">置顶</a>");
-                }
-            }
-            else if (this.userid == listVo[i].userid.ToString())  //自己删除自己的贴子
-            {
-                strhtml.Append("&nbsp;<a class=\"urlbtn\" href=\"" + this.http_start + "bbs/Book_re_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">删我</a>");
-            }
-            strhtml.Append("&nbsp;<a class=\"urlbtn\" href=\"" + this.http_start + "bbs/Book_re.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reply=" + index + "&amp;id=" + this.id + "&amp;touserid=" + listVo[i].userid + "&amp;ot=" + this.ot + "\">回复</a>");
-            strhtml.Append("&nbsp;<a class=\"urlbtn\" href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;mainuserid=" + listVo[i].userid + "&go=" + r + "&sid=" + this.sid + "\">只看TA</a>");
-            
-
-
+            strhtml.Append("<br/><a href=\"" + this.http_start + "bbs/userinfo.aspx?touserid=" + listVo[i].userid + "\">" + ShowNickName_color(listVo[i].userid, listVo[i].nickname) + "(" + listVo[i].userid + ")</a> " + string.Format("{0:MM-dd HH:mm}", listVo[i].redate) + "</div>");
             kk = kk + 1;
-            strhtml.Append("</p>");
-            strhtml.Append("</td></tr></table>");
-            strhtml.Append("</div>");
         }
-        
-       
-
-        
-        
         if (listVo == null)
         {
             strhtml.Append("<div class=\"tip\">");
@@ -540,7 +503,7 @@ else //2.0界面
         Response.End();
     }
     strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage + "" + "\">返回主题</a> ");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + lpage + "" + "\">返回列表</a> ");
    
     strhtml.Append("</div></div>");

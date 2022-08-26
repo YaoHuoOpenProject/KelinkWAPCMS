@@ -58,7 +58,7 @@ else //2.0界面
     
     strhtml.Append("<div class=\"title\">" + this.GetLang("在线时间规则|在线时间规则|Time online ") + "</div>");
     strhtml.Append("<div class=\"subtitle\">");
-    strhtml.Append("<b>在线时间(天)规则：</b>");
+    strhtml.Append("<b>在线天数与等级图标：</b>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
     try{
@@ -76,11 +76,11 @@ else //2.0界面
         {
             if (i == lvl0.Length - 1)
             {
-                strhtml.Append(string.Format("{0}:<img src=\"" + http_start + "bbs/medal/{1}\" alt=\"{2}\"/><br/>", Convert.ToInt32(lvl0[i]) + 1, lvl1[i], lvl1[i]));
+                strhtml.Append(string.Format("{0}：<img src=\"" + http_start + "bbs/medal/{1}\" alt=\"{2}\"/><br/>", Convert.ToInt32(lvl0[i]) + 1, lvl1[i], lvl1[i]));
             }
             else
             {
-                strhtml.Append(string.Format("{0}-{1}:<img src=\"" + http_start + "bbs/medal/{2}\" alt=\"{3}\"/><br/>", Convert.ToInt32(lvl0[i]) + 1, lvl0[i + 1], lvl1[i], lvl1[i]));
+                strhtml.Append(string.Format("{0}-{1}：<img src=\"" + http_start + "bbs/medal/{2}\" alt=\"{3}\"/><br/>", Convert.ToInt32(lvl0[i]) + 1, lvl0[i + 1], lvl1[i], lvl1[i]));
             }
         }
     }
@@ -99,9 +99,8 @@ else //2.0界面
     strhtml.Append("(1)<a href=\"" + this.http_start + "bbs/tomoneyinfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">充值金币规则</a><br/>");
     strhtml.Append("(2)在线时间规则<br/>");
     strhtml.Append("(3)<a href=\"" + this.http_start + "bbs/tolvlinfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">经验头衔等级规则</a><br/>");
-    strhtml.Append("(4)<a href=\"" + this.http_start + "bbs/toXunZhangInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">自动奖励勋章规则</a><br/>");
-    
-    strhtml.Append("(5)<a href=\"" + this.http_start + "bbs/toGroupInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">用户身份级别规则</a><br/>");
+    //strhtml.Append("(4)<a href=\"" + this.http_start + "bbs/toXunZhangInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">自动奖励勋章规则</a><br/>");
+    //strhtml.Append("(5)<a href=\"" + this.http_start + "bbs/toGroupInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">用户身份级别规则</a><br/>");
  
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");

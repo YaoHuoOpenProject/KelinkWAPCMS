@@ -219,9 +219,8 @@ function checkSelectNo(chkAllID)
                                                         <input id="Button4" name="" type="button" value=" 删 除 " onclick="DoDel()" class="bt" />
                                                         &nbsp;
                                                         <input id="Button2" name="" type="button" value="删除查询结果" onclick="DoDelAll()" class="bt" />
-                                                         &nbsp;
-                                                        <input id="Button1" name="" type="button" value="清空所有" onclick="DoDelAllNULL()" class="bt" />
-                                                        &nbsp; <font color=red>配制文件Web.config中参数：KL_CLOSE_LOG_INFO 表示是否关闭会员活动日志信息(wap_log表)，会生成大量记录，1为关闭，空或0为写入</font>
+                                                        &nbsp;
+                                                        <font color=red>配制文件Web.config中参数：KL_CLOSE_LOG_INFO 表示是否关闭会员活动日志信息(wap_log表)，会生成大量记录，1为关闭，空或0为写入</font>
                                                     </td>
                                                 </tr>
                                             </table>

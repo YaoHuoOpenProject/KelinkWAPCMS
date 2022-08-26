@@ -165,7 +165,7 @@ else //2.0界面
     strhtml.Append("<a href=\"" + this.http_start + "bbs/toDefineBBS.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "" + "\">[列表设置]</a><br/>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"bt2\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/lockuser_list.aspx?action=class&amp;backurlid=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=0\">[禁言名单]</a> ");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs/lockuser_list.aspx?action=class&amp;backurlid=1&amp;siteid=" + this.siteid + "&amp;classid=0\">[禁言名单]</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/Log_List.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=" + this.classid + "" + "\">[版务记录]</a><br/>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"bt2\">");
@@ -181,26 +181,11 @@ else //2.0界面
     strhtml.Append("<div class=\"bt2\">");
     
     strhtml.Append("<a href=\"" + this.http_start + "bbs/toBbsAdmin.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "" + "\">[版主设置]</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list_back.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "" + "\">[回收站←]</a>");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list_back.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "" + "\">[回 收 站]</a>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"bt1\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/toBbsType.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "" + "\">[类别和回复语设置]</a><br/>");
-    
-    strhtml.Append("<br/><a href=\"" + this.http_start + "bbs/toBbsSecret.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "" + "\">[本版暗号设置]</a> ");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs/toBbsType.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "" + "\">[类别和回复语设置]</a>");
     strhtml.Append("<br/><a href=\"" + this.http_start + "bbs/classconfigall.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "" + "\">[更多属性设置]</a>");
-    strhtml.Append("<br/><a href=\"" + this.http_start + "bbs/showadmin.aspx?action=remove&amp;siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "" + "\">[更新本区缓存]</a>");
-    strhtml.Append("<br/><a href=\"" + this.http_start + "bbs/showadmin.aspx?action=removeall&amp;siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "" + "\">[更新本站缓存]</a>");
-    
-    if (KL_BAK_SQLCONN != "")
-    {
-        strhtml.Append("<br/><a href=\"" + this.http_start + "bbs/book_list_bak.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "" + "\">[历史数据]</a>");
-    
-    }
-    else
-    {
-        strhtml.Append("<br/><a href=\"#\">[历史数据](暂时没有)</a>");
-
-    }
     strhtml.Append("</div>");
     strhtml.Append("</div>"); 
     

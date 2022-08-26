@@ -21,7 +21,7 @@ if (ver == "1")
     strhtml.Append("<p>");
     strhtml.Append("<a href=\""  + (backurl) +  "\">[返回源来页]</a><br/>");
 
-   strhtml.Append("<b>"+TA+"勋章</b>:<br/>" + WapTool.GetMedal(toUserVo.moneyname, this.http_start) + "<br/>");
+   strhtml.Append("<b>"+TA+"的勋章：</b><br/>" + WapTool.GetMedal(toUserVo.moneyname, this.http_start) + "<br/>");
 
 strhtml.Append("<a href=\""+http_start+"wapindex.aspx?siteid="+siteid+"&amp;sid="+sid+"\">返回首页</a>	");
 strhtml.Append(WapTool.GetVS(wmlVo));
@@ -38,7 +38,7 @@ else //2.0界面
     strhtml.Append("</div>");
 
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("<b>"+TA+"勋章:</b><br/>" + WapTool.GetMedal(toUserVo.moneyname, this.http_start) + "<br/>");
+    strhtml.Append("<b>"+TA+"的勋章：</b><br/>" + WapTool.GetMedal(toUserVo.moneyname, this.http_start) + "<br/>");
 
     strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");
    

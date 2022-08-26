@@ -125,7 +125,7 @@ else //2.0界面
     }
     strhtml.Append("<!--web-->");
     strhtml.Append("<div class=\"subtitle\">我的勋章</div>");
-    strhtml.Append("<div class=\"content\">" + WapTool.GetMedal(userVo.moneyname, http_start) + "<br/><a class=\"urlbtn\" href=\"" + http_start + "XinZhang/book_view_my.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + CurrentPage + "&amp;ordertype=" + this.ordertype + "" + "\">管理我的勋章</a></div>");
+    strhtml.Append("<div class=\"content\">" + WapTool.GetMedal(userVo.moneyname, http_start) + "<br/></div>");
 
     strhtml.Append("<div class=\"btBox\"><div class=\"bt4\">");
     strhtml.Append("<a");
@@ -179,7 +179,7 @@ else //2.0界面
         index = index + kk;
         strhtml.Append(index + "." + listVo[i].XinZhangMingChen + "<br/>");
         strhtml.Append("<img src=\"/" + listVo[i].XinZhangTuPian + "\" alt=\"" + listVo[i].XinZhangMingChen + "\"/><br/>价格:" + listVo[i].XinZhangJiaGe +" "+siteVo.sitemoneyname );
-        strhtml.Append("<a class=\"urlbtn\" href=\"" + http_start + "XinZhang/book_view_buy.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;id=" + listVo[i].ID  + "&amp;lpage=" + CurrentPage + "&amp;ordertype="+this.ordertype +"" + "\">购买</a> <br/>");
+        strhtml.Append(" <a class=\"urlbtn\" href=\"" + http_start + "XinZhang/book_view_buy.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;id=" + listVo[i].ID  + "&amp;lpage=" + CurrentPage + "&amp;ordertype="+this.ordertype +"" + "\">购买</a><br/>");
         strhtml.Append("</div>");
     }
 

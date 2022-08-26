@@ -63,7 +63,7 @@ if (ver == "1")
     //{
     //    strhtml.Append(adVo.threeShowTop );
     //}
-    strhtml.Append("<div class=\"subtitle\">购买勋章</div>" );
+    strhtml.Append("<div class=\"subtitle\">购买勋章（禁止重复购买）</div>" );
     
  
     
@@ -86,10 +86,10 @@ if (ver == "1")
         strhtml.Append("<div class=\"content\">");
         strhtml.Append("<b>" + bookVo.XinZhangMingChen + "</b><br/>");
         strhtml.Append("<img src=\"" +this.http_start + bookVo.XinZhangTuPian + "\" alt=\".\"/><br/>");
-        strhtml.Append("价格：" + bookVo.XinZhangJiaGe + " " + siteVo.sitemoneyname + "<br/>");
-        strhtml.Append("我当前拥有：" + userVo.money  + " " + siteVo.sitemoneyname + "<br/>");
+        strhtml.Append("价格：" + bookVo.XinZhangJiaGe + " " + siteVo.sitemoneyname + "<br/><br/>");
+        strhtml.Append("当前拥有：" + userVo.money  + " " + siteVo.sitemoneyname + " [<a href=\"" + http_start + "wapindex.aspx?classid=207\">赚币</a>]<br/><br/>");
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "xinzhang/book_view_buy.aspx\" method=\"post\">");
-        strhtml.Append("我的密码:<input type=\"text\" name=\"pw\" value=\"" + pw + "\" size=\"8\"/><br/>");
+        strhtml.Append("输入密码：<input type=\"text\" style=\"width: 65%; \" name=\"pw\" value=\"" + pw + "\" size=\"15\"/><br/><br/>");
         strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
         strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
         strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + (bookVo.ID) + "\" />");
@@ -104,7 +104,7 @@ if (ver == "1")
 
     string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码   
     strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
-    strhtml.Append("<a href=\"" + this.http_start + "XinZhang/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + this.lpage + "&amp;ordertype="+this.ordertype +"" + "\">返回上级</a> ");
+    strhtml.Append("<a href=\"/wapindex.aspx?classid=226\">返回上级</a> ");
   
         strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
  

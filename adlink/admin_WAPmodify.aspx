@@ -77,20 +77,19 @@ else //2.0界面
     Response.Write("</div>");
     Response.Write("<div class=\"content\">");
     Response.Write("<form name=\"go\" action=\"" + this.http_start + "adlink/admin_WAPmodify.aspx\" method=\"post\">");
-    Response.Write(this.GetLang("广告语|*广告语|Title") + "*:<br/>");
+    Response.Write(this.GetLang("广告语|*广告语|Title") + ":<br/>");
     Response.Write("<input type=\"text\" name=\"book_title\" value=\"" + bookVo.book_title + "\"/><br/>");
     Response.Write("(可用图片地址，如:http://abc.com/ad/1.jpg) <br/>");
-    Response.Write(this.GetLang("广告地址|广告地址|URL address") + "*:<br/>");
+    Response.Write(this.GetLang("广告地址|广告地址|URL address") + ":<br/>");
     Response.Write("<input type=\"text\"  name=\"book_content\" value=\"" + bookVo.book_content + "\" /><br/>");
-    Response.Write("(&amp;不用写成&amp;amp; 链接本站地址后面加入可防掉线！)<br/>");
     Response.Write("显示跳转提示:<select name=\"hasmoney\">");
     Response.Write("<option value=\"" + bookVo.hasMoney + "\">" + bookVo.hasMoney + "</option>");
     Response.Write("<option value=\"0\">0_否</option>");
     Response.Write("<option value=\"1\">1_是</option>");
     Response.Write("</select><br/>");
-    Response.Write(this.GetLang("点击送多少币|点击送多少币|send money") + "*:<br/>");
+    Response.Write(this.GetLang("点击送多少币|点击送多少币|send money") + ":<br/>");
     Response.Write("<input type=\"text\" name=\"sendmoney\" value=\"" + bookVo.sendMoney + "\"/><br/>");
-    Response.Write(this.GetLang("送币相隔时间|送币相隔时间|送币相隔时间") + "*:<br/>");
+    Response.Write(this.GetLang("送币相隔时间|送币相隔时间|送币相隔时间") + ":<br/>");
     Response.Write("<input type=\"text\" name=\"book_pub\" value=\"" + bookVo.book_pub + "\"/><br/>");
     Response.Write("(单位小时,0为不送)<br/>");
     

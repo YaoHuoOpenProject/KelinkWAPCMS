@@ -38,8 +38,8 @@ else //2.0界面
 {
 
     Response.Write("<div class=\"subtitle\">" + this.GetLang("修改操作|修改操作|Modify") + "</div>");
+	Response.Write("<div class=\"tip\">");
     Response.Write(this.ERROR);
-    Response.Write("<div class=\"tip\">");
     if (this.INFO == "OK")
     {
         Response.Write("<b>" + this.GetLang("修改成功！|修改成功！|Modify successfully!") + "</b> <a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.page + "&amp;ot=" + this.ot + "&amp;id=" + this.id + "\">" + this.GetLang("返回|返回|Back") + "</a><br/>");
@@ -52,8 +52,8 @@ else //2.0界面
     Response.Write("</div>");
     Response.Write("<div class=\"content\">");
     Response.Write("<form name=\"f\" aciont=\""+this.http_start+"bbs/Book_re_mod.aspx\" method=\"post\">");
-    Response.Write(this.GetLang("回复内容|回複內容|Reply Content") + "*:<br/>");
-    Response.Write("<input type=\"text\"  name=\"content\" value=\"" + bbsReVo.content + "\" /><br/>");    
+    Response.Write(this.GetLang("回复内容|回複內容|Reply Content") + "<br/>");
+    Response.Write("<input type=\"text\"  name=\"content\" value=\"" + bbsReVo.content + "\" style=\"width:97%;height:80px\"><br/>");    
     Response.Write("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
     Response.Write("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
     Response.Write("<input type=\"hidden\" name=\"reid\" value=\"" + reid + "\"/>");
@@ -64,10 +64,6 @@ else //2.0界面
     Response.Write("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
     Response.Write("<input type=\"submit\" name=\"g\" value=\"" + this.GetLang("修 改|修 改|Modify") + "\"/><br/>");
     Response.Write("</form></div>");
-    
-    Response.Write("<div class=\"subtitle\">");     
-    Response.Write("说明:为安全起见，普通会员发表回复内容中的[sid]会过滤掉，如有需要请添加回去！");
-    Response.Write("</div>");
 
     Response.Write("<div class=\"btBox\"><div class=\"bt1\">");   
     Response.Write("<a href=\"" + this.http_start + "bbs/book_re.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.page + "&amp;ot=" + this.ot + "&amp;id=" + this.id + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a>");

@@ -217,7 +217,7 @@ else //2.0界面
         }
         else
         {
-            strhtml.Append("<div class=\"bt1\"><a href=\"" + http_start + "games/chat/book_re.aspx?nid=egg&amp;classid=" + classid + "&amp;siteid=" + siteid + "" + "\">查看更多...</a></div>");
+            strhtml.Append("<div class=\"more\"><a href=\"" + http_start + "games/chat/book_re.aspx?nid=egg&amp;classid=" + classid + "&amp;siteid=" + siteid + "" + "\">查看更多</a></div>");
 
         }
 

@@ -86,7 +86,7 @@ else //2.0界面
      else if(this.INFO=="NULL")
     {
         strhtml.Append("<b>");
-        strhtml.Append("<b>标题最少" + this.titlemax + "字，内容最少" + this.contentmax + "字！</b><br/>");
+        strhtml.Append("<b>标题最少" + this.titlemax + "字，内容最少" + this.contentmax + "字！</b>");
         strhtml.Append("</b><br/>");
 
     }
@@ -96,48 +96,27 @@ else //2.0界面
         //显示表情
         strhtml.Append("<form name=\"go\" action=\"" + this.http_start + "bbs/book_view_mod.aspx\" method=\"post\">");
       
-        strhtml.Append("<select name=\"face\">");
+        strhtml.Append("<select name=\"face\" style=\"display:none;\">");
         strhtml.Append("<option value=\"\">表情</option>");
         for (int i = 0; (facelist != null && i < this.facelist.Length); i++)
         {
-            strhtml.Append("<option value=\"" + this.facelistImg[i] + "\">" + this.facelist[i] + "</option>");
         }
         strhtml.Append("</select>");
         //显示类别
-        strhtml.Append("<select name=\"stype\">");
+        strhtml.Append("<select name=\"stype\" style=\"display:none;\">");
         strhtml.Append("<option value=\"\">类别</option>");
         for (int i = 0; (stypelist != null && i < this.stypelist.Length); i++)
         {
-            strhtml.Append("<option value=\"" + this.stypelist[i] + "\">" + this.stypelist[i] + "</option>");
         }
-        strhtml.Append("</select><br/>");
+        strhtml.Append("</select>");
 
         
         strhtml.Append("<div class=\"content\">");
-        strhtml.Append(this.GetLang("标题|標題|Title") + "*:<br/>");
-        strhtml.Append("<input type=\"text\" name=\"book_title\" value=\"" + bbsVo.book_title + "\" style=\"width:100%\"/><br/>");
-        strhtml.Append(this.GetLang("作者|作者|Author") + ":" + bbsVo.book_author + "<br/>");
-        strhtml.Append(this.GetLang("内容|內容|Content") + "*:<br/>");
-        strhtml.Append("<textarea name=\"book_content\" rows=\"12\" style=\"width:100%\">" + bbsVo.book_content.Replace("[br]", "\r\n") + "</textarea><br/>");
-
-        strhtml.Append(this.GetLang("缩放图地址|缩放图地址|Photo") + "*:<br/>");
-        strhtml.Append("<input type=\"text\" name=\"book_img\" value=\"" + bbsVo.book_img + "\"/><br/>");
-
-        //查看条件
-        strhtml.Append("特殊贴:<select name=\"viewtype\">");
-        strhtml.Append("<option value=\"" + bbsVo.viewtype + "\">" + bbsVo.viewtype + "</option>");
-        strhtml.Append("<option value=\"0\">0_特殊贴↓</option>");
-        strhtml.Append("<option value=\"1\">1_登录可见</option>");
-        strhtml.Append("<option value=\"2\">2_手机可见</option>");
-        strhtml.Append("<option value=\"3\">3_回复可见</option>");
-        strhtml.Append("<option value=\"4\">4_金钱可见需要</option>");
-        strhtml.Append("<option value=\"5\">5_经验可见需要</option>");
-        strhtml.Append("<option value=\"6\">6_付费" + siteVo.sitemoneyname + "可见需要</option>");
-        strhtml.Append("<option value=\"7\">7_付费RMB可见需要</option>");
-        strhtml.Append("</select><br/>");
-        //查看值
-        strhtml.Append("需要:<input type=\"text\" format=\"*N\" name=\"viewmoney\" value=\"" + bbsVo.viewmoney + "\" size=\"4\" /><br/>");
-
+        strhtml.Append(this.GetLang("标题|標題|Title") + " <br/>");
+        strhtml.Append("<input type=\"text\" minlength=\"5\" maxlength=\"25\" required=\"required\" name=\"book_title\" value=\"" + bbsVo.book_title + "\" style=\"width:97%\"/><br/>");
+        //strhtml.Append(this.GetLang("作者|作者|Author") + "：" + bbsVo.book_author + "<br/>");
+        strhtml.Append(this.GetLang("内容|內容|Content") + " <br/>");
+        strhtml.Append("<textarea name=\"book_content\" minlength=\"15\" required=\"required\" rows=\"12\" style=\"width:97%\">" + bbsVo.book_content.Replace("[br]", "\r\n") + "</textarea><br/>");
         strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
         strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
         strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
@@ -162,7 +141,7 @@ else //2.0界面
     }
     
     strhtml.Append("<div class=\"btBox\"><div class=\"bt3\">");   
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回主题|返回主题|Back to subject") + "</a> ");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_admin.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回管理|返回上級|Back to admin") + "</a> ");
     strhtml.Append("</div></div>");

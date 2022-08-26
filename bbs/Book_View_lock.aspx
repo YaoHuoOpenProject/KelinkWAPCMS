@@ -21,7 +21,7 @@ if (ver == "1")
     {
         if (tops == "1")
         {
-        strhtml.Append("输入原因(150字)：<br/><input type=\"text\"  name=\"con"+r+"tent\" value=\""+this.whylock+"\"/><br/>");
+        strhtml.Append("输入原因(150字) <br/><input type=\"text\"  name=\"con"+r+"tent\" value=\""+this.whylock+"\"/><br/>");
         strhtml.Append("<anchor><go href=\""+http_start+"bbs/book_view_lock.aspx\" method=\"post\" accept-charset=\"utf-8\">");
         strhtml.Append("<postfield name=\"action\" value=\"gomod\"/>");
         strhtml.Append("<postfield name=\"id\" value=\""+ id+"\"/>");
@@ -66,7 +66,7 @@ else //2.0界面
         if (tops == "1")
         {
             strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/book_view_lock.aspx\" method=\"post\">");
-            strhtml.Append("输入原因(150字)：<br/><input type=\"text\"  name=\"whylock\" value=\"" + this.whylock + "\"/><br/>");
+            strhtml.Append("输入锁定原因 <br/><input type=\"text\" style=\"width:80%;\" name=\"whylock\" value=\"" + this.whylock + "\"/><br/>");
             strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
@@ -94,7 +94,7 @@ else //2.0界面
     {
         strhtml.Append("<div class=\"tip\">");
         strhtml.Append("<b>" + this.GetLang(lang1 + "锁定成功！|" + lang2 + "锁定成功！|" + lang3 + " TOP successfully!") + "</b> ");
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回主题|返回主题|Back to subject") + "</a>");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
    
         strhtml.Append("</div>");
     }
@@ -111,7 +111,7 @@ else //2.0界面
         Response.End();
     }
     strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回主题|返回主题|Back to subject") + "</a>");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
     strhtml.Append(" <a href=\"" + this.http_start + "bbs/book_view_admin.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回管理|返回上級|Back to admin") + "</a>");
     strhtml.Append("</div></div>");
     Response.Write(strhtml);

@@ -60,7 +60,6 @@ else //2.0界面
 
 
     strhtml.Append("<div class=\"subtitle\">" + this.GetLang("添加收藏|添加收藏|add favlist") + "</div>");
-    strhtml.Append("<div class=\"tip\">");
     if (this.INFO == "ADDOK")
     {
         strhtml.Append("<b>" + this.GetLang("添加成功！|添加成功！|add successfully!") + "</b><br/>");
@@ -71,9 +70,6 @@ else //2.0界面
         strhtml.Append("<b>" + this.GetLang("不能为空！|不能为空！|not null!") + "</b><br/>");
 
     }
-    strhtml.Append("</div>");
-    strhtml.Append("<div class=\"subtitle\">");
-    strhtml.Append("<a href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
     if (this.INFO != "ADDOK")
@@ -89,9 +85,9 @@ else //2.0界面
 
         }
         strhtml.Append("</select><br/>");
-        strhtml.Append("说明*:<br/>");
+        strhtml.Append("说明：<br/>");
         strhtml.Append("<input type=\"text\" name=\"title\" value=\"" + title + "\"/><br/>");
-        strhtml.Append("地址*:<br/>");
+        strhtml.Append("地址：<br/>");
         strhtml.Append("<input type=\"text\" name=\"url\" value=\"" + url + "\"/><br/>");
         
         strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"goadd\" />");

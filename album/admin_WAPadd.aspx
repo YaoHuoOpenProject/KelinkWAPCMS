@@ -14,7 +14,6 @@ if (ver == "1")
 }
 else //2.0界面
 {
-
     if (ERROR != "")
     {
         strhtml.Append("<div class=\"tip\">");
@@ -24,14 +23,13 @@ else //2.0界面
     
     if (this.INFO == "OK")
     {
-
         strhtml.Append("<div class=\"tip\">");
         strhtml.Append("<b>上传成功！</b> ");
         if (siteVo.isCheck == 1)
         {
             strhtml.Append("<b>审核后显示！</b> ");
         }
-        strhtml.Append(" <a class=\"urlbtn\" href=\"" + this.http_start + "album/albumlist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;smalltypeid=" + this.smalltypeid + "\">" + this.GetLang("返回|返回|Back to list") + "</a>");
+        strhtml.Append(" <a class=\"urlbtn\" href=\"" + this.http_start + "album/albumlist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;smalltypeid=" + this.smalltypeid + "\">" + this.GetLang("返回设为头像|返回|Back to list") + "</a>");
         strhtml.Append("</div>");
     }
     else if (this.INFO == "EXTERR")
@@ -71,110 +69,80 @@ else //2.0界面
         strhtml.Append("<b>抱歉，您已经被加入黑名单，请注意发贴规则！</b><br/>");
         strhtml.Append("</div>");
     }
-
-
-   
-    
-    
-    
     strhtml.Append("<div class=\"subtitle\">" + this.GetLang("上传相片|上传相片|Add operation") + "</div>");
-   
     strhtml.Append("<div class=\"content\">");
     //选多少个
-    
     strhtml.Append("<form name=\"g1\" action=\"" + http_start + "album/admin_WAPadd.aspx\" method=\"get\">");
-    strhtml.Append(this.GetLang("上传数量|上传数量|Upload Number") + " <input type=\"text\" name=\"num\" value=\"" + this.num + "\" size=\"2\"/>");   
+    //strhtml.Append(this.GetLang("上传数量|上传数量|Upload Number") + " <input type=\"text\" name=\"num\" value=\"" + this.num + "\" size=\"2\"/>");   
+    strhtml.Append("<input type=\"hidden\" name=\"num\" value=\"1" + this.num + "\" size=\"2\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"go\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"classid\" value=\"" + classid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"siteid\" value=\"" + siteid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"smalltypeid\" value=\"" + smalltypeid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"sid\" value=\"" + sid + "\"/>");
-    strhtml.Append(" <input type=\"submit\"  name=\"bt\" value=\"" + this.GetLang("确定|确定|GO") + "\"/></form>");
-    
-    strhtml.Append("<br/>");
-
-    
+    strhtml.Append("<input type=\"hidden\"  name=\"bt\" value=\"" + this.GetLang("确定|确定|GO") + "\"/></form>");
+    //strhtml.Append("<br/>");
     //选择栏目
     strhtml.Append("<form name=\"gt\" action=\"" + http_start + "album/admin_WAPadd.aspx\" enctype=\"multipart/form-data\" method=\"post\">");
-    strhtml.Append(this.GetLang("标题|標題|Title") + "*:<br/>");
-    strhtml.Append("<input type=\"text\" name=\"book_title\" class=\"txt\" value=\""+book_title+"\"/><br/>");
-    
-
-    strhtml.Append(this.GetLang("相片介绍|相片介绍|Introduction") + "*:<br/>");
-    strhtml.Append("<textarea name=\"book_content\" rows=\"5\" style=\"width:100%\">"+book_content+"</textarea><br/>");
-    
- 
-  
-    strhtml.Append(this.GetLang("图宽|图宽|Width") + ":<input type=\"text\" name=\"swidth\" size=\"5\" value=\"" + swidth + "\"/>");
-    strhtml.Append(this.GetLang("图高|图高|Height") + ":<input type=\"text\" name=\"sheight\" size=\"5\" value=\"" + sheight + "\"/><br/>");
-    strhtml.Append("(不缩放,请留空,只输入宽或高,不变型)<br/>");
-    strhtml.Append(this.GetLang("我的分类|我的分类|Class of Album") + "*:");
-    strhtml.Append("<select name=\"smalltypeid\" class=\"KL_select\">");
+    strhtml.Append(this.GetLang("<br/>图片名|標題|Title") + " ");
+    strhtml.Append("<input type=\"text\" name=\"book_title\" style=\"width:150px;\" class=\"txt\" value=\"自定义头像\"/><br/><br/>");
+    //strhtml.Append(this.GetLang("介绍|介绍|Introduction") + "：<br/>");
+    //strhtml.Append("<textarea name=\"book_content\" rows=\"5\" style=\"width:99%\">"+book_content+"</textarea><br/>");
+    //strhtml.Append(this.GetLang("图高|图高|Height") + "：<input type=\"text\" name=\"sheight\" size=\"5\" value=\"" + sheight + "\"/>");
+    //strhtml.Append(this.GetLang("我的分类|我的分类|Class of Album") + "：");
+    strhtml.Append("<select style=\"display:none;\" name=\"smalltypeid\" class=\"KL_select\">");
     strhtml.Append("<option value=\"" + this.smalltypeid + "\">" + this.smalltypeid + "</option>");
     strhtml.Append("<option value=\"0\">0_默认</option>");
     for (int k = 0; (smallTypeList != null && k < smallTypeList.Count); k++)
     {
-
         strhtml.Append("<option value=\"" + smallTypeList[k].id + "\">" + smallTypeList[k].id + "_" + smallTypeList[k].subjectname + "</option>");
-
     }
-    strhtml.Append("</select><br/>");
-    strhtml.Append(this.GetLang("系统分类|系统分类|Class") + "*:");
-    strhtml.Append("<select name=\"toclassid\" class=\"KL_select\">");
+    strhtml.Append("</select>");
+    //strhtml.Append(this.GetLang("系统分类|系统分类|Class") + "：");
+    strhtml.Append("<select style=\"display:none;\" name=\"toclassid\" class=\"KL_select\">");
     strhtml.Append("<option value=\"" + this.classid + "\">" + this.classid + "</option>");
     strhtml.Append("<option value=\"0\">0_默认</option>");
     for (int i = 0; (classList != null && i < classList.Count); i++)
     {
-
-        strhtml.Append("<option value=\"" + classList[i].classid + "\">" + classList[i].classid + "_" + classList[i].classname + "</option>");
-
+    strhtml.Append("<option value=\"" + classList[i].classid + "\">" + classList[i].classid + "_" + classList[i].classname + "</option>");
     }
-    strhtml.Append("</select><br/>");
-    strhtml.Append(this.GetLang("公开|公开|公开") + "*:");
-    strhtml.Append("<select name=\"ishidden\" class=\"KL_select\">");
-    strhtml.Append("<option value=\"0\">0_是</option>");
-    strhtml.Append("<option value=\"1\">1_否</option>");
-    strhtml.Append("</select><br/>");  
+    strhtml.Append("</select>");
+    //strhtml.Append(this.GetLang("隐私|公开|公开") + "：");
+    strhtml.Append("<select style=\"display:none;\" name=\"ishidden\" class=\"KL_select\">");
+    strhtml.Append("<option value=\"1\">公开</option>");
+    strhtml.Append("<option value=\"1\">隐藏</option>");
+    strhtml.Append("</select>");  
     for (int i = 0; i < this.num; i++)
     {
-        strhtml.Append("---"+this.GetLang("相片|相片|Source") + (i + 1) + "---<br/>");
-       
-        strhtml.Append("<input type=\"file\" name=\"book_file\" value=\"\"/><br/>");
+        //strhtml.Append("---"+this.GetLang("相片|相片|Source") + (i + 1) + "---<br/>");
+        strhtml.Append("<input style=\"border:0px;\" type=\"file\" name=\"book_file\" required=\"required\" onchange=\"fileChange(this);\" value=\"\"/><br/>");
+        strhtml.Append("<script charset=\"utf-8\" type=\"text/javascript\" src=\"/CSS/JS/uphoto.js\"></script>");
     }
-
-       
-
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"num\" value=\"" + num + "\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
-    strhtml.Append("<input type=\"submit\"  name=\"bt\" class=\"btn\" value=\"" + this.GetLang("上传|上传|submit") + "\"/></form>");
+    strhtml.Append("<br/><input type=\"submit\"  name=\"bt\" class=\"btn\" value=\"" + this.GetLang("上 传|上 传|submit") + "\"/></form><br/>");
     strhtml.Append("</div>");
+	strhtml.Append("<div class=\"tip\">"); 
+	strhtml.Append("警告：严禁上传色情图片，违者永久封号。"); 
+	strhtml.Append("</div>");
     string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码   
-
     strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");
-    strhtml.Append("<a href=\"" + this.http_start + "album/albumlist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;smalltypeid=" + this.smalltypeid + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a>");
-
+    strhtml.Append("<a href=\"" + this.http_start + "album/albumlist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;smalltypeid=" + this.smalltypeid + "\">" + this.GetLang("相片列表|相片列表|Back to list") + "</a>");
+    strhtml.Append("<a href=\"javascript:history.go(-1)\">返回上级</a>");
     strhtml.Append("</div></div>");
-
-    
     if (isWebHtml != "")
     {
         string strhtml_list = strhtml.ToString();
         //int s = strhtml_list.IndexOf("<div class=\"title\">");
         //strhtml_list = strhtml_list.Substring(s, strhtml_list.Length - s);
-
         Response.Clear();
         Response.Write(WapTool.ToWML(isWebHtml.Replace("[view]", strhtml_list), wmlVo));
         Response.End();
     }
     Response.Write(strhtml);
 }
-                                                                                                                                                                               
-                                                                                                                                                                             
 //显示底部
 Response.Write(WapTool.showDown(wmlVo)); %>
-
-
-

@@ -114,7 +114,7 @@ if (ver == "1")
     {
         strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=1&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清空系统消息</a>.");
         strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清空聊天消息</a><br/>");
-        strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=2&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清空收藏消息</a>.");
+        //strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=2&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清空收藏消息</a>.");
 
     }
     strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=" + this.types + "&amp;issystem=&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清所有" + this.GetLang(msgbox) + "</a><br/>");
@@ -139,10 +139,8 @@ else //2.0界面
     //strhtml.Append("<a class=\"urlbtn\" href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a><br/>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
-    
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/messagelist.aspx\" method=\"post\">");
-    strhtml.Append("关键字:<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"8\"/>");
-    
+    strhtml.Append("关键字 <input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"25\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"class\" />");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
@@ -160,24 +158,24 @@ else //2.0界面
         strhtml.Append("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=2&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">" + this.GetLang("发件箱|发件箱|Send") + "</a>");
 
         strhtml.Append("</div><div class=\"content\">");
-        strhtml.Append("收件箱[");
+        strhtml.Append("收件箱 [");
         if (issystem == "")
         {
-            strhtml.Append("所有.<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=1&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">系统</a>.<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">聊天</a>.<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=2&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">收藏</a>");
+            strhtml.Append("所有 <a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=1&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">系统</a> <a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">聊天</a>");
         }
         else if (issystem == "0")
         {
-            strhtml.Append("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">所有</a>.<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=1&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">系统</a>.聊天.<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=2&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">收藏</a>");
+            strhtml.Append("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">所有</a> <a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=1&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">系统</a> 聊天");
        
         }
         else if (issystem == "1")
         {
-            strhtml.Append("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">所有</a>.系统.<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">聊天</a>.<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=2&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">收藏</a>");
+            strhtml.Append("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">所有</a> 系统 <a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">聊天</a>");
 
         }
         else if (issystem == "2")
         {
-            strhtml.Append("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">所有</a>.<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=1&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">系统</a>.<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">聊天</a>.收藏");
+            strhtml.Append("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">所有</a> <a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=1&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">系统</a> <a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">聊天</a>");
 
         }
         strhtml.Append("]");
@@ -199,11 +197,11 @@ else //2.0界面
     {
         if (i % 2 == 0)
         {
-            strhtml.Append("<div class=\"line1\">");
+            strhtml.Append("<div class=\"listmms line1\">");
         }
         else
         {
-            strhtml.Append("<div class=\"line2\">");
+            strhtml.Append("<div class=\"listmms line2\">");
         }
         index = index + kk;
         strhtml.Append(index + ".");
@@ -227,7 +225,6 @@ else //2.0界面
         strhtml.Append(" [<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist_del.aspx?action=del&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + listVo[i].id + "&amp;types=" + this.types + "&amp;issystem=" + this.issystem + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\" >删除</a>");
         if (types!="2" && issystem != "2")
         {
-            strhtml.Append(".<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist.aspx?action=save&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + listVo[i].id + "&amp;types=" + this.types + "&amp;issystem=" + this.issystem + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">收藏</a>");
        
         }
         strhtml.Append("]");
@@ -257,7 +254,7 @@ else //2.0界面
     {
         strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=1&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清空系统消息</a> ");
         strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=0&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清空聊天消息</a> ");
-        strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=2&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清空收藏消息</a> ");
+        //strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=2&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清空收藏消息</a> ");
    
     }
     strhtml.Append("<a href=\"" + http_start + "bbs/messagelist_del.aspx?action=delall&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=" + this.types + "&amp;issystem=&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.CurrentPage + "" + "\">清所有" + this.GetLang(msgbox) + "</a> ");

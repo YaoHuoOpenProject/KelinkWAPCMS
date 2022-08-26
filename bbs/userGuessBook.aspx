@@ -161,9 +161,8 @@ else //2.0界面
 
     //显示输入框
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/userguessbook.aspx\" method=\"post\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/userguessbook_pic.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.touserid + "&amp;ot=" + this.ot + "&amp;go=" + this.r + "\"><img src=\"" + this.http_start + "bbs/face/" + face + ".gif\" alt=\"表情\"/></a>");
-    strhtml.Append("<textarea name=\"content\" rows=\"5\" class=\"KL_textarea\" style=\"width:100%\"></textarea><br/>");
-          
+    //strhtml.Append("<a href=\"" + this.http_start + "bbs/userguessbook_pic.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.touserid + "&amp;ot=" + this.ot + "&amp;go=" + this.r + "\"><img src=\"" + this.http_start + "bbs/face/" + face + ".gif\" alt=\"表情\"/></a>");
+    strhtml.Append("<textarea name=\"content\" rows=\"5\" class=\"KL_textarea\" style=\"width:97%\" required=\"required\"></textarea><br/>");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"add\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"touserid\" value=\"" + touserid + "\"/>");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
@@ -183,7 +182,7 @@ else //2.0界面
             strhtml.Append("class=\"btSelect\" ");
         }
     
-        strhtml.Append("href=\"" + this.http_start + "bbs/userguessbook.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.touserid + "&amp;ot=0&amp;go=" + this.r + "\">按最新回复</a> ");
+        strhtml.Append("href=\"" + this.http_start + "bbs/userguessbook.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.touserid + "&amp;ot=0&amp;go=" + this.r + "\">最新留言</a> ");
    
         strhtml.Append("<a ");
         if (this.ot == "1")
@@ -191,7 +190,7 @@ else //2.0界面
             strhtml.Append("class=\"btSelect\" ");
         }
     
-        strhtml.Append("href=\"" + this.http_start + "bbs/userguessbook.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.touserid + "&amp;ot=1&amp;go=" + this.r + "\">按最早回复</a> ");
+        strhtml.Append("href=\"" + this.http_start + "bbs/userguessbook.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.touserid + "&amp;ot=1&amp;go=" + this.r + "\">最早留言</a> ");
 
 
         strhtml.Append("</div></div>");

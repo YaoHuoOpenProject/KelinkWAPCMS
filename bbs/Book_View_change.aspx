@@ -75,9 +75,9 @@ else //2.0界面
     }
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append(this.GetLang("原栏目ID|原欄目ID|Original classID") + ": " + classid + "<br/>");
-    strhtml.Append(this.GetLang("原栏目名|原欄目名|Class Name") + ": " + classVo.classname + "<br/>");
-    strhtml.Append(this.GetLang("转移后栏目|轉移後欄目|Change ClassID") + "*:<br/>");
+    strhtml.Append(this.GetLang("原栏目ID|原欄目ID|Original classID") + "： " + classid + "<br/>");
+    strhtml.Append(this.GetLang("原栏目名|原欄目名|Class Name") + "： " + classVo.classname + "<br/>");
+    strhtml.Append(this.GetLang("转移后栏目|轉移後欄目|Change ClassID") + "：<br/>");
     //下拉选择
     strhtml.Append("<form name=\"go\" action=\"book_view_change.aspx\" method=\"post\">");
     strhtml.Append("<select name=\"toclassid\" value=\"" + this.classid + "\">");
@@ -112,7 +112,7 @@ else //2.0界面
         Response.End();
     }
     strhtml.Append("<div class=\"btBox\"><div class=\"bt3\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.toclassid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回主题|返回主题|Back to subject") + "</a> ");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_admin.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回管理|返回上級|Back to admin") + "</a> ");
     strhtml.Append("</div></div>");

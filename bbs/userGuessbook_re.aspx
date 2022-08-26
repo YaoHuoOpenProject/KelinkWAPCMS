@@ -59,7 +59,7 @@ else //2.0界面
     Response.Write("</div>");
     Response.Write("<div class=\"content\">");
     Response.Write("<form name=\"f\" aciont=\""+this.http_start+"bbs/userguessbook_re.aspx\" method=\"post\">");
-    Response.Write(this.GetLang("回复内容|回複內容|Reply Content") + "*:<br/>");
+    Response.Write(this.GetLang("回复内容|回複內容|Reply Content") + "：<br/>");
     Response.Write("<a href=\"" + this.http_start + "bbs/userguessbook_pic.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "&amp;touserid=" + this.touserid + "&amp;ot=" + this.ot + "&amp;go=" + this.r + "&amp;reid="+this.reid+"\"><img src=\"" + this.http_start + "bbs/face/" + face + ".gif\" alt=\"表情\"/></a>");
     Response.Write("<textarea name=\"content\" rows=\"5\" class=\"KL_textarea\" style=\"width:100%\"></textarea><br/>");
              

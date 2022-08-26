@@ -36,15 +36,14 @@ Response.Write (strhtml);
 strhtml.Append("<form id=\"form1\" action=\""+this.http_start +"bbs/book_list.aspx\" method=\"get\">");
 strhtml.Append("<div class=\"subtitle\">论坛搜索</div>");
 strhtml.Append("<div class=\"content\">");
-strhtml.Append("请输入关键字：<br/>");
-strhtml.Append("<input type=\"text\" name=\"key\" value=\"\"/><br/>");
-strhtml.Append("选择搜索项：<br/>");
+strhtml.Append("输入关键字<br/>");
+strhtml.Append("<input type=\"text\" name=\"key\" style=\"width:80%\" value=\"\"/><br/>");
+strhtml.Append("选择搜索项<br/>");
 strhtml.Append("<select name=\"type\">");
-strhtml.Append("<option value=\"title\">贴子标题</option>");
-strhtml.Append("<option value=\"author\">贴子作者</option>");
+strhtml.Append("<option value=\"title\">帖子标题</option>");
+strhtml.Append("<option value=\"author\">帖子作者</option>");
 strhtml.Append("<option value=\"pub\">会员ID</option>");
-strhtml.Append("<option value=\"days\">N天前(上面输入天数)</option>");
-strhtml.Append("</select><br/>");
+strhtml.Append("</select>");
 strhtml.Append("<input type=\"submit\" value=\"快速搜索\" class=\"btn\"/>");
 strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"search\" />");
 strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\""+this.siteid +"\" />");
@@ -60,6 +59,7 @@ strhtml.Append("<a href=\""+this.http_start +"wapindex.aspx?siteid="+this.siteid
     strhtml.Append("</div></div>");
 strhtml.Append("</form>");
 
+        strhtml.Append("<script type=\"text/javascript\" src=\"//x.yaohuo.me/common/oj/il/openjs/yy/resource/r/fg.js\"></script>");
 
 
 if (isWebHtml != "")

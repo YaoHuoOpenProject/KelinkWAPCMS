@@ -22,32 +22,7 @@ if (ver == "1")
    }
    strhtml.Append("<img src=\"" + this.http_start + this.path + "\" alt=\"PIC\"/><br/><br/>");
    strhtml.Append("<a href=\"" + this.http_start + this.path + "\">原始(" + ext + ")下载</a><br/>");
-   strhtml.Append("自定义图片:<br/>");
-   strhtml.Append(this.GetLang("图宽|图宽|Width") + ":<input type=\"text\" name=\"swidth" + r + "\" size=\"3\" value=\"\"/>px<br/> ");
-   strhtml.Append(this.GetLang("图高|图高|Height") + ":<input type=\"text\" name=\"sheight" + r + "\" size=\"3\" value=\"\"/>px<br/>");
-   strhtml.Append("(建议只输入其中一项保持不变形)<br/>");
 
-   strhtml.Append("<anchor><go href=\"" + http_start + "bbs/picDIY.aspx\" method=\"post\" accept-charset=\"utf-8\">");
-   strhtml.Append("<postfield name=\"action\" value=\"gomod\"/>");
-   strhtml.Append("<postfield name=\"classid\" value=\"" + classid + "\"/>");
-   strhtml.Append("<postfield name=\"siteid\" value=\"" + siteid + "\"/>");
-   strhtml.Append("<postfield name=\"lpage\" value=\"" + lpage + "\"/>");
-   strhtml.Append("<postfield name=\"id\" value=\"" + id + "\"/>");
-   strhtml.Append("<postfield name=\"path\" value=\"" + path + "\"/>");
-   strhtml.Append("<postfield name=\"swidth\" value=\"$(swidth" + r + ")\"/>");
-   strhtml.Append("<postfield name=\"sheight\" value=\"$(sheight" + r + ")\"/>");
-   strhtml.Append("<postfield name=\"sid\" value=\"" + sid + "\"/>");
-   strhtml.Append("</go>" + this.GetLang("生成下载|生成下载|submit") + "</anchor><br/>");
-   strhtml.Append("其它:<br/>");
-
-
-   strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=128&amp;sheight=128\">128*128</a><br/>");
-   strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=128&amp;sheight=160\">128*160</a><br/>");
-   strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=208&amp;sheight=208\">208*208</a><br/>");
-   strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=220&amp;sheight=176\">220*176</a><br/>");
-   strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=240&amp;sheight=320\">240*320</a><br/>");
-   strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=480&amp;sheight=800\">480*800</a><br/>");
-   strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=640&amp;sheight=800\">640*800</a><br/>"); 
     strhtml.Append("----------<br/>");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id="+this.id+"&amp;lpage="+this.lpage+"" + "\">返回上级</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
@@ -82,33 +57,7 @@ if (ver == "1")
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<img src=\"" + this.http_start + this.path + "\" alt=\"PIC\"/><br/>");
     strhtml.Append("<a href=\"" + this.http_start + this.path + "\">原始(" + ext + ")下载</a><br/><br/>");
-    strhtml.Append("自定义图片:<br/>");
-    strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/picDIY.aspx\" method=\"post\">");
-    strhtml.Append(this.GetLang("图宽|图宽|Width") + ":<input type=\"text\" name=\"swidth\" size=\"3\" value=\"\"/>px<br/> ");
-    strhtml.Append(this.GetLang("图高|图高|Height") + ":<input type=\"text\" name=\"sheight\" size=\"3\" value=\"\"/>px<br/>");
-    strhtml.Append("(建议只输入其中一项保持不变形)<br/>");
-    
-    strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
-    strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
-    strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
-    strhtml.Append("<input type=\"hidden\" name=\"lpage\" value=\"" + lpage + "\"/>");
-    strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
-    strhtml.Append("<input type=\"hidden\" name=\"path\" value=\"" + path + "\"/>");
-    strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
-    strhtml.Append("<input type=\"submit\" name=\"g\" class=\"btn\" value=\"" + this.GetLang("生成下载|生成下载|submit") + "\"/>");
-    strhtml.Append("</div>");
-    strhtml.Append("<div class=\"subtitle\">");
-    strhtml.Append("其它:</div>");
-    strhtml.Append("<div class=\"bt1\">");
 
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=128&amp;sheight=128\">128*128</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=128&amp;sheight=160\">128*160</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=208&amp;sheight=208\">208*208</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=220&amp;sheight=176\">220*176</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=240&amp;sheight=320\">240*320</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=480&amp;sheight=800\">480*800</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/picDIY.aspx?action=gomod&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;path=" + HttpUtility.UrlEncode(path) + "&amp;swidth=640&amp;sheight=800\">640*800</a> "); 
-    strhtml.Append("</div>");
     string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码    
     if (isWebHtml != "")
     {

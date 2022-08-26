@@ -8,12 +8,12 @@ if (ver == "1")
 strhtml.Append("<p align=\"left\">");
 
 strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyPW.aspx?siteid="+this.siteid +"\">01.修改我的密码</a> <br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyNick.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">02.修改我的昵称</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyHead.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">03.修改我的头像</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyRemark.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">04.修改个性签名</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyInfo.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">05.修改详细资料</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyCard.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">06.修改我的名片</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyUserFriends.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">07.修改交友资料</a><br/>");
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyNick.aspx?siteid="+this.siteid +"\">02.修改我的昵称</a><br/>");
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyHead.aspx?siteid="+this.siteid +"\">03.修改我的头像</a><br/>");
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyRemark.aspx?siteid="+this.siteid +"\">04.修改个性签名</a><br/>");
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyInfo.aspx?siteid="+this.siteid +"\">05.修改详细资料</a><br/>");
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyCard.aspx?siteid="+this.siteid +"\">06.修改我的名片</a><br/>");
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyUserFriends.aspx?siteid="+this.siteid +"\">07.修改交友资料</a><br/>");
 strhtml.Append("<a href=\"" + http_start + "wapstyle/mobileua.aspx?siteid=" + siteid + "" + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/modifyuserinfo.aspx?siteid=" + siteid) + "\">08.修改手机型号</a>"); 
 strhtml.Append("<br />"+ WapTool.ToWML(WapTool.GetUAUBB(this.myua,ver,lang,this.sid,1),wmlVo ));
 strhtml.Append("<br/>----------<br/>");
@@ -30,14 +30,10 @@ Response.Write(strhtml);
 strhtml.Append("<div class=\"subtitle\">修改我的资料</div>");
 strhtml.Append("<div class=\"content\">");
 strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyPW.aspx?siteid="+this.siteid +"\">01.修改我的密码</a> <br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyNick.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">02.修改我的昵称</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyHead.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">03.修改我的头像</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyRemark.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">04.修改个性签名</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyInfo.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">05.修改详细资料</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyCard.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">06.修改我的名片</a><br/>");
-strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyUserFriends.aspx?siteid="+this.siteid +"&amp;sid="+this.sid+"\">07.修改交友资料</a><br/>");
-strhtml.Append("<a href=\"" + http_start + "wapstyle/mobileua.aspx?siteid=" + siteid + "" + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/modifyuserinfo.aspx?siteid=" + siteid) + "\">08.修改手机型号</a>"); 
-strhtml.Append(" "+ WapTool.ToWML(WapTool.GetUAUBB(this.myua,ver,lang,this.sid,1),wmlVo ));
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyNick.aspx?siteid="+this.siteid +"\">02.修改我的昵称</a><br/>");
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyHead.aspx?siteid="+this.siteid +"\">03.修改我的头像</a><br/>");
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyRemark.aspx?siteid="+this.siteid +"\">04.修改个性签名</a><br/>");
+strhtml.Append("<a href=\""+this.http_start +"bbs/ModifyInfo.aspx?siteid="+this.siteid +"\">05.修改详细资料</a><br/>");
 
 
 

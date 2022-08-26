@@ -140,9 +140,9 @@ else //2.0界面
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"subtitle\">第" + bookVo.appleID + "期-<a href=\"" + this.http_start + "games/apple/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;r=" + this.r + "\">刷新</a></div>");
     
-    strhtml.Append("<div class=\"content\">还有"+WapTool.DateToString(this.leftTime,base.lang,0)+"开盅,各位客官赶快下啦买定离手咯!<br/><br/>");
+    strhtml.Append("<div class=\"content\">还有"+WapTool.DateToString(this.leftTime,base.lang,0)+"开盅,各位客官赶快下啦买定离手咯!<br/>");
     //显示列表    
-   // strhtml.Append("<div class=\"content\">");
+    strhtml.Append("<div class=\"content\">");
     strhtml.Append("<a href=\"" + this.http_start + "games/apple/doit.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;myapple=1&amp;id=" + bookVo.appleID + "\">下注</a><b>苹果</b>×"+this.type1+"(" + bookVo.type1 + "注)<br/>");
     strhtml.Append("<a href=\"" + this.http_start + "games/apple/doit.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;myapple=2&amp;id=" + bookVo.appleID + "\">下注</a><b>木瓜</b>×" + this.type2 + "+<b>小木</b>×" + this.type3 + "(" + bookVo.type2 + "注)<br/>");
     strhtml.Append("<a href=\"" + this.http_start + "games/apple/doit.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;myapple=4&amp;id=" + bookVo.appleID + "\">下注</a><b>西瓜</b>×" + this.type4 + "+<b>小西</b>×" + this.type5 + "(" + bookVo.type4 + "注)<br/>");
@@ -167,18 +167,17 @@ else //2.0界面
         strhtml.Append("<b>上" + lastVo.appleID + "期开 " + lastVo.Result + "</b> <a href=\"" + this.http_start + "games/apple/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;towin=1&amp;toid=" + lastVo.appleID + "\">赢家</a>获" + lastVo.winAllMoney + siteVo.sitemoneyname + "<br/>");
    }
     strhtml.Append("</div>");
-    strhtml.Append("<div class=\"subtitle\">聊天交流 <a class=\"urlbtn\" href=\"" + this.http_start + "games/apple/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;r=" + this.r + "\">刷新</a></div>");
+    strhtml.Append("</div>");
+    strhtml.Append("<div class=\"subtitle\">聊天交流区</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "games/chat/book_re.aspx\" method=\"post\">");
-    strhtml.Append("<textarea name=\"content\" rows=\"5\" class=\"KL_textarea\" style=\"width:100%\"></textarea><br/>");
-
+    strhtml.Append("<textarea name=\"content\" required=\"required\" rows=\"5\" class=\"KL_textarea\" style=\"width:96.6%\"></textarea><br/>");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"add\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"classid\" value=\"" + classid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"siteid\" value=\"" + siteid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"sid\" value=\"" + sid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"nid\" value=\"apple\"/>");
-    strhtml.Append("<br/><input type=\"submit\" name=\"g\" class=\"btn\" value=\"" + this.GetLang("发言|发言|submit") + "\"/>");
-
+    strhtml.Append("<input type=\"submit\" name=\"g\" class=\"btn\" value=\"" + this.GetLang("发 言|发言|submit") + "\"/>");
     strhtml.Append("</form><br/>");
     if (showRe > 0)
     {
@@ -206,7 +205,7 @@ else //2.0界面
         }
         else
         {
-            strhtml.Append("<div class=\"bt1\"><a href=\"" + http_start + "games/chat/book_re.aspx?nid=apple&amp;classid=" + classid + "&amp;siteid=" + siteid + "" + "\">查看更多...</a></div>");
+            strhtml.Append("<div class=\"more\"><a href=\"" + http_start + "games/chat/book_re.aspx?nid=apple&amp;classid=" + classid + "&amp;siteid=" + siteid + "" + "\">查看更多</a></div>");
 
         }
 

@@ -19,7 +19,6 @@ StringBuilder strhtml = new StringBuilder();
             strhtml.Append("<br/>");
         }
        
-        strhtml.Append("用户名：" + userVo.username + "<br/>");
         strhtml.Append("用户ID：" + userVo.userid + "<br/>");
         strhtml.Append("昵称：" + userVo.nickname + "<br/>");
         strhtml.Append("性别：");
@@ -40,14 +39,12 @@ StringBuilder strhtml = new StringBuilder();
         strhtml.Append("<input type=\"text\" name=\"zhiye" + r + "\" value=\"" + userVo.zhiye + "\" maxlength=\"50\" /><br/>");
         strhtml.Append("城市：");
         strhtml.Append("<input type=\"text\" name=\"city" + r + "\" value=\"" + userVo.city + "\" maxlength=\"50\" /><br/>");
-        strhtml.Append("手机号码：");
+        strhtml.Append("手机号：");
         strhtml.Append("<input type=\"text\" name=\"mobile" + r + "\" value=\"" + userVo.mobile + "\" maxlength=\"50\" /><br/>");
         strhtml.Append("QQ号码：");
         strhtml.Append("<input type=\"text\" name=\"qq" + r + "\" value=\"" + qq + "\" maxlength=\"50\" /><br/>");
-        strhtml.Append("EMAIL：");
+        strhtml.Append("E-MAIL：");
         strhtml.Append("<input type=\"text\" name=\"email" + r + "\" value=\"" + userVo.email + "\" /><br/>");
-        strhtml.Append("个性签名：");
-        strhtml.Append("<input type=\"text\" name=\"remark" + r + "\" value=\"" + userVo.remark + "\" /><br/>");
 
         strhtml.Append("<anchor><go href=\"" + http_start + "bbs/ModifyInfo.aspx\" method=\"post\" accept-charset=\"utf-8\">");
         strhtml.Append("<postfield  name=\"action\"  value=\"gomod\" />");
@@ -94,36 +91,34 @@ StringBuilder strhtml = new StringBuilder();
         strhtml.Append("<div class=\"content\">");
         strhtml.Append("<form name =\"f\" action=\"" + http_start + "bbs/ModifyInfo.aspx\" method=\"post\">");
               
-        strhtml.Append("用户名：" + userVo.username + "<br/>");
         strhtml.Append("用户ID：" + userVo.userid + "<br/>");
         strhtml.Append("昵称：" + userVo.nickname + "<br/>");
-        strhtml.Append("性别：");
-        strhtml.Append("<select name=\"sex\"><option value=\"" + userVo.sex.ToString() + "\">" + userVo.sex.ToString() + "</option><option value=\"1\">1_男</option><option value=\"0\">0_女</option></select><br/>");
+        //strhtml.Append("性别：");
+        strhtml.Append("<select style=\"display:none;\" name=\"sex\"><option value=\"" + userVo.sex.ToString() + "\">" + userVo.sex.ToString() + "</option><option value=\"1\">1_男</option><option value=\"0\">0_女</option></select>");
         strhtml.Append("年龄：");
-        strhtml.Append("<input type=\"text\" name=\"age\" value=\"" + userVo.age.ToString() + "\" maxlength=\"50\" /><br/>");
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"age\" value=\"" + userVo.age.ToString() + "\" maxlength=\"50\" /><br/>");
         strhtml.Append("身高：");
-        strhtml.Append("<input type=\"text\" name=\"shenggao\" value=\"" + userVo.shenggao + "\" maxlength=\"50\" /><br/>");
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"shenggao\" value=\"" + userVo.shenggao + "\" maxlength=\"50\" /><br/>");
         strhtml.Append("体重：");
-        strhtml.Append("<input type=\"text\" name=\"tizhong\" value=\"" + userVo.tizhong + "\" maxlength=\"50\" /><br/>");
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"tizhong\" value=\"" + userVo.tizhong + "\" maxlength=\"50\" /><br/>");
         strhtml.Append("星座：");
-        strhtml.Append("<input type=\"text\" name=\"xingzuo\" value=\"" + userVo.xingzuo + "\" maxlength=\"50\" /><br/>");
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"xingzuo\" value=\"" + userVo.xingzuo + "\" maxlength=\"50\" /><br/>");
         strhtml.Append("爱好：");
-        strhtml.Append("<input type=\"text\" name=\"aihao\" value=\"" + aihao + "\" maxlength=\"50\" /><br/>");
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"aihao\" value=\"" + aihao + "\" maxlength=\"50\" /><br/>");
         strhtml.Append("婚否：");
-        strhtml.Append("<input type=\"text\" name=\"fenfuo\" value=\"" + userVo.fenfuo + "\" maxlength=\"50\" /><br/>");
-        strhtml.Append("职务：");
-        strhtml.Append("<input type=\"text\" name=\"zhiye\" value=\"" + userVo.zhiye + "\" maxlength=\"50\" /><br/>");
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"fenfuo\" value=\"" + userVo.fenfuo + "\" maxlength=\"50\" /><br/>");
+        strhtml.Append("职业：");
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"zhiye\" value=\"" + userVo.zhiye + "\" maxlength=\"50\" /><br/>");
         strhtml.Append("城市：");
-        strhtml.Append("<input type=\"text\" name=\"city\" value=\"" + userVo.city + "\" maxlength=\"50\" /><br/>");
-        strhtml.Append("手机号码：");
-        strhtml.Append("<input type=\"text\" name=\"mobile\" value=\"" + userVo.mobile + "\" maxlength=\"50\" /><br/>");        
-        strhtml.Append("QQ号码：");
-        strhtml.Append("<input type=\"text\" name=\"qq\" value=\"" + qq + "\" maxlength=\"50\" /><br/>");
-        strhtml.Append("EMAIL：");
-        strhtml.Append("<input type=\"text\" name=\"email\" value=\"" + userVo.email + "\" /><br/>");
-        strhtml.Append("个性签名：");
-        strhtml.Append("<input type=\"text\" name=\"remark\" value=\"" + userVo.remark + "\" /><br/>");
-        
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"city\" value=\"" + userVo.city + "\" maxlength=\"50\" /><br/>");
+        strhtml.Append("手机：");
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"mobile\" value=\"" + userVo.mobile + "\" maxlength=\"50\" /><br/>");        
+        strhtml.Append("邮箱：");
+        strhtml.Append("<input style=\"width:50%\" type=\"text\" name=\"email\" value=\"" + userVo.email + "\" /><br/>");
+        //strhtml.Append("签名：");
+        strhtml.Append("<input style=\"width:50%;display:none\" type=\"text\" maxlength=\"15\" name=\"remark\" value=\"" + userVo.remark + "\" />");
+        strhtml.Append("QQ号：");
+        strhtml.Append("<input style=\"width:30%\" type=\"text\" name=\"qq\" value=\"" + qq + "\" maxlength=\"50\" /><br/>");
         strhtml.Append("<input name=\"action\"  type=\"hidden\" value=\"gomod\" />");
         strhtml.Append("<input name=\"siteid\"  type=\"hidden\" value=\"" + this.siteid + "\"  />");
         strhtml.Append("<input name=\"classid\"  type=\"hidden\" value=\"" + this.classid + "\"  />");
@@ -131,9 +126,7 @@ StringBuilder strhtml = new StringBuilder();
         strhtml.Append("<input type=\"submit\" id=\"submit\" class=\"btn\" name=\"submit\" value=\"修 改\" /><br/>");
         strhtml.Append("</form>");
         strhtml.Append("</div>");
-        
         string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码  
-
         strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");
         strhtml.Append("<a href=\"" + this.http_start + "bbs/modifyuserinfo.aspx?siteid=" + this.siteid + "\">" + this.GetLang("返回上级|返回上级|Back to set") + "</a> ");
 

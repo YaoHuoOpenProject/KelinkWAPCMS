@@ -132,12 +132,12 @@ else //2.0界面
 
     Response.Write("<div class=\"content\">");
     Response.Write("<form name=\"gt\" action=\"" + http_start + "games/chuiniu/doit.aspx\" method=\"post\">");
-    Response.Write("您目前共有" + userVo.money + "个" + siteVo.sitemoneyname + "！<br/>");
-    Response.Write("这是<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + bookVo.userid + "&amp;backurl=" + HttpUtility.UrlEncode("games/chuiniu/doit.aspx?siteid=" + this.siteid + "&classid=" + this.classid + "&id=" + this.id) + "\">" + bookVo.nickName + "</a>的挑战:<br/>");
-    Response.Write("赌注是:" + bookVo.myMoney + "个" + siteVo.sitemoneyname + "<br/>");
-    Response.Write("问题是:" + bookVo.Question + "<br/>");
-    Response.Write("答案1:" + bookVo.Answer1 + "<br/>");
-    Response.Write("答案2:" + bookVo.Answer2 + "<br/>");
+    Response.Write("您目前共有 " + userVo.money + " 个" + siteVo.sitemoneyname + "！<br/>");
+    Response.Write("这是 <a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + bookVo.userid + "&amp;backurl=" + HttpUtility.UrlEncode("games/chuiniu/doit.aspx?siteid=" + this.siteid + "&classid=" + this.classid + "&id=" + this.id) + "\">" + bookVo.nickName + "</a> 的挑战：<br/>");
+    Response.Write("赌注是：" + bookVo.myMoney + "个" + siteVo.sitemoneyname + "<br/>");
+    Response.Write("问题是：" + bookVo.Question + "<br/>");
+    Response.Write("答案1：" + bookVo.Answer1 + "<br/>");
+    Response.Write("答案2：" + bookVo.Answer2 + "<br/>");
     if (this.INFO == "OK")
     {
 
@@ -164,7 +164,7 @@ else //2.0界面
     }
     else
     {
-        Response.Write("请选择您的答案:<br/>");
+        Response.Write("请选择您的答案：<br/>");
         Response.Write("<select name=\"myanswer\">");
         Response.Write("<option value=\"1\">答案1</option>");
         Response.Write("<option value=\"2\">答案2</option>");       
@@ -175,7 +175,7 @@ else //2.0界面
         Response.Write("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
         Response.Write("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
         Response.Write("<input type=\"submit\"  name=\"bt\" value=\"" + this.GetLang("确 定|确 定|submit") + "\"/></form>");
-        Response.Write("<br/>说明:如果其它友友获胜,您的赌注就要输光哦,如果您获胜,您将获得您赌注的" + per + "%金币。");
+        Response.Write("<br/>说明：如果其他友友获胜，您的赌注就要输光哦！如果您获胜，您将获得赌注的"+per+"%金币。");
 
     }
     Response.Write("</div>");

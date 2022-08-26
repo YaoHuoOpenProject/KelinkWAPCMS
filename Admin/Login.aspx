@@ -7,7 +7,7 @@ Response.CacheControl = "no-cache";
 %><html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>登陆</title>
+<title>登录</title>
 <link href="../NetCSS/style.css" rel="stylesheet" type="text/css">
 <script language="javascript" type="text/javascript">
     document.onkeydown = function() {
@@ -28,7 +28,7 @@ Response.CacheControl = "no-cache";
                             <tr>
                                 <td colspan="2" height="22">
                                     <img height="11" src="../NetImages/shdot.gif" width="11" border="0">
-                                                                <b>站长登录</b>
+                                                                <b>登录</b>
                                 </td>
                             </tr>
                             <tr bgcolor="#f6f6f6">
@@ -59,8 +59,7 @@ Response.CacheControl = "no-cache";
                             <tr align="center" bgcolor="#FFFFFF">
                                 <td bgcolor="#FFFFFF" colspan="2" height="26">
                                                                     
-                                  <input type="submit" name="bt" value="登录" class="bt" />
-                                  <input type="button" onclick="window.open('sendMail.aspx', 'getmail', 'height=200, width=430, toolbar= no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');" name="g" value="忘记密码" class="bt" />
+                                  <input type="submit" name="bt" value="确认登录" class="bt" />
                                                                         
                                                                  
                                 	
@@ -83,7 +82,7 @@ Response.CacheControl = "no-cache";
       } %>
     
     
-    技术支持：<a href="http://kelink.com">联速科技Kelink.Com</a></p>
+</p>
 
 </body>
 </html>

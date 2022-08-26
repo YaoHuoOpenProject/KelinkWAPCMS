@@ -152,49 +152,45 @@ string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码
     strhtml.Append("<a href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a><br/>");
 
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "chinabank_wap/banklist.aspx\" method=\"get\">");
-    strhtml.Append("年份:<input type=\"text\" name=\"toyear\" value=\"" + toyear + "\" size=\"4\"/>");
-    strhtml.Append("月份:<input type=\"text\" name=\"tomonth\" value=\"" + tomonth + "\" size=\"4\"/><br/>");
+    strhtml.Append("年份：<input type=\"text\" name=\"toyear\" value=\"" + toyear + "\" size=\"13\"/><br/>");
+    strhtml.Append("月份：<input type=\"text\" name=\"tomonth\" value=\"" + tomonth + "\" size=\"13\"/><br/>");
        
     if (userVo.managerlvl == "00")
     {
-        strhtml.Append("网站ID:<input type=\"text\" name=\"tositeid\" value=\"" + tositeid + "\" size=\"5\"/>");
-        strhtml.Append("会员ID:<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"5\"/>");
+        strhtml.Append("<input type=\"hidden\" name=\"tositeid\" value=\"" + tositeid + "\" size=\"5\"/>");
+        strhtml.Append("ID号：<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"13\"/>");
     }
     else if (userVo.managerlvl == "01")
     {
 
-        strhtml.Append("会员ID:<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"5\"/>");
+        strhtml.Append("ID号：<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"13\"/>");
     }
 
     strhtml.Append("<br/>");
-    strhtml.Append("项目名称:<select name=\"banktype\">");
+    strhtml.Append("项目：<select name=\"banktype\">");
     strhtml.Append("<option value=\""+banktype+"\">"+banktype+"</option>");
     strhtml.Append("<option value=\"\">所有</option>");
-    strhtml.Append("<option value=\"0\">0_易宝支付</option>");
-    strhtml.Append("<option value=\"1\">1_WAP支付宝2_手机网银</option>");
+    //strhtml.Append("<option value=\"0\">0_易宝支付</option>");
+    //strhtml.Append("<option value=\"1\">1_WAP支付宝2_手机网银</option>");
     //strhtml.Append("<option value=\"2\">2_手机网银</option>");
     strhtml.Append("<option value=\"3\">3_手工入帐</option>");
     strhtml.Append("<option value=\"-3\">-3_手工扣帐</option>");
     strhtml.Append("<option value=\"4\">4_商品支付</option>");
     strhtml.Append("<option value=\"-1\">-1_购买虚拟币</option>");
     strhtml.Append("<option value=\"-2\">-2_购买身份级别</option>");
-    strhtml.Append("<option value=\"5\">5_RMB购买内容收入</option>");
-    strhtml.Append("<option value=\"-5\">-5_RMB购买内容消费</option>");
+    //strhtml.Append("<option value=\"5\">5_RMB购买内容收入</option>");
+    //strhtml.Append("<option value=\"-5\">-5_RMB购买内容消费</option>");
     strhtml.Append("</select><br/>");
-
-    strhtml.Append("状态:<select name=\"code\">");
-    strhtml.Append("<option value=\"" + code + "\">" + code + "</option>");
-    strhtml.Append("<option value=\"\">所有</option>");
-    strhtml.Append("<option value=\"0\">0_支付失败</option>");
-    strhtml.Append("<option value=\"1\">1_支付成功</option>");
-    strhtml.Append("</select><br/>");
-    strhtml.Append("流水ID:<input type=\"text\" name=\"orderid\" value=\"" + orderid + "\" size=\"10\"/><br/>");
-
-   
+    //strhtml.Append("状态:<select name=\"code\">");
+    //strhtml.Append("<option value=\"" + code + "\">" + code + "</option>");
+    //strhtml.Append("<option value=\"\">所有</option>");
+    //strhtml.Append("<option value=\"0\">0_支付失败</option>");
+    //strhtml.Append("<option value=\"1\">1_支付成功</option>");
+    //strhtml.Append("</select><br/>");
+    //strhtml.Append("流水ID:<input type=\"text\" name=\"orderid\" value=\"" + orderid + "\" size=\"10\"/><br/>");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"search\" />");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
-
     strhtml.Append("<input type=\"hidden\" name=\"backurl\" value=\"" + (backurl) + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
     strhtml.Append("<input type=\"submit\" name=\"g\" value=\"" + this.GetLang("搜索|搜索|Search") + "\"/>");
@@ -202,20 +198,19 @@ string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码
     strhtml.Append("</form>");
     strhtml.Append("</div>");
     strhtml.Append(linkTOP);
-    //显示列表    
-
-    strhtml.Append("<table border=\"1\" width=\"700\" id=\"table1\">");
+    //显示列表
+    strhtml.Append("<table border=\"1\" width=\"100%\" id=\"table1\">");
     strhtml.Append("<tr align=\"center\">");
-    strhtml.Append("<td width=\"46\">币种</td>");
-    strhtml.Append("<td width=\"109\">项目</td>");
-    strhtml.Append("<td width=\"85\">交易数量</td>");
-    strhtml.Append("<td width=\"105\">帐户余额</td>");
-    strhtml.Append("<td width=\"106\">操作者</td>");
-    strhtml.Append("<td width=\"101\">备注</td>");
-    strhtml.Append("<td width=\"80\">流水ID</td>");
-    strhtml.Append("<td width=\"80\">状态</td>");
-    strhtml.Append("<td width=\"104\">时间</td>");
-    strhtml.Append("<td width=\"80\">当事ID</td>");
+    //strhtml.Append("<td width=\"46\">币种</td>");
+    strhtml.Append("<td width=\"25%\">项目</td>");
+    strhtml.Append("<td width=\"15%\">交易数量</td>");
+    strhtml.Append("<td width=\"20%\">帐户余额</td>");
+    strhtml.Append("<td width=\"20%\">操作者</td>");
+    //strhtml.Append("<td width=\"101\">备注</td>");
+    //strhtml.Append("<td width=\"80\">流水ID</td>");
+    //strhtml.Append("<td width=\"80\">状态</td>");
+    strhtml.Append("<td width=\"35%\">时间</td>");
+    //strhtml.Append("<td width=\"80\">当事ID</td>");
     strhtml.Append("</tr>");
 
     for (int i = 0; (listVo != null && i < listVo.Count); i++)
@@ -232,9 +227,9 @@ string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码
 
         //index = index + kk;
         // strhtml.Append(index + ".");
-        strhtml.Append("<td width=\"46\">RMB</td>");
-        strhtml.Append("<td width=\"109\">" + WapTool.GetRMBTypeName(listVo[i].bankType.ToString()) + "</td>");
-        strhtml.Append("<td width=\"85\">");
+        //strhtml.Append("<td width=\"46\">RMB</td>");
+        strhtml.Append("<td align=\"center\" width=\"25%\">" + WapTool.GetRMBTypeName(listVo[i].bankType.ToString()) + "</td>");
+        strhtml.Append("<td align=\"center\" width=\"15%\">");
         if (listVo[i].Amount.ToString().IndexOf("-") >= 0)
         {
             strhtml.Append("<font color=\"FF0000\">");
@@ -248,20 +243,14 @@ string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码
             strhtml.Append("</font>");
         }
         strhtml.Append("</td>");
-        strhtml.Append("<td width=\"105\">" + listVo[i].leftmoney.ToString("f2") + "</td>");
-        strhtml.Append("<td width=\"106\"><a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].opera_userid + "&amp;backurl=" + HttpUtility.UrlEncode("chinabank_wap/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + HttpUtility.UrlEncode(touserid)) + "" + "\">" + listVo[i].opera_nickname + "</a><br/>(ID:" + listVo[i].opera_userid + ")</td>");
-        strhtml.Append("<td width=\"101\">" + listVo[i].CodeInfo + "</td>");
-        strhtml.Append("<td width=\"80\">" + listVo[i].orderID + "</td>");
-        strhtml.Append("<td width=\"80\">" + this.getCodeStr(listVo[i].Code) + "</td>");
-        strhtml.Append("<td width=\"104\">" + listVo[i].addtime + "</td>");
-        strhtml.Append("<td width=\"80\">ID:<a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + HttpUtility.UrlEncode("chinabank_wap/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + listVo[i].userid) + "" + "\">" + listVo[i].userid + "</a><br/>IP:" + listVo[i].IP + "</td>");
+        strhtml.Append("<td align=\"center\" width=\"20%\">" + listVo[i].leftmoney.ToString("f2") + "</td>");
+        strhtml.Append("<td align=\"center\" width=\"20%\"><a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].opera_userid + "&amp;backurl=" + HttpUtility.UrlEncode("chinabank_wap/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + HttpUtility.UrlEncode(touserid)) + "" + "\">" + listVo[i].opera_nickname + "</a><br/>(ID:" + listVo[i].opera_userid + ")</td>");
+        //strhtml.Append("<td width=\"101\">" + listVo[i].CodeInfo + "</td>");
+        //strhtml.Append("<td width=\"80\">" + listVo[i].orderID + "</td>");
+        //strhtml.Append("<td width=\"80\">" + this.getCodeStr(listVo[i].Code) + "</td>");
+        strhtml.Append("<td align=\"center\" width=\"35%\">" + listVo[i].addtime + "</td>");
+        //strhtml.Append("<td width=\"80\">ID:<a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + HttpUtility.UrlEncode("chinabank_wap/banklist.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + listVo[i].userid) + "" + "\">" + listVo[i].userid + "</a><br/>IP:" + listVo[i].IP + "</td>");
         strhtml.Append("</tr>");
-
-
-
-
-
-
     }
 
     strhtml.Append("</table>");

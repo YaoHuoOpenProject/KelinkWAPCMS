@@ -147,15 +147,15 @@ else //2.0界面
        
         
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/toMoney.aspx\" method=\"post\">");        
-        strhtml.Append("会员ID：<br/>");
-        strhtml.Append("<input type=\"text\" class=\"txt\" name=\"touserid\" value=\"" + this.touserid + "\"/><br/>");
+        strhtml.Append("会员ID号<br/>");
+        strhtml.Append("<input type=\"text\" size=\"44\" class=\"txt\" name=\"touserid\" value=\"" + this.touserid + "\"/><br/>");
 
 
-        strhtml.Append("输入金额：<br/>");
-        strhtml.Append("<input type=\"text\" class=\"txt\" name=\"tomoney\" value=\"" + this.tomoney + "\"/><br/>");
+        strhtml.Append("转账金额<br/>");
+        strhtml.Append("<input type=\"text\" size=\"44\" class=\"txt\" name=\"tomoney\" value=\"" + this.tomoney + "\"/><br/>");
 
-        strhtml.Append("说明原因：<br/>");
-        strhtml.Append("<input type=\"text\" class=\"txt\" name=\"remark\" value=\"" + this.remark + "\"/><br/>");
+        strhtml.Append("备注原因<br/>");
+        strhtml.Append("<input type=\"text\" size=\"44\" class=\"txt\" name=\"remark\" value=\"感谢支持" + this.remark + "\"/><br/>");
         strhtml.Append("<input type=\"hidden\"  name=\"siteid\" value=\"" + siteid + "\"/>");
         strhtml.Append("<input type=\"hidden\"  name=\"backurl\" value=\"" + backurl + "\"/>");
         strhtml.Append("<input type=\"hidden\"  name=\"type\" value=\"" + type + "\"/>");

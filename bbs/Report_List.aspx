@@ -50,7 +50,7 @@ else //2.0界面
     if (this.CheckManagerLvl("04", "") == true)
     {
         strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/Report_List.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=0\">查看所有举报</a>-<a href=\"" + this.http_start + "bbs/Report_List_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=0&amp;id=0\">删除所有</a> ");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs/Report_List.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=0\">查看所有举报</a><a href=\"" + this.http_start + "bbs/Report_List_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=0&amp;id=0\">删除所有</a> ");
         strhtml.Append("</div></div>");
     }
 

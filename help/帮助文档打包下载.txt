@@ -1,5 +1,0 @@
-说明：由于帮助文件包太大，不直接内置程序，但您可以下载它并解压至此目录。
-
-帮助文件下载地址：http://www.kelink.com/help/help.rar
-
-柯林WAP自助建站系统免费版下载地址：http://kelink.com

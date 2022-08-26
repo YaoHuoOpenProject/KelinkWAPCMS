@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BookView.aspx.cs" Inherits="KeLin.WebSite.shop.BookView" %>

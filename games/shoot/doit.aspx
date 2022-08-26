@@ -69,7 +69,6 @@ if (ver == "1")
         Response.Write("请选择你想要扑球的方向:<br/>");
         Response.Write("<select name=\"myshoot" + r + "\" value=\"1\">");
         Response.Write("<option value=\"1\">左</option>");
-        Response.Write("<option value=\"2\">中</option>");
         Response.Write("<option value=\"3\">右</option>");
         Response.Write("</select><br/>");
         Response.Write("<anchor><go href=\"" + http_start + "games/shoot/doit.aspx\" method=\"post\" accept-charset=\"utf-8\">");
@@ -162,7 +161,6 @@ else //2.0界面
         Response.Write("请选择你想要扑球的方向:<br/>");
         Response.Write("<select name=\"myshoot\">");
         Response.Write("<option value=\"1\">左</option>");
-        Response.Write("<option value=\"2\">中</option>");
         Response.Write("<option value=\"3\">右</option>");
         Response.Write("</select><br/>");
         Response.Write("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");

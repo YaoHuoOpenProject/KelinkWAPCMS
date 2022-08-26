@@ -74,18 +74,18 @@ else //2.0界面
     //显示搜索
 
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("内容管理.<a href=\"" + this.http_start + "adlink/admin_guestlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">点击明细</a><br/>");
+    strhtml.Append("内容管理 <a href=\"" + this.http_start + "adlink/admin_guestlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">点击明细</a><br/>");
     strhtml.Append(" <a href=\"" + this.http_start + "adlink/admin_WAPadd.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">新增广告</a> ");
     strhtml.Append(" <a href=\"" + this.http_start + "adlink/admin_WAPadvertise.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">插入广告</a><br/>");
     strhtml.Append("<form id=\"form1\" action=\"" + http_start + "adlink/admin_userlistWAP.aspx\" method=\"get\">");
-    strhtml.Append("标题关键字：<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"5\"/>");
-    strhtml.Append("栏目ID：<input type=\"text\" name=\"classid\" value=\"" + classid + "\" size=\"5\"/><br/>");
+    strhtml.Append("关键字：<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"25\"/><br/>");
+    strhtml.Append("栏目ID：<input type=\"text\" name=\"classid\" value=\"" + classid + "\" size=\"25\"/><br/>");
     strhtml.Append("<input type=\"submit\" value=\"搜索\" />");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"class\" />");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
-    strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
-    strhtml.Append("(栏目ID为0时所有)</form>");
-    strhtml.Append("<br/><a href=\"" + this.http_start + "adlink/admin_userlistWAP.aspx?action=gocheckall&amp;state=0&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">审核所有</a>.<a href=\"" + this.http_start + "adlink/admin_userlistWAP.aspx?action=gocheckall&amp;state=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">取消所有审核</a><br/>");
+    strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" /></form>");
+    //strhtml.Append("(栏目ID为0时所有)");
+    //strhtml.Append("<br/><a href=\"" + this.http_start + "adlink/admin_userlistWAP.aspx?action=gocheckall&amp;state=0&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">审核所有</a>.<a href=\"" + this.http_start + "adlink/admin_userlistWAP.aspx?action=gocheckall&amp;state=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">取消所有审核</a><br/>");
     
     strhtml.Append("</div>");
 

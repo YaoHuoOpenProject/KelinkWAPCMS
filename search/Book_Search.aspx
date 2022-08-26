@@ -69,9 +69,28 @@ strhtml.Append("<div class=\"content\">");
 //strhtml.Append("<a href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a><br/>");
 //strhtml.Append("<br />");
 strhtml.Append("<form id=\"form1\" action=\""+this.http_start +"search/book_list.aspx\" method=\"get\">");
-strhtml.Append("身份:<select name=\"sessiontimeout\">");
-strhtml.Append("<option value=\"\">所有会员</option>");
-strhtml.Append("<option value=\"0\">普通会员</option>");
+strhtml.Append("状态：<select name=\"isonline\">");
+strhtml.Append("<option value=\"\">默认</option>");
+strhtml.Append("<option value=\"1\">在线</option>");
+strhtml.Append("<option value=\"0\">离线</option>");
+strhtml.Append("</select><br/>");
+strhtml.Append("性别：<select name=\"sex\">");
+strhtml.Append("<option value=\"\">默认</option>");
+strhtml.Append("<option value=\"0\">女</option>");
+strhtml.Append("<option value=\"1\">男</option>");
+strhtml.Append("</select>");
+//strhtml.Append("<br />排序：<select name=\"order\">");
+strhtml.Append("<select name=\"order\" style=\"display:none;\">");
+strhtml.Append("<option value=\"1\">经验值</option>");
+strhtml.Append("<option value=\"2\">货币值</option>");
+strhtml.Append("<option value=\"3\">最新注册</option>");
+strhtml.Append("</select><br/>");
+strhtml.Append("城市：<input type=\"text\" style=\"width:50%;max-width:200px;\" name=\"city\" value=\"\" size=\"8\"/><br/>");
+strhtml.Append("昵称：<input type=\"text\" style=\"width:50%;max-width:200px;\" name=\"tonickname\" value=\"\" size=\"8\"/><br/>");
+strhtml.Append("ID号：<input type=\"text\" style=\"width:50%;max-width:200px;\" name=\"touserid\" value=\"\" size=\"8\"/><br/>");
+//strhtml.Append("身份：<select name=\"sessiontimeout\">");
+//strhtml.Append("<option value=\"\">所有会员</option>");
+//strhtml.Append("<option value=\"0\">普通会员</option>");
 
     for (int i = 0; (listVo != null && i < listVo.Count); i++)
     {
@@ -79,28 +98,10 @@ strhtml.Append("<option value=\"0\">普通会员</option>");
         {
             listVo[i].subclassName = "(图片)";
         }
-   strhtml.Append("<option value=\""+listVo[i].id+"\">"+listVo[i].subclassName+"</option>");
+   //strhtml.Append("<option value=\""+listVo[i].id+"\">"+listVo[i].subclassName+"</option>");
     }
 
-strhtml.Append("</select><br/>");
-strhtml.Append("排序:<select name=\"order\">");
-strhtml.Append("<option value=\"\">最新注册</option>");
-strhtml.Append("<option value=\"0\">货币值</option>");
-strhtml.Append("<option value=\"1\">经验值</option>");
-strhtml.Append("</select><br/>");
-strhtml.Append("状态:<select name=\"isonline\">");
-strhtml.Append("<option value=\"\">默认</option>");
-strhtml.Append("<option value=\"1\">在线</option>");
-strhtml.Append("<option value=\"0\">离线</option>");
-strhtml.Append("</select><br/>");
-strhtml.Append("性别:<select name=\"sex\">");
-strhtml.Append("<option value=\"\">默认</option>");
-strhtml.Append("<option value=\"0\">女</option>");
-strhtml.Append("<option value=\"1\">男</option>");
-strhtml.Append("</select><br />");
-strhtml.Append("城市:<input type=\"text\" name=\"city\" value=\"\" size=\"8\"/><br/>");
-strhtml.Append("昵称:<input type=\"text\" name=\"tonickname\" value=\"\" size=\"8\"/><br/>");
-strhtml.Append("会员ID:<input type=\"text\" name=\"touserid\" value=\"\" size=\"8\"/><br/>");
+//strhtml.Append("</select><br/>");
 
 strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\""+this.siteid +"\"/>");
 strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\""+this.classid +"\"/>");

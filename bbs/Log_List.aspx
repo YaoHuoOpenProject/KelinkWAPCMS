@@ -15,7 +15,7 @@ if (ver == "1")
     for (int i = 0; (listVo != null && i < listVo.Count); i++)
     {
         index = index + kk;
-        strhtml.Append(index + "." + listVo[i].log_info + "<br/>操作人:<a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;touserid=" + listVo[i].oper_userid + "&amp;backurl=" + "\">" + listVo[i].oper_userid + "</a>(" + listVo[i].oper_ip + ")<br/>");
+        strhtml.Append(index + "." + listVo[i].log_info + "<br/>操作人:<a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;touserid=" + listVo[i].oper_userid + "&amp;backurl=" + "\">" + listVo[i].oper_userid + "</a><br/>");
         strhtml.Append("操作时间:"+listVo[i].oper_time+"<br/>----------<br/>");
         
     }
@@ -59,7 +59,7 @@ else //2.0界面
             strhtml.Append("<div class=\"line2\">");
         }
 
-        strhtml.Append(index + "." + listVo[i].log_info + "<br/>操作人:<a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;touserid=" + listVo[i].oper_userid + "&amp;backurl=" + "\">" + listVo[i].oper_userid + "</a>(" + listVo[i].oper_ip + ")<br/>");
+        strhtml.Append(index + "." + listVo[i].log_info + "<br/>操作人:<a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;touserid=" + listVo[i].oper_userid + "&amp;backurl=" + "\">" + listVo[i].oper_userid + "</a><br/>");
         strhtml.Append("操作时间:" + listVo[i].oper_time + "<br/>");
         strhtml.Append("</div>");
     }

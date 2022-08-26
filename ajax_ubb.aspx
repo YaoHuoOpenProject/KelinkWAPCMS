@@ -1,1 +1,0 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WapLogin.aspx.cs" Inherits="KeLin.WebSite.WapLogin" %><%@ Import Namespace="KeLin.ClassManager.Tool" %><%string ubb = Request["ubb"]; ubb=ubb.Replace("{", "["); ubb=ubb.Replace("}", "]"); string content = ubb; Response.Write(WapTool.ToWML(ubb, wmlVo)); %>

@@ -89,7 +89,7 @@ else //2.0界面
         //选多少个
 
         Response.Write("<form name=\"g1\" action=\"" + http_start + "bbs/book_re_addfile.aspx\" method=\"get\">");
-        Response.Write(this.GetLang("上传数量|上传数量|Upload Number") + " <input type=\"text\" name=\"num\" value=\"" + this.num + "\" size=\"2\"/>");
+        Response.Write(this.GetLang("上传数量|上传数量|Upload Number") + " <input type=\"number\" name=\"num\" style=\"width:30px;text-align:center;\" value=\"" + this.num + "\" size=\"2\"/>");
         Response.Write("<input type=\"hidden\" name=\"action\" value=\"class\"/>");
         Response.Write("<input type=\"hidden\"  name=\"classid\" value=\"" + classid + "\"/>");
         Response.Write("<input type=\"hidden\"  name=\"siteid\" value=\"" + siteid + "\"/>");
@@ -97,7 +97,6 @@ else //2.0界面
         Response.Write("<input type=\"hidden\"  name=\"id\" value=\"" + id + "\"/>");       
         Response.Write("<input type=\"hidden\"  name=\"sid\" value=\"" + sid + "\"/>");
         Response.Write(" <input type=\"submit\"  name=\"bt\" value=\"" + this.GetLang("确定|确定|GO") + "\"/></form>");
-
         Response.Write("<br/>");
         
         //显示表情
@@ -109,32 +108,24 @@ else //2.0界面
             Response.Write("<option value=\"" + this.facelistImg[i] + "\">" + this.facelist[i] + "</option>");
         }
         Response.Write("</select>");
-        
-
-
-        Response.Write(this.GetLang("内容|內容|Content") + "*:<br/>");
-        Response.Write("<textarea name=\"book_content\" rows=\"3\" class=\"KL_bbs_textarea\" style=\"width:100%\">" + book_content + "</textarea><br/>");
-     
-      
+        Response.Write("<textarea name=\"book_content\" minlength=\"1\" required=\"required\" placeholder=\"请不要乱打字回复，以免被加黑。\" rows=\"3\" class=\"KL_bbs_textarea\" style=\"width:97%;height:80px\">" + book_content + "</textarea><br/>");
         for (int i = 0; i < this.num; i++)
         {
-            Response.Write("----- 上传文件" + (i + 1) + " -------<br/>");
-            Response.Write("<input type=\"file\" name=\"book_file\" value=\"\"/><br/>");
-            Response.Write(this.GetLang("说明|说明|Source") + ":<br/>");
-            Response.Write("<textarea name=\"book_file_info\" rows=\"3\" style=\"width:100%\"></textarea><br/>");
+            Response.Write("----- 上传文件" + (i + 1) + " -----<br/>");
+            Response.Write("<input style=\"border:0px;\" type=\"file\" required=\"required\" name=\"book_file\" onchange=\"fileChange(this);\" accept=\".txt,.zip,.rar,.7z,.apk,.jpg,.jpeg,.png,.gif,.torrent,.mp3,.wma,.wav,.pdf,.xls,.doc,.docx\" value=\"\"/><br/>");
+            Response.Write(this.GetLang("文件说明|文件说明|Source") + "<br/>");
+            Response.Write("<script charset=\"utf-8\" type=\"text/javascript\" src=\"/CSS/JS/upload.js\"></script>");
+            Response.Write("<textarea name=\"book_file_info\" rows=\"3\" style=\"width:97%\"></textarea><br/>");
             if (i == (this.num - 1))
             {
-                Response.Write(this.GetLang("如果有图片文件进行缩放|ss|ss:") + "<br/>"); ;
-                Response.Write(this.GetLang("图宽|图宽|Width") + ":<input type=\"text\" name=\"book_width\" size=\"5\" value=\"\"/>px ");
-                Response.Write(this.GetLang("高|高|Height") + ":<input type=\"text\" name=\"book_height\" size=\"5\" value=\"\"/>px<br/>");
-                Response.Write("(不缩放,请留空，建议只输入一个图宽或高来保持不变形。)<br/>");
+                Response.Write("<input style=\"display:none;\"  type=\"number\" min=\"300\" style=\"width:60px;text-align:center;\" name=\"book_width\" value=\"\"/>");
+                //Response.Write(this.GetLang("图片宽度|图片宽度|Width") + " <input type=\"number\" min=\"300\" style=\"width:60px;text-align:center;\" name=\"book_width\" value=\"\"/> PX<br/>");
             }
         }
         //Response.Write("<anchor><go href=\"" + http_start + "bbs/book_view_add.aspx\" method=\"post\" accept-charset=\"utf-8\">");
         if (this.isNeedSecret == true)
         {
-            Response.Write("本版暗号*:<input type=\"text\" name=\"secret\" value=\"\" size=\"10\" /><br/>");
-
+            Response.Write("本版暗号:<input type=\"text\" name=\"secret\" value=\"\" size=\"10\" /><br/>");
         }
         Response.Write("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
         Response.Write("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
@@ -147,22 +138,11 @@ else //2.0界面
         Response.Write("</form>");
     }
     Response.Write("</div>");
-
-
     Response.Write("<div class=\"btBox\"><div class=\"bt1\">");
     Response.Write("<a href=\"" + this.http_start + "bbs/book_view_ubb.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.page + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/book_re_addfile.aspx?siteid=" + this.siteid + "&classid=" + this.classid+"&id="+this.id) + "\">" + this.GetLang("查看UBB方法|查看UBB方法|view UBB fuction") + "</a> ");
- 
     Response.Write("<a href=\"" + this.http_start + "bbs/book_view.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;lpage="+this.lpage+"\">" + this.GetLang("返回主题|返回主题|Back to main") + "</a> ");
-
     Response.Write("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">" + this.GetLang("返回首页|返回首页|Back to index") + "</a> ");
-
     Response.Write("</div></div>");
- 
-
 }
-                                                                                                                                                                               
-                                                                                                                                                                             
 //显示底部
 Response.Write(WapTool.showDown(wmlVo)); %>
-
-

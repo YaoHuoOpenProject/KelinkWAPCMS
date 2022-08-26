@@ -64,7 +64,7 @@ else //2.0界面
     Response.Write("<div class=\"content\">");
     Response.Write("<form name=\"f\" aciont=\"" + this.http_start + "bbs/sendmoney_free.aspx\" method=\"post\">");
     Response.Write("我当前币有：" + userVo.money + "个<br/>");
-    Response.Write("输入奖励给会员ID:"+touserid+"币值*:<br/>");
+    Response.Write("奖励给会员ID："+touserid+" 的币值：<br/>");
     Response.Write("<input type=\"text\"  name=\"sendmoney\" value=\"\" /><br/>");
     Response.Write("理由:<br/><input type=\"text\"  name=\"remark\" value=\"\" /><br/>");   
     Response.Write("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");

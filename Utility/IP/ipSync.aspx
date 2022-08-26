@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ipSync.aspx.cs" Inherits="KeLin.WebSite.Utility.IP.ipSync" %><%Response.Write(this.html); %>

@@ -104,9 +104,9 @@ else //2.0界面
     //Response.Write("</div>");
     Response.Write("<div class=\"content\">");
     Response.Write("<b>" + bookVo.title + "</b><br/>");
-    Response.Write("<b>发件人:</b><a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + bookVo.userid + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/messagelist.aspx?siteid=" + this.siteid + "&amp;classid=0&amp;types=" + this.types+"&amp;issystem="+this.issystem) + "" + "\">" + bookVo.nickname + "</a><br/>");
-    Response.Write("<b>时间:</b>" + bookVo.addtime + "<br/>");
-    Response.Write("<b>内容:</b>" + WapTool.ToWML(bookVo.content, wmlVo) + "<br/>");
+    Response.Write("<b>发件人：</b><a href=\"" + http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + bookVo.userid + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/messagelist.aspx?siteid=" + this.siteid + "&amp;classid=0&amp;types=" + this.types+"&amp;issystem="+this.issystem) + "" + "\">" + bookVo.nickname + "</a><br/>");
+    Response.Write("<b>时间：</b>" + bookVo.addtime + "<br/>");
+    Response.Write("<b>内容：</b>" + WapTool.ToWML(bookVo.content, wmlVo) + "<br/>");
     Response.Write("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist_add.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=0&amp;issystem=" + this.issystem + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;touserid=" + bookVo.userid + "" + "\">回复/转发</a>.");
     Response.Write("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist_del.aspx?action=del&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + this.id + "&amp;types=" + this.types + "&amp;issystem=" + this.issystem + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.page + "" + "\">删除本条</a><br/>");
     Response.Write("<a class=\"urlbtn\" href=\"" + http_start + "bbs/messagelist_del.aspx?action=delother&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + this.id + "&amp;types=" + this.types + "&amp;issystem=" + this.issystem + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.page + "" + "\">删除我跟此用户会话</a><br/>");
@@ -135,15 +135,12 @@ else //2.0界面
         Response.Write("<form name=\"f\" action=\"" + http_start + "bbs/messagelist_add.aspx\" method=\"post\">");
         if (this.needpwFlag == "1")
         {
-            Response.Write("回复内容*:<input type=\"text\"  name=\"content\" value=\"\" size=\"8\" />");
-
-            Response.Write("<br/>我的密码*:<input type=\"text\" name=\"needpw\" value=\"" + needpw + "\" size=\"10\" /><br/>");
-
+            Response.Write("回复内容：<input type=\"text\"  name=\"content\" value=\"\" size=\"8\" />");
+            Response.Write("<br/>我的密码：<input type=\"text\" name=\"needpw\" value=\"" + needpw + "\" size=\"10\" /><br/>");
         }
         else
         {
-            Response.Write("<textarea name=\"content\" rows=\"3\" style=\"width:100%\"></textarea><br/>");
-        
+            Response.Write("<textarea name=\"content\" rows=\"3\" style=\"width:97%;height: 85px;\"></textarea><br/>");
         }
         Response.Write("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
         Response.Write("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
@@ -167,7 +164,7 @@ else //2.0界面
             if (listVo[i].touserid.ToString() != this.userid)
             {
                 //html.Append("<b>我:</b>" + listVo[i].content + "<br/>");
-                html.Append("<div class=\"the_me\">");
+                html.Append("<div class=\"listmms the_me\">");
                 html.Append("<div class=\"bubble\">");
                 html.Append("<div class=\"con\">");
                 html.Append(listVo[i].content);
@@ -184,7 +181,7 @@ else //2.0界面
             }
             else
             {
-                html.Append("<div class=\"the_user\">");
+                html.Append("<div class=\"listmms the_user\">");
                 html.Append("<div class=\"bubble\">");
                 html.Append("<div class=\"con\">");
                 html.Append(listVo[i].content);

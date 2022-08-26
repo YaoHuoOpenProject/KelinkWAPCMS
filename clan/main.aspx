@@ -134,7 +134,7 @@ else //2.0界面
     }
     strhtml.Append("----------<br/>");
    
-    strhtml.Append("<a href=\""+this.http_start+"clan/addclan.aspx?siteid="+this.siteid+"&amp;classid="+this.classid+"&amp;sid="+this.sid+"\">创建家族</a>(最多"+maxclan+"个)<br/>");
+    strhtml.Append("<a href=\"" + this.http_start + "clan/addclan.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">创建家族</a>(最多"+maxclan+"个)<br/>");
     strhtml.Append("<a href=\"" + this.http_start + "clan/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">加入家族</a>(最多" + maxclanadd + "个)");
    
     
@@ -142,7 +142,7 @@ else //2.0界面
     strhtml.Append("<div class=\"subtitle\">家族争霸</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<a href=\"" + http_start + "clan/myinfo.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + this.userid + "" + "\">我的战绩</a>.<a href=\"" + http_start + "clan/rule.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + this.userid + "" + "\">游戏规则</a><br/>");
-    strhtml.Append("<a href=\""+this.http_start+"clan/book_list.aspx?siteid="+this.siteid+"&amp;classid="+this.classid+"&amp;sid="+this.sid+"\">家族排行</a>.");
+    strhtml.Append("<a href=\"" + this.http_start + "clan/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">家族排行</a>.");
 
 
     strhtml.Append("<a href=\"" + this.http_start + "clan/user_pk_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">进入争霸</a>");

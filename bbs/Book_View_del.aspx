@@ -14,7 +14,7 @@ if (ver == "1")
         }
         else
         {
-            strhtml.Append("删贴理由:<input type=\"text\" name=\"why\" value=\"" + this.why + "\"/><br/>");
+            strhtml.Append("删贴理由：<input type=\"text\" name=\"why\" value=\"" + this.why + "\"/><br/>");
             strhtml.Append("<anchor><go href=\"" + http_start + "bbs/book_view_del.aspx\" method=\"post\" accept-charset=\"utf-8\">");
             strhtml.Append("<postfield name=\"action\" value=\"godel\" />");
             strhtml.Append("<postfield name=\"siteid\" value=\"" + siteid + "\" />");
@@ -90,7 +90,7 @@ else //2.0界面
         {
             strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/book_view_del.aspx\" method=\"get\">");
 
-            strhtml.Append("删贴理由:<input type=\"text\" name=\"why\" value=\"" + why + "\" /><br/>");
+            strhtml.Append("删贴理由：<input type=\"text\" name=\"why\" value=\"" + why + "\" /><br/>");
 
             strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
             strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
@@ -104,12 +104,6 @@ else //2.0界面
             strhtml.Append("3.删除贴子不扣币和经验<br/>");
             strhtml.Append("<input type=\"submit\" name=\"action\" value=\"Del_3\"/><br/>");
             strhtml.Append("</form>");
-            //strhtml.Append("1.删除贴子扣1倍币和经验<br/>");
-            //strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_del.aspx?action=godel&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;sub=1&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定删除！|确定删除！|submit") + "</a><br/>");
-            //strhtml.Append("2.删除贴子扣2倍币和经验<br/>");
-            //strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_del.aspx?action=godel&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;sub=2&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定删除！|确定删除！|submit") + "</a><br/>");
-            //strhtml.Append("3.删除贴子不扣币和经验<br/>");
-            //strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_del.aspx?action=godel&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;sub=0&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定删除！|确定删除！|submit") + "</a><br/>");
         }
         strhtml.Append("</div>");
 
@@ -135,7 +129,7 @@ else //2.0界面
     }
   
     strhtml.Append("<div class=\"btBox\"><div class=\"bt3\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回主题|返回主题|Back to subject") + "</a> ");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_admin.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回管理|返回上級|Back to admin") + "</a> ");
     strhtml.Append("</div></div>");

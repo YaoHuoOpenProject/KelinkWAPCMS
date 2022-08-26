@@ -39,7 +39,7 @@ if (ver == "1")
 
     
     strhtml.Append("--------<br/>");
-    strhtml.Append("<img src=\"stone/st.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/stone/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">疯狂石头</a>.<a href=\"" + this.http_start + "games/stone/add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">公开叫板</a><br/>");
+    strhtml.Append("<img src=\"stone/st.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/stone/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">石头剪刀布</a>.<a href=\"" + this.http_start + "games/stone/add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">公开叫板</a><br/>");
     strhtml.Append("今日疯狂总数:" + this.GetTodayState("stone", "1") + "次 <br/>");
     strhtml.Append("今日石头总量:" + this.GetTodayState("stone", "2") + siteVo.sitemoneyname + "<br/>");
     strhtml.Append("--------<br/>");
@@ -58,10 +58,6 @@ if (ver == "1")
     strhtml.Append("<img src=\"chuiniu/dh.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/chuiniu/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">疯狂吹牛</a>.<a href=\"" + this.http_start + "games/chuiniu/add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">放狠话</a> <br/>");
     strhtml.Append("今日传播大话总数:" + this.GetTodayState("chuiniu", "1") + " 次 <br/>");
     strhtml.Append("今日传播大话金额:" + this.GetTodayState("chuiniu", "2") + siteVo.sitemoneyname + "  <br/>");
-    strhtml.Append("--------<br/>");
-    strhtml.Append("<img src=\"war/jt.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/war/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">掠夺军团</a>.<a href=\"" + this.http_start + "games/war/info.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">兵法</a>.<a href=\"" + this.http_start + "games/rank/book_list.aspx?id=war&amp;type=0&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">精英</a> <br/>");
-    strhtml.Append("今日将军总出征:" + this.GetTodayState("war", "1") + " 次 <br/>");
-    strhtml.Append("今日将军总缴获:" + this.GetTodayState("war", "2") + siteVo.sitemoneyname + "  <br/>");
     strhtml.Append("--------<br/>");
     strhtml.Append("<img src=\"lucky28/luck28.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/lucky28/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">幸运28！</a> <br/>");
     strhtml.Append("看看今天谁是幸运大赢家！ <br/>");
@@ -133,89 +129,60 @@ else //2.0界面
     }
     //显示内容
     strhtml.Append("<div class=\"line1\">");
+    strhtml.Append("<img src=\"chuiniu/dh.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/chuiniu/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">疯狂吹牛</a>.<a href=\"" + this.http_start + "games/chuiniu/add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">放狠话</a> <br/>");
+    strhtml.Append("今日传播大话总数:" + this.GetTodayState("chuiniu", "1")  + " 次 <br/>");
+    strhtml.Append("今日传播大话金额:" + this.GetTodayState("chuiniu", "2") + siteVo.sitemoneyname + "  <br/>");
+    strhtml.Append("</div>");
+    strhtml.Append("<div class=\"line2\">");
     strhtml.Append("<img src=\"wabao/wabao.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/waBao/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">挖宝竟猜</a>.<a href=\"" + this.http_start + "games/wabao/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">历史开奖</a><br/>");
     strhtml.Append("今日下注总数:" + this.GetTodayState("waBao", "1") + "次 <br/>");
     strhtml.Append("今日下注总量:" + this.GetTodayState("waBao", "2") + siteVo.sitemoneyname + "<br/>");
     strhtml.Append("</div>");
     
-    strhtml.Append("<div class=\"line2\">");
-    strhtml.Append("<img src=\"happyten/10.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/happyTen/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">快乐十分</a>.<a href=\"" + this.http_start + "games/happyTen/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">历史开奖</a><br/>");
-    strhtml.Append("今日下注总数:" + this.GetTodayState("happyTen", "1") + "次 <br/>");
-    strhtml.Append("今日下注总量:" + this.GetTodayState("happyTen", "2") + siteVo.sitemoneyname + "<br/>");
-    strhtml.Append("</div>");
-    
     strhtml.Append("<div class=\"line1\">");
-    strhtml.Append("<img src=\"marksix/zhong.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/marksix/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">博彩游戏</a>.<a href=\"" + this.http_start + "games/marksix/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">历史开奖</a><br/>");
-    strhtml.Append("今日下注总数:" + this.GetTodayState("MarkSix", "1") + "次 <br/>");
-    strhtml.Append("今日下注总量:" + this.GetTodayState("MarkSix", "2") + siteVo.sitemoneyname + "<br/>");
-    strhtml.Append("</div>");
-
-    //strhtml.Append("<div class=\"line2\">");
-    //strhtml.Append("<img src=\"ball/ball.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/ball/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">球彩竟猜</a>.<a href=\"" + this.http_start + "games/ball/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">我要下注</a><br/>");
-    //strhtml.Append("今日下注总数:" + this.GetTodayState("ballLottery", "1") + "次 <br/>");
-    //strhtml.Append("今日下注总量:" + this.GetTodayState("ballLottery", "2") + siteVo.sitemoneyname + "<br/>");
-    //strhtml.Append("</div>");
-    
-    strhtml.Append("<div class=\"line2\">");
-    strhtml.Append("<img src=\"stone/st.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/stone/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">疯狂石头</a>.<a href=\"" + this.http_start + "games/stone/add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">公开叫板</a><br/>");
+    strhtml.Append("<img src=\"stone/st.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/stone/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">石头剪刀布</a>.<a href=\"" + this.http_start + "games/stone/add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">公开叫板</a><br/>");
     strhtml.Append("今日疯狂总数:" + this.GetTodayState ("stone","1")+ "次 <br/>");
     strhtml.Append("今日石头总量:" + this.GetTodayState("stone", "2") +siteVo.sitemoneyname +"<br/>");
     strhtml.Append("</div>");
-    strhtml.Append("<div class=\"line1\">");
+    strhtml.Append("<div class=\"line2\">");
     strhtml.Append("<img src=\"touzi/sz.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/touzi/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">激情骰子</a>.<a href=\"" + this.http_start + "games/touzi/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + this.userid + "\">激情的岁月</a><br/>");
     strhtml.Append("今日掷骰总次数:" + this.GetTodayState("touzi", "1") + "次 <br/>");
     strhtml.Append("今日掷骰总金额:" + this.GetTodayState("touzi", "2") + siteVo.sitemoneyname + " <br/>");
     strhtml.Append("</div>");
-    strhtml.Append("<div class=\"line2\">");
+    strhtml.Append("<div class=\"line1\">");
     strhtml.Append("<img src=\"apple/apple.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/apple/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">苹果机</a>.<a href=\"" + this.http_start + "games/apple/info.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">玩法</a> <br/>");
     strhtml.Append("今日投注总次数:" + this.GetTodayState("apple", "1") + "次 <br/>");
     strhtml.Append("今日投注总金额:" + this.GetTodayState("apple", "2") + siteVo.sitemoneyname + "  <br/>");
     strhtml.Append("</div>");
-    strhtml.Append("<div class=\"line1\">");
+    strhtml.Append("<div class=\"line2\">");
     strhtml.Append("<img src=\"quankun/qkb.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/quankun/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">乾坤宝</a>.<a href=\"" + this.http_start + "games/quankun/info.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">规则</a><br/>");
     strhtml.Append("今日压注总次数:" + this.GetTodayState("quankun", "1") + " 次 <br/>");
     strhtml.Append("今日压注总金额:" + this.GetTodayState("quankun", "2") + siteVo.sitemoneyname + "  <br/>");
     strhtml.Append("</div>");
-    strhtml.Append("<div class=\"line2\">");
-    strhtml.Append("<img src=\"chuiniu/dh.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/chuiniu/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">疯狂吹牛</a>.<a href=\"" + this.http_start + "games/chuiniu/add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">放狠话</a> <br/>");
-    strhtml.Append("今日传播大话总数:" + this.GetTodayState("chuiniu", "1")  + " 次 <br/>");
-    strhtml.Append("今日传播大话金额:" + this.GetTodayState("chuiniu", "2") + siteVo.sitemoneyname + "  <br/>");
-    strhtml.Append("</div>");
     strhtml.Append("<div class=\"line1\">");
-    strhtml.Append("<img src=\"war/jt.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/war/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">掠夺军团</a>.<a href=\"" + this.http_start + "games/war/info.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">兵法</a>.<a href=\"" + this.http_start + "games/rank/book_list.aspx?id=war&amp;type=0&amp;classid="+this.classid+"&amp;siteid="+this.siteid+"&amp;sid="+this.sid+"\">精英</a> <br/>");
-    strhtml.Append("今日将军总出征:" + this.GetTodayState("war", "1")  + " 次 <br/>");
-    strhtml.Append("今日将军总缴获:" + this.GetTodayState("war", "2") + siteVo.sitemoneyname + "  <br/>");
-    strhtml.Append("</div>");
-    strhtml.Append("<div class=\"line2\">");
     strhtml.Append("<img src=\"lucky28/luck28.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/lucky28/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">幸运28！</a> <br/>");
     strhtml.Append("看看今天谁是幸运大赢家！ <br/>");
     strhtml.Append("今日投注总次数:" + this.GetTodayState("lucky28", "1") +  " 次 <br/>");
     strhtml.Append("今日投注总金额:" + this.GetTodayState("lucky28", "2") + siteVo.sitemoneyname + " <br/>");
     strhtml.Append("</div>");  
-    strhtml.Append("<div class=\"line1\">");
+    strhtml.Append("<div class=\"line2\">");
     strhtml.Append("<img src=\"shoot/ball.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/shoot/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">疯狂射门</a> <br/>");
     strhtml.Append("超级刺激的疯狂射门，让您体会足球的乐趣，赚币多多！ <br/>");
     strhtml.Append("今日疯狂射门总次数:" + this.GetTodayState("shoot", "1")  + " 次 <br/>");
     strhtml.Append("今日疯狂射门总金额:" + this.GetTodayState("shoot", "2") + siteVo.sitemoneyname + "  <br/>");
     strhtml.Append("</div>");
-    strhtml.Append("<div class=\"line2\">");
+    strhtml.Append("<div class=\"line1\">");
     strhtml.Append("<img src=\"horse/2.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/horse/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">赛马场</a><br/>");
     strhtml.Append("疯狂刺激，爽，赚币多多！ <br/>");
     strhtml.Append("今日投注总次数:" + this.GetTodayState("horse", "1") + " 次 <br/>");
     strhtml.Append("今日投注总金额:" + this.GetTodayState("horse", "2") + siteVo.sitemoneyname + " <br/>");
     strhtml.Append("</div>");
-    strhtml.Append("<div class=\"line1\">");
-    strhtml.Append("<img src=\"egg/egg.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/egg/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">砸金蛋</a> <br/>");
-    
-    strhtml.Append("高赔率，快速致富的好途径！<br/>");
-    strhtml.Append("今日玩家总次数:" + this.GetTodayState("egg", "1") + " 次 <br/>");
-    strhtml.Append("今日砸金总金额:" + this.GetTodayState("egg", "2") + siteVo.sitemoneyname + " <br/>");
-    
-    strhtml.Append("</div>");
-    strhtml.Append("<div class=\"line2\">");
-    strhtml.Append("<img src=\"/netImages/nc.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "nongchang/index.asp?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;sid=" + this.sid + "\">开心农场</a> <br/>");
-    strhtml.Append("在自己农场里开垦土地、种植各种蔬菜和水果，快去偷菜吧。");
-    strhtml.Append("</div>");
+    //strhtml.Append("<div class=\"line2\">");
+    //strhtml.Append("<img src=\"egg/egg.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "games/egg/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">砸金蛋</a> <br/>");
+    //strhtml.Append("高赔率，快速致富的好途径！<br/>");
+    //strhtml.Append("今日玩家总次数:" + this.GetTodayState("egg", "1") + " 次 <br/>");
+    //strhtml.Append("今日砸金总金额:" + this.GetTodayState("egg", "2") + siteVo.sitemoneyname + " <br/>");
+    //strhtml.Append("</div>");
     strhtml.Append("<div class=\"line1\">");
     strhtml.Append("<img src=\"/netImages/jz.gif\" alt=\"PIC\"/><a href=\"" + this.http_start + "clan/main.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">家族争霸</a> <br/>");
     strhtml.Append("不同家族之间争霸，可让自己的家族雄起来。");

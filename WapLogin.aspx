@@ -94,7 +94,7 @@ if (ver == "1")  //显示WAP1.0
 
         if (this.showQQLogin == "0")
         {
-            strhtml.Append("<a href=\"http://" + http_start2 + "/oauth/qq/qqlogin.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "" + "\"><img src=\"/oauth/qq/Connect_logo.png\" alt=\"QQ\"/>QQ帐号登录</a><br/>");
+            strhtml.Append("<a href=\"http://" + http_start2 + "/oauth/qq/qqlogin.aspx?siteid=" + siteid + "&amp;classid=" + this.classid +  "\"><img src=\"/oauth/qq/Connect_logo.png\" alt=\"QQ\"/>QQ帐号登录</a><br/>");
         }
         strhtml.Append("<a href=\"" + http_start + "wapreg.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "" + "\">免费注册会员</a><br/>");
         strhtml.Append("<a href=\"" + http_start + "wapgetpw.aspx?siteid=" + siteid + "" + "\">取回忘记密码</a><br/>");
@@ -179,21 +179,17 @@ if (ver == "1")  //显示WAP1.0
     {
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "waplogin.aspx\" method=\"post\">");
 
-        strhtml.Append("<div class=\"line1\">");
+        strhtml.Append("<div class=\"content\">");
         strhtml.Append(this.GetLang("用户ID/用户名/手机号码|用户ID/用户名/手机号码|userid/username/mobile") + "*:<br/>");
 
         strhtml.Append("<input type=\"text\" name=\"logname\" class=\"txt\" value=\"" + this.logname + "\"/><br/>");
-        strhtml.Append("</div>");
+       
 
-        strhtml.Append("<div class=\"line2\">");
+        
         strhtml.Append(this.GetLang("密码|密码|password") + "*:<br/>");
         strhtml.Append("<input type=\"password\" name=\"logpass\" class=\"txt\" value=\"" + this.logpass + "\"/><br/>");
-        strhtml.Append("</div>");
-        strhtml.Append("<div class=\"line1\">");
-        //strhtml.Append("<select name=\"savesid\">");       
-        //strhtml.Append("<option value=\"0\">[1]下次自动登录(移动网络)</option>");
-        //strhtml.Append("<option value=\"1\">[2]安全登录(WLan;网线上网)</option>");        
-        //strhtml.Append("</select><br/>");
+        
+     
 
         strhtml.Append("<input type=\"checkbox\" name=\"savesid\" checked=\"checked\" value=\"0\" > 下次自动登录");
  
@@ -222,8 +218,10 @@ if (ver == "1")  //显示WAP1.0
             strhtml.Append("<a href=\"" + http_start + "waplogin.aspx?action=weixin&amp;siteid=" + siteid + "&amp;classid=" + this.classid + "" + "\"><img src=\"/weixin/images/logo.png\" alt=\"WeiXin\" width=\"16\" height=\"16\"/> WX微信登录</a><br/>");
             strhtml.Append("</div></div>");
         }
-        strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
+        strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");
         strhtml.Append("<a href=\"" + http_start + "wapreg.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "" + "\">免费注册会员</a> ");
+        strhtml.Append("</div></div>");
+        strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");
         strhtml.Append("<a href=\"" + http_start + "wapgetpw.aspx?siteid=" + siteid + "" + "\">取回忘记密码</a><br/>");
         strhtml.Append("</div></div>");
         if (pd == false)

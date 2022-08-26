@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="add.aspx.cs" Inherits="KeLin.WebSite.Games.chuiniu.add" %><%@ Import namespace="KeLin.ClassManager.Tool" %><%
-string [] arryQuestion ={"你是乌龟还是王八？","我比张曼玉还漂亮"};
-string[] arryAnswer1 = { "乌龟", "当然" };
-string[] arryAnswer2 = { "王八", "不是" };
+string [] arryQuestion ={"我是吹牛大神！","爱生活还是爱妖火？"};
+string[] arryAnswer1 = { "不是", "爱生活" };
+string[] arryAnswer2 = { "当然", "爱妖火" };
 if (action == "")
 {
     Random rnd1 = new Random();
@@ -135,16 +135,16 @@ else //2.0界面
     {
         Response.Write("<div class=\"content\">");
         Response.Write("<form name=\"gt\" action=\"" + http_start + "games/chuiniu/add.aspx\" method=\"post\">");
-        Response.Write("您目前共有" + userVo.money + "个"+siteVo.sitemoneyname + "！<br/>");
-        Response.Write("请输入您的赌注(最少"+min+"个金币,最多"+max+"个金币)*:<br/>");
-        Response.Write("<input type=\"text\" name=\"mymoney\" value=\"" + min + "\"/><br/>");
+        Response.Write("您目前共有 " + userVo.money + " 个"+siteVo.sitemoneyname + "！<br/>");
+        Response.Write("请输入您的赌注（最少500最多1千万）：<br/>");
+        Response.Write("<input type=\"text\" name=\"mymoney\" style=\"width:77%\" value=\"" + min + "\"/><br/>");
 
-        Response.Write("请输入您的问题:<br/>");
-        Response.Write("<input type=\"text\" name=\"question\" value=\"" + question + "\"/><br/>");
-        Response.Write("答案一:<br/>");
-        Response.Write("<input type=\"text\" name=\"answer1\" value=\"" + answer1 + "\"/><br/>");
-        Response.Write("答案二:<br/>");
-        Response.Write("<input type=\"text\" name=\"answer2\" value=\"" + answer2 + "\"/><br/>");
+        Response.Write("请输入您的问题：<br/>");
+        Response.Write("<input type=\"text\" name=\"question\" style=\"width:77%\" value=\"" + question + "\"/><br/>");
+        Response.Write("答案一：<br/>");
+        Response.Write("<input type=\"text\" name=\"answer1\" style=\"width:77%\" value=\"" + answer1 + "\"/><br/>");
+        Response.Write("答案二：<br/>");
+        Response.Write("<input type=\"text\" name=\"answer2\" style=\"width:77%\" value=\"" + answer2 + "\"/><br/>");
 
         Response.Write("正确答案:<br/>");
         Response.Write("<select name=\"myanswer\">");
@@ -156,7 +156,7 @@ else //2.0界面
         Response.Write("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");       
         Response.Write("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
         Response.Write("<input type=\"submit\"  name=\"bt\" value=\"" + this.GetLang("确 定|确 定|submit") + "\"/></form>");
-        Response.Write("<br/>说明:如果其它友友获胜,您的赌注就要输光哦,如果您获胜,您将获得您赌注的"+per+"%金币,如果平局则退回挑战金币。");
+        Response.Write("<br/>说明：如果其他友友获胜，您的赌注就要输光哦！如果您获胜，您将获得赌注的"+per+"%金币。");
         Response.Write("</div>");
     }
 

@@ -186,7 +186,7 @@ else //2.0界面
     }
     string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码   
     strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/togroupinfo.aspx?siteid=" + this.siteid + "" + "\">返回上级</a> ");
+    strhtml.Append("<a href=\"javascript:window.history.back();\">返回上级</a> ");
    
     strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
 

@@ -58,7 +58,7 @@ if (ver == "1")
     }
     strhtml.Append("<a href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a><br/>");
 
-    strhtml.Append("输入会员ID:<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"8\"/>");
+    strhtml.Append("输入会员ID：<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"8\"/>");
     strhtml.Append("<anchor><go href=\"" + http_start + "bbs/friendlist.aspx\" method=\"get\" accept-charset=\"utf-8\">");
     strhtml.Append("<postfield name=\"action\" value=\"class\" />");
     strhtml.Append("<postfield name=\"siteid\" value=\"" + siteid + "\" />");
@@ -169,7 +169,7 @@ else //2.0界面
     //strhtml.Append("<a class=\"urlbtn\" href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a><br/>");
 
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/friendlist.aspx\" method=\"post\">");
-    strhtml.Append("输入会员ID:<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"8\"/>");
+    strhtml.Append("输入会员ID：<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"8\"/>");
     
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"class\" />");
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");

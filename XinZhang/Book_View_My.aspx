@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_My.aspx.cs" Inherits="KeLin.WebSite.XinZhang.Book_View_My" %><%@ Import namespace="KeLin.ClassManager.Tool" %><%
-Response.Write(WapTool.showTop("管理我的勋章", wmlVo));//显示头  
+Response.Write(WapTool.showTop("删除我的勋章", wmlVo));//显示头  
 bool isexit = false;                                                                                                                                                                
 if (ver == "1")
 {
@@ -88,7 +88,7 @@ if (ver == "1")
     //{
     //    strhtml.Append(adVo.threeShowTop );
     //}
-    strhtml.Append("<div class=\"subtitle\">管理我的勋章</div>" );
+    strhtml.Append("<div class=\"subtitle\">删除我的勋章</div>" );
     
  
     
@@ -108,7 +108,7 @@ if (ver == "1")
         strhtml.Append("<div class=\"content\">");
         
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "xinzhang/book_view_my.aspx\" method=\"post\">");
-        strhtml.Append("我的密码:<input type=\"text\" name=\"pw\" value=\"" + pw + "\" size=\"8\"/><br/>");
+        strhtml.Append("删除后无法恢复，确认请输入密码：<input type=\"text\" name=\"pw\" style=\"width: 66%; \" value=\"" + pw + "\" size=\"15\"/><br/><br/>");
 
         string[] arry = userVo.moneyname.Split('|');
         for (int i = 0; i < arry.Length; i++)
@@ -131,7 +131,7 @@ if (ver == "1")
                 }
                 isexit = true;
                 //strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + arry[i] + "\" />");
-                strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"删除_" + arry[i] + "\"/><br/>");
+                strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"删除_" + arry[i] + "\"/><br/><br/>");
 
             }
 

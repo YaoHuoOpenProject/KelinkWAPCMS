@@ -102,18 +102,18 @@ else //2.0界面
     //显示列表
    
     Response.Write("<b>第一步：</b><br/>");
-    Response.Write("<a href=\"" + http_start + "bbs/toMedalView.aspx?siteid=" + siteid + "&amp;classid=" + classid + "" + "&amp;facetype=1&amp;facesmall=1&amp;facebig=22\">查看小图系列</a><br/>");
-    Response.Write("<a href=\"" + http_start + "bbs/toMedalView.aspx?siteid=" + siteid + "&amp;classid=" + classid + "" + "&amp;facetype=2&amp;facesmall=23&amp;facebig=40\">查看大图系列</a><br/>");
-    Response.Write("<a href=\"" + http_start + "bbs/toMedalView.aspx?siteid=" + siteid + "&amp;classid=" + classid + "" + "&amp;facetype=3&amp;facesmall=41&amp;facebig=60\">查看QQ系列</a><br/>");
-    Response.Write("<br/>");
+    Response.Write("<a href=\"" + http_start + "wapindex.aspx?classid=224\">查看勋章图片</a><br/><br/>");
+    //Response.Write("<a href=\"" + http_start + "bbs/toMedalView.aspx?siteid=" + siteid + "&amp;classid=" + classid + "" + "&amp;facetype=2&amp;facesmall=23&amp;facebig=40\">查看大图系列</a><br/>");
+    //Response.Write("<a href=\"" + http_start + "bbs/toMedalView.aspx?siteid=" + siteid + "&amp;classid=" + classid + "" + "&amp;facetype=3&amp;facesmall=41&amp;facebig=60\">查看QQ系列</a><br/>");
+    //Response.Write("<br/>");
     Response.Write("<b>第二步：</b><br/>");
     Response.Write("<form id=\"form1\" action=\"" + http_start + "bbs/toMedal.aspx\" method=\"post\">");
     Response.Write("<input type=\"hidden\" name=\"action\" value=\"search\" />");
     Response.Write("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
     Response.Write("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
-    Response.Write("用户ID：<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"5\"/>");
+    Response.Write("用户ID <input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"12\"/>");
     Response.Write("<input type=\"submit\" value=\"查询\" /></form><br/>");
-    Response.Write("查询勋章显示：<br/>");
+    //Response.Write("显示勋章<br/>");
     if (smedal != "")
     {
 
@@ -121,21 +121,18 @@ else //2.0界面
     }
     else
     {
-        Response.Write("<b>" + this.GetLang("暂时无勋章|暂时无勋章|暂时无勋章") + "</b>");
+        Response.Write("<b>" + this.GetLang("暂无勋章|暂无勋章|暂无勋章") + "</b>");
     }
-    
-    Response.Write("<br/>");
+    Response.Write("<br/><br/>");
     Response.Write("<b>第三步：</b><br/>");
     Response.Write("<form id=\"form1\" action=\"" + http_start + "bbs/toMedal.aspx\" method=\"post\">");
     Response.Write("<input type=\"hidden\" name=\"action\" value=\"gomod\" />");
     Response.Write("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
     Response.Write("<input type=\"hidden\" name=\"touserid\" value=\"" + touserid + "\" />");
     Response.Write("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
-    Response.Write("手动奖励勋章：<br/><input type=\"text\" name=\"smedal\" value=\"" + smedal + "\" size=\"25\"/><br/>");
-    Response.Write("(多个用|区分,如1.gif|2.gif)<br/>");
-    Response.Write("原因：<br/><input type=\"text\" name=\"remark\" value=\"" + remark + "\" size=\"25\"/><br/>");
-        
-    Response.Write("<input type=\"submit\" value=\"确定更新\" />");
+    Response.Write("奖励勋章<br/><input type=\"text\" name=\"smedal\" value=\"" + smedal + "\" style=\"width:97%\"/><br/>");
+    Response.Write("奖励原因<br/><input type=\"text\" name=\"remark\" value=\"" + remark + "\" style=\"width:97%\"/><br/>");
+    Response.Write("<input type=\"submit\" value=\"确认提交\" />");
     Response.Write("</form>");
     Response.Write("</div>");
     

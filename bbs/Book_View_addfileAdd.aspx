@@ -36,7 +36,7 @@ else //2.0界面
         {
             strhtml.Append("<b>审核后显示！</b> ");
         }
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回主题|返回主题|add vote") + "</a><br/>");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a><br/>");
         
     }
     else if (this.INFO == "EXTERR")
@@ -66,9 +66,8 @@ else //2.0界面
     if (this.INFO != "OK")
     {
         //选多少个
-
         strhtml.Append("<form name=\"g1\" action=\"" + http_start + "bbs/book_view_addfileadd.aspx\" method=\"get\">");
-        strhtml.Append(this.GetLang("上传数量|上传数量|Upload Number") + " <input type=\"text\" name=\"num\" value=\"" + this.num + "\" size=\"2\"/>");
+        strhtml.Append(this.GetLang("上传数量|上传数量|Upload Number") + " <input type=\"number\" name=\"num\" style=\"width:30px;text-align:center\" value=\"" + this.num + "\" size=\"2\"/>");
         strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"class\"/>");
         strhtml.Append("<input type=\"hidden\"  name=\"classid\" value=\"" + classid + "\"/>");
         strhtml.Append("<input type=\"hidden\"  name=\"siteid\" value=\"" + siteid + "\"/>");
@@ -76,23 +75,20 @@ else //2.0界面
         strhtml.Append("<input type=\"hidden\"  name=\"id\" value=\"" + id + "\"/>");
         strhtml.Append("<input type=\"hidden\"  name=\"sid\" value=\"" + sid + "\"/>");
         strhtml.Append(" <input type=\"submit\"  name=\"bt\" value=\"" + this.GetLang("确定|确定|GO") + "\"/></form>");
-
         strhtml.Append("<br/>");
-
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/book_view_addfileadd.aspx\" enctype=\"multipart/form-data\" method=\"post\">");
         for (int i = 0; i < this.num; i++)
         {
-            strhtml.Append("----- 上传文件" + (i + 1) + " -------<br/>");
-            strhtml.Append("<input type=\"file\" name=\"book_file\" value=\"\"/><br/>");
-            strhtml.Append(this.GetLang("说明|说明|Source") + ":<br/>");
-            strhtml.Append("<textarea name=\"book_file_info\" rows=\"3\" style=\"width:100%\"></textarea><br/>");
+            strhtml.Append("----- 上传文件" + (i + 1) + " -----<br/>");
+            strhtml.Append("<input type=\"file\" style=\"border:0px;\" required=\"required\" name=\"book_file\" onchange=\"fileChange(this);\" accept=\".txt,.zip,.rar,.7z,.apk,.jpg,.jpeg,.png,.gif,.torrent,.mp3,.wma,.wav,.pdf,.xls,.doc,.docx\" value=\"\"/><br/>");
+            strhtml.Append("<script charset=\"utf-8\" type=\"text/javascript\" src=\"/CSS/JS/upload.js\"></script>");
+            strhtml.Append(this.GetLang("文件说明|文件说明|Source") + "<br/>");
+            strhtml.Append("<textarea name=\"book_file_info\" rows=\"3\" style=\"width:97%\"></textarea><br/>");
             if (i == (this.num - 1))
             {
-                strhtml.Append(this.GetLang("如果有图片文件进行缩放|ss|ss:") + "<br/>"); ;
-                strhtml.Append(this.GetLang("图宽|图宽|Width") + ":<input type=\"text\" name=\"book_width\" size=\"5\" value=\"\"/>px ");
-                strhtml.Append(this.GetLang("高|高|Height") + ":<input type=\"text\" name=\"book_height\" size=\"5\" value=\"\"/>px<br/>");
-                strhtml.Append("(不缩放,请留空，建议只输入一个图宽或高来保持不变形。)<br/>");
-            }
+                strhtml.Append(" <input style=\"display:none;\" type=\"number\" min=\"300\" style=\"width:60px;text-align:center;\" name=\"book_width\" value=\"\" \"\"/>");
+                //strhtml.Append(this.GetLang("图片宽度|图片宽度|Width") + " <input type=\"number\" min=\"300\" style=\"width:60px;text-align:center;\" name=\"book_width\" value=\"\" \"\"/> PX<br/>");
+				}
         }
         //strhtml.Append("<anchor><go href=\"" + http_start + "bbs/book_view_add.aspx\" method=\"post\" accept-charset=\"utf-8\">");
         strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
@@ -105,6 +101,9 @@ else //2.0界面
         strhtml.Append("<input type=\"submit\" name=\"g\" value=\"" + this.GetLang("上传文件|上传文件|upload new subject") + "\"/>");
         strhtml.Append("</form>");
     }
+    strhtml.Append("</div>");
+    strhtml.Append("<div class=\"tip\">");
+    strhtml.Append("提示：严禁上传色情文件、病毒文件和恶意软件；<b>附件大小上限为1MB</b>，大文件建议传至网盘。");
     strhtml.Append("</div>");
     string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码    
     if (isWebHtml != "")
@@ -120,7 +119,7 @@ else //2.0界面
     
     strhtml.Append("<div class=\"btBox\"><div class=\"bt4\">");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_View_admin.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回上级|返回上级|add content") + "</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回主题|返回主题|add vote") + "</a> ");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">" + this.GetLang("返回首页|返回首页|Back to index") + "</a> "); 
     

@@ -76,12 +76,11 @@ else //2.0界面
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<form name=\"go\" action=\"" + this.http_start + "bbs/toDefine.aspx\" method=\"post\">");
-    strhtml.Append(this.GetLang("每页内容显示数|每页内容显示数|View Content Num") + "(100-65535):<br/>");
+    strhtml.Append(this.GetLang("每页字数|每页字数|View Content Num") + "(100-65535):<br/>");
     strhtml.Append("<input type=\"text\" name=\"num\" value=\"" + num + "\"/><br/>");
 
-    strhtml.Append(this.GetLang("WAP2.0页面宽度|WAP2.0页面宽度|WAP2.0页面宽度") + "(0为100%,建议320):<br/>");
+    strhtml.Append(this.GetLang("页面宽度|页面宽度|页面宽度") + "(0为100%):<br/>");
     strhtml.Append("<input type=\"text\" name=\"towidth\" value=\"" + towidth + "\"/>");
-   
     strhtml.Append("<br/>");
 
     if (userVo.managerlvl == "00" || userVo.managerlvl == "01")

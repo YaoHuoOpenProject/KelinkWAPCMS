@@ -60,7 +60,7 @@ else //2.0界面
     Response.Write("</div>");
     Response.Write("<div class=\"content\">");
     Response.Write("<form name=\"f\" aciont=\"" + this.http_start + "bbs/sendmoney.aspx\" method=\"post\">");
-    Response.Write(this.GetLang("输入赏分值|输入赏分值|输入赏分值") + "*:<br/>");
+    Response.Write(this.GetLang("输入赏分值|输入赏分值|输入赏分值") + ":<br/>");
     Response.Write("<input type=\"text\"  name=\"sendmoney\" value=\"\" /><br/>");    
     Response.Write("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
     Response.Write("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");

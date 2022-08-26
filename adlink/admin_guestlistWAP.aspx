@@ -57,7 +57,7 @@ else //2.0界面
     //显示搜索
     
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("<a href=\"" + this.http_start + "adlink/admin_userlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">内容管理</a>.点击明细<br/>");
+    strhtml.Append("<a href=\"" + this.http_start + "adlink/admin_userlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">内容管理</a> 点击明细<br/>");
     strhtml.Append("<a href=\"" + this.http_start + "adlink/admin_guestlistWAPdel.aspx?action=goall&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">清空记录</a><br/>");
     strhtml.Append("<form id=\"form1\" action=\"" + http_start + "adlink/admin_guestlistWAP.aspx\" method=\"get\">");
     strhtml.Append("广告ID：<input type=\"text\" name=\"key\" value=\"" + key + "\" size=\"5\"/>");

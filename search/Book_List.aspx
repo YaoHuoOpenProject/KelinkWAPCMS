@@ -8,14 +8,14 @@ if (ver == "1")
     strhtml.Append("<a href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a><br/>");
 
    
-        strhtml.Append("会员ID:<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"5\"/>");
+        strhtml.Append("会员ID：<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"5\"/>");
         strhtml.Append("<anchor><go href=\"" + http_start + "search/book_list.aspx\" method=\"get\" accept-charset=\"utf-8\">");
         strhtml.Append("<postfield name=\"action\" value=\"class\" />");
         strhtml.Append("<postfield name=\"siteid\" value=\"" + siteid + "\" />");
         strhtml.Append("<postfield name=\"classid\" value=\"" + classid + "\" />");
         strhtml.Append("<postfield name=\"touserid\" value=\"$(touserid)\" />");
         strhtml.Append("<postfield name=\"backurl\" value=\"" + (backurl) + "\" />");
-        strhtml.Append("<postfield name=\"sid\" value=\"" + sid + "\" />");
+        //strhtml.Append("<postfield name=\"sid\" value=\"" + sid + "\" />");
         strhtml.Append("</go>" + this.GetLang("搜索|搜索|Search") + "</anchor><br/>");
         
     
@@ -89,13 +89,13 @@ else //2.0界面
     strhtml.Append("<div class=\"content\">");
     
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "search/book_list.aspx\" method=\"get\">");
-    strhtml.Append("会员ID:<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"5\"/>");
+    strhtml.Append("会员ID：<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" size=\"25\"/>");
 
 
     strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
     strhtml.Append("<input type=\"hidden\" name=\"backurl\" value=\"" + (backurl) + "\" />");
-    strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
+    //strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
     strhtml.Append("<input type=\"submit\" name=\"g\" value=\"" + this.GetLang("搜索|搜索|Search") + "\"/>");
 
 

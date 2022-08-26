@@ -44,24 +44,21 @@
         strhtml.Append("<div class=\"content\">");
         strhtml.Append("<a href=\"" + this.http_start + (backurl) + "" + "\">[返回源来页]</a><br/>");
 
-        strhtml.Append("第一步：");
+        //strhtml.Append("第一步：");
         strhtml.Append("<Form name=\"f\" action=\"" + http_start + "bbs/ModifyUserName.aspx\" method=\"post\">");
         strhtml.Append("<input name=\"action\"  type=\"hidden\" value=\"search\" />");
         strhtml.Append("<input name=\"siteid\"  type=\"hidden\" value=\"" + this.siteid + "\"  />");
         strhtml.Append("<input name=\"classid\"  type=\"hidden\" value=\"" + this.classid + "\"  />");
         strhtml.Append("<input name=\"sid\"  type=\"hidden\" value=\"" + this.sid + "\"  />");
         strhtml.Append("<input name=\"backurl\"  type=\"hidden\" value=\"" + this.backurl + "\"  />");
-        strhtml.Append("会员ID：<br />");
-        strhtml.Append("<input type=\"text\" name=\"touserid\" value=\"" + touserid + "\" maxlength=\"50\" /><br/>");
-        strhtml.Append("<input type=\"submit\" id=\"submit\" name=\"submit\" value=\"查询\" />");
+        strhtml.Append("会员ID<br />");
+        strhtml.Append("<input type=\"text\" style=\"width:50%\"name=\"touserid\" value=\"" + touserid + "\" maxlength=\"50\" /><br/>");
+        strhtml.Append("<input type=\"submit\" id=\"submit\" name=\"submit\" value=\"查 询\" />");
         strhtml.Append("</Form><br/>");
-
-        
-       
         if (toUserVo != null)
         {
-            strhtml.Append("----------<br/>");
-            strhtml.Append("第二步：");
+            strhtml.Append("<br/>");
+            //strhtml.Append("第二步：");
             strhtml.Append("<Form name=\"f\" action=\"" + http_start + "bbs/ModifyUserName.aspx\" method=\"post\">");
             strhtml.Append("<input name=\"action\"  type=\"hidden\" value=\"gomod\" />");
             strhtml.Append("<input name=\"siteid\"  type=\"hidden\" value=\"" + this.siteid + "\"  />");
@@ -69,8 +66,8 @@
             strhtml.Append("<input name=\"sid\"  type=\"hidden\" value=\"" + this.sid + "\"  />");
             strhtml.Append("<input name=\"touserid\"  type=\"hidden\" value=\"" + this.touserid + "\"  />");
             strhtml.Append("<input name=\"backurl\"  type=\"hidden\" value=\"" + this.backurl + "\"  />");
-            strhtml.Append("用户名：<br />");
-            strhtml.Append("<input type=\"text\" name=\"tousername\" value=\"" + toUserVo.username + "\" maxlength=\"20\" /><br/>");
+            strhtml.Append("用户名<br />");
+            strhtml.Append("<input type=\"text\" style=\"width:50%\" name=\"tousername\" value=\"" + toUserVo.username + "\" maxlength=\"20\" /><br/>");
             strhtml.Append("<input type=\"submit\" id=\"submit\" name=\"submit\" value=\"修 改\" /><br/>");
             strhtml.Append("</Form>");
         }

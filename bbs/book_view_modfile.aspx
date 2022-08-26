@@ -69,31 +69,29 @@ else //2.0界面
         
 
         strhtml.Append("<form name=\"f1\" action=\"" + http_start + "bbs/book_view_modfile.aspx\" method=\"post\">");        
-        strhtml.Append(this.GetLang("标题|標題|Title") + ":<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + this.id + "" + "\">" + bbsVo.book_title+ "</a><br/>");
+        strhtml.Append(this.GetLang("标题|標題|Title") + "：<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + this.id + "" + "\">" + bbsVo.book_title+ "</a><br/>");
         strhtml.Append("<br/>");
 
         int kk = 0;
         for (int i = 0; (imgList!=null&&i < imgList.Count); i++)
         {
-            strhtml.Append("<b>----- URL图片/文件" + (i + 1) + " -------</b><br/>");
+            strhtml.Append("<b>----- URL图片/文件" + (i + 1) + " -----</b><br/>");
             strhtml.Append("<input type=\"hidden\" name=\"book_id\" value=\"" + imgList[i].ID + "\"/>");
             strhtml.Append("[<a href=\"" + this.http_start + "bbs/book_view_modfile_del.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + this.id + "&amp;delid="+imgList[i].ID+"" + "\">删除此文件</a>]<br/>");
-            strhtml.Append("路径:<b><a href=\"" + imgList[i].book_file + "\">" + imgList[i].book_file + "</a></b><br/>");
+            //strhtml.Append("路径：<b><a href=\"" + imgList[i].book_file + "\">" + imgList[i].book_file + "</a></b><br/>");
             
-            strhtml.Append("文件名:");
-            strhtml.Append("<input type=\"text\" name=\"book_file_title\" value=\"" + imgList[i].book_title + "\" size=\"8\"/><br/>");
-            strhtml.Append("扩展名:");
-            strhtml.Append("<input type=\"text\" name=\"book_ext\" value=\"" + imgList[i].book_ext + "\" size=\"4\"/><br/>");
-            strhtml.Append("大小:");
-            strhtml.Append("<input type=\"text\" name=\"book_size\" value=\"" + imgList[i].book_size + "\" size=\"4\"/><br/>");
-            strhtml.Append("点击:");
-            strhtml.Append("<input type=\"text\" name=\"book_click\" value=\"" + imgList[i].book_click + "\" size=\"4\"/><br/>");
+            strhtml.Append("资源名称：");
+            strhtml.Append("<input type=\"text\" name=\"book_file_title\" value=\"" + imgList[i].book_title + "\" size=\"35\"/><br/>");
+            strhtml.Append("文件后缀：");
+            strhtml.Append("<input type=\"text\" name=\"book_ext\" value=\"" + imgList[i].book_ext + "\" size=\"12\"/><br/>");
+            strhtml.Append("文件大小：");
+            strhtml.Append("<input type=\"text\" name=\"book_size\" value=\"" + imgList[i].book_size + "\" size=\"12\"/><br/>");
             
-            strhtml.Append(this.GetLang("说明|说明|INFO") + ":<br/>");
-            strhtml.Append("<textarea name=\"book_file_info\" rows=\"3\" style=\"width:100%\">" + imgList[i].book_content + "</textarea><br/>");
+            strhtml.Append(this.GetLang("说明|说明|INFO") + "：<br/>");
+            strhtml.Append("<textarea name=\"book_file_info\" rows=\"3\" style=\"width:97%\">" + imgList[i].book_content + "</textarea><br/>");
 
             
-            strhtml.Append("<hr/>");
+            //strhtml.Append("<hr/>");
             kk++;
             
         }
@@ -116,7 +114,7 @@ else //2.0界面
     }
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"tip\">");
-    strhtml.Append("说明：如果您的附件不显示，修复一下即可。");
+    strhtml.Append("说明：如果附件不显示，修改一下即可。");
     strhtml.Append("</div>");
     string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码    
     if (isWebHtml != "")

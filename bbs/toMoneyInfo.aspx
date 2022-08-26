@@ -41,27 +41,25 @@ else //2.0界面
     strhtml.Append("<b>" + siteVo.sitemoneyname + "获取或消费:</b>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("1.<a href=\"" + http_start + "chinabank_wap/RMBtoMoney.aspx?siteid=" + siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "\">我要在线购买</a><br/>");
-
-    strhtml.Append("2.站长设置默认规则:<br/>");
-    strhtml.Append("发贴奖励数:" + WapTool.getLvLRegular(siteVo.moneyregular, 0) + "个<br/>");
-    strhtml.Append("回贴奖励数:" + WapTool.getLvLRegular(siteVo.moneyregular, 1) + "个<br/>");
-    strhtml.Append("加精奖励数:" + WapTool.getLvLRegular(siteVo.moneyregular, 2) + "个<br/>");
-    strhtml.Append("置顶奖励数:" + WapTool.getLvLRegular(siteVo.moneyregular, 3) + "个<br/>");
-    strhtml.Append("推荐奖励:" + WapTool.getLvLRegular(siteVo.moneyregular, 4) + "个<br/>");
-    strhtml.Append("3.站长直接增加或兑换等<br/>");
-    strhtml.Append("4.论坛中赏帖、购买帖、签到帖<br/>");
+    strhtml.Append("1.<a href=\"" + http_start + "chinabank_wap/RMBtoMoney.aspx?siteid=" + siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "\">充值妖晶</a><br/><br/>");
+    strhtml.Append("2.系统奖励：<br/>");
+    strhtml.Append("发帖奖励数：" + WapTool.getLvLRegular(siteVo.moneyregular, 0) + "妖晶<br/>");
+    strhtml.Append("回帖奖励数：" + WapTool.getLvLRegular(siteVo.moneyregular, 1) + "妖晶<br/>");
+    strhtml.Append("加精奖励数：" + WapTool.getLvLRegular(siteVo.moneyregular, 2) + "妖晶<br/><br/>");
+    //strhtml.Append("置顶奖励数：" + WapTool.getLvLRegular(siteVo.moneyregular, 3) + "妖晶<br/>");
+    //strhtml.Append("推荐奖励:" + WapTool.getLvLRegular(siteVo.moneyregular, 4) + "妖晶<br/>");
+    strhtml.Append("3.站长直接增加或兑换等<br/><br/>");
+    strhtml.Append("4.论坛中赏帖、派币帖<br/><br/>");
     strhtml.Append("5.游戏赚币或其它<br/>");
-    strhtml.Append("6.栏目设置的消费币等<br/>");
-    strhtml.Append("说明:还有每个栏目属性设置参数可能不同。<br/>");
+    //strhtml.Append("6.栏目设置的消费币等<br/>");
+    //strhtml.Append("说明:还有每个栏目属性设置参数可能不同。<br/>");
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"mylink\">");
     strhtml.Append("(1)充值金币规则<br/>");
     strhtml.Append("(2)<a href=\"" + this.http_start + "bbs/totimeinfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">在线时间规则</a><br/>");
     strhtml.Append("(3)<a href=\"" + this.http_start + "bbs/tolvlinfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">经验头衔等级规则</a><br/>");
-    strhtml.Append("(4)<a href=\"" + this.http_start + "bbs/toXunZhangInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">自动奖励勋章规则</a><br/>");
-    
-    strhtml.Append("(5)<a href=\"" + this.http_start + "bbs/toGroupInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">用户身份级别规则</a><br/>");
+    //strhtml.Append("(4)<a href=\"" + this.http_start + "bbs/toXunZhangInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">自动奖励勋章规则</a><br/>");
+    //strhtml.Append("(5)<a href=\"" + this.http_start + "bbs/toGroupInfo.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">用户身份级别规则</a><br/>");
    
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");

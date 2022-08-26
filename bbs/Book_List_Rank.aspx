@@ -1,11 +1,11 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_List_Rank.aspx.cs" Inherits="KeLin.WebSite.bbs.Book_List_Rank" %><%@ Import namespace="KeLin.ClassManager.Tool" %><%
 //论坛专题名称
 if(this.stype =="0"){
-    classVo.classname = "贴子排行";
+    classVo.classname = "帖子排行";
 }
 else if (this.stype == "1")
 {
-    classVo.classname = "回贴排行";
+    classVo.classname = "回复排行";
 }
 else if (this.stype == "2")
 {
@@ -35,16 +35,16 @@ if (ver == "1")
     strhtml.Append("会员排行榜<br/>按");
     if (this.stype == "0")
     {
-         strhtml.Append("贴子");
+         strhtml.Append("帖子");
     }else{
-         strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=0\">贴子</a>");
+         strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=0\">帖子</a>");
     }
     
     if (this.stype == "1")
     {
-         strhtml.Append(".回贴");
+         strhtml.Append(".回复");
     }else{
-         strhtml.Append(".<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=1\">回贴</a>");
+         strhtml.Append(".<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=1\">回复</a>");
     } 
         
     if (this.stype == "2")
@@ -93,11 +93,11 @@ if (ver == "1")
         strhtml.Append("<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + HttpUtility.UrlEncode(this.GetUrlQueryString()) + "\">" + WapTool.GetColorNickName(listVo[i].idname, listVo[i].nickname, lang, ver) + "</a>(ID" + listVo[i].userid + ")");
         if (this.stype == "0")
         {
-            strhtml.Append("，贴子(<a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + listVo[i].userid + "&amp;type=pub\">" + listVo[i].bbsCount + "</a>)");
+            strhtml.Append("，帖子(<a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + listVo[i].userid + "&amp;type=pub\">" + listVo[i].bbsCount + "</a>)");
         }
         else if (this.stype == "1")
         {
-            strhtml.Append("，回贴(<a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=0&amp;touserid=" + listVo[i].userid + "\">" + listVo[i].bbsReCount + "</a>)");
+            strhtml.Append("，回复(<a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=0&amp;touserid=" + listVo[i].userid + "\">" + listVo[i].bbsReCount + "</a>)");
         }
         else if (this.stype == "2")
         {
@@ -167,38 +167,38 @@ else //2.0界面
     
     if (this.stype == "0")
     {
-        strhtml_list.Append("贴子");
+        strhtml_list.Append("帖子   ");
     }
     else
     {
-        strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=0\">贴子</a>");
+        strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=0\">帖子</a>   ");
     }
 
     if (this.stype == "1")
     {
-        strhtml_list.Append("回贴");
+        strhtml_list.Append("回复   ");
     }
     else
     {
-        strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=1\">回贴</a>");
+        strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=1\">回复</a>   ");
     }
 
     if (this.stype == "2")
     {
-        strhtml_list.Append(""+siteVo.sitemoneyname);
+        strhtml_list.Append(""+siteVo.sitemoneyname+ "   ");
     }
     else
     {
-        strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=2\">" + siteVo.sitemoneyname + "</a>");
+        strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=2\">" + siteVo.sitemoneyname + "</a>   ");
     }
 
     if (this.stype == "3")
     {
-        strhtml_list.Append("经验");
+        strhtml_list.Append("经验   ");
     }
     else
     {
-        strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=3\">经验</a>");
+        strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=3\">经验</a>   ");
     }
     if (this.stype == "4")
     {
@@ -207,14 +207,6 @@ else //2.0界面
     else
     {
         strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=4\">人气</a>");
-    }
-    if (this.stype == "5")
-    {
-        strhtml_list.Append("推荐");
-    }
-    else
-    {
-        strhtml_list.Append("<a href=\"" + this.http_start + "bbs/book_list_rank.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;stype=5\">推荐</a>");
     }
     strhtml_list.Append("</div>");
     strhtml_list.Append("</div>");
@@ -241,11 +233,11 @@ else //2.0界面
         strhtml_list.Append("<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + HttpUtility.UrlEncode(this.GetUrlQueryString()) + "\">" + WapTool.GetColorNickName(listVo[i].idname, listVo[i].nickname, lang, ver) + "</a>(ID" + listVo[i].userid + ")");
         if (this.stype == "0")
         {
-            strhtml_list.Append("，贴子(<a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid="+this.siteid+"&amp;classid=0&amp;key="+listVo[i].userid+"&amp;type=pub&amp;sid="+this.sid+"\">" + listVo[i].bbsCount + "</a>)");
+            strhtml_list.Append("，帖子(<a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid="+this.siteid+"&amp;classid=0&amp;key="+listVo[i].userid+"&amp;type=pub&amp;sid="+this.sid+"\">" + listVo[i].bbsCount + "</a>)");
         }
         else if (this.stype == "1")
         {
-            strhtml_list.Append("，回贴(<a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid="+this.siteid+"&amp;classid=0&amp;touserid="+listVo[i].userid+"&amp;sid="+this.sid+"\">" + listVo[i].bbsReCount + "</a>)");
+            strhtml_list.Append("，回复(<a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid="+this.siteid+"&amp;classid=0&amp;touserid="+listVo[i].userid+"&amp;sid="+this.sid+"\">" + listVo[i].bbsReCount + "</a>)");
         }
         else if (this.stype == "2")
         {

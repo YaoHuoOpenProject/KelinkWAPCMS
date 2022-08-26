@@ -214,11 +214,9 @@ else //2.0界面
     strhtml.Append("<div class=\"subtitle\">挖宝竟猜</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("我随身有 <a href=\"" + http_start + "bbs/banklist.aspx?siteid=" + siteid + "&amp;classid=" + this.classid + "&amp;key=" + this.userid + "&amp;backurl=" + HttpUtility.UrlEncode(this.GetUrlQueryString()) + "" + "\">" + userVo.money + "</a> 个" + siteVo.sitemoneyname + "！");
-
     strhtml.Append("<br/>我的投注:<a href=\"" + this.http_start + "games/waBao/book_list_bet.aspx?touserid=" + this.userid + "&amp;tostate=0&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">未开</a>");
     strhtml.Append(".<a href=\"" + this.http_start + "games/waBao/book_list_bet.aspx?touserid=" + this.userid + "&amp;tostate=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">已开</a>");
     strhtml.Append(".<a href=\"" + this.http_start + "games/waBao/book_list_bet.aspx?touserid=" + this.userid + "&amp;tostate=3&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">已中</a>");
-
     strhtml.Append(".<a href=\"" + this.http_start + "games/waBao/book_list_bet.aspx?touserid=" + this.userid + "&amp;tostate=&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">历史</a>");
     strhtml.Append("<br/>我的兑奖:<a href=\"" + this.http_start + "games/waBao/book_list_bet.aspx?touserid=" + this.userid + "&amp;tostate=4&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">未兑</a>");
     strhtml.Append(".<a href=\"" + this.http_start + "games/waBao/book_list_bet.aspx?touserid=" + this.userid + "&amp;tostate=5&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">已兑</a>");
@@ -334,18 +332,16 @@ else //2.0界面
     {
         strhtml.Append(this.content);
     }
-    strhtml.Append("<div class=\"subtitle\">聊天交流 <a class=\"urlbtn\" href=\"" + this.http_start + "games/waBao/index.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;r=" + this.r + "\">刷新</a></div>");
+    strhtml.Append("<div class=\"subtitle\">聊天交流区</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<form name=\"f\" action=\"" + http_start + "games/chat/book_re.aspx\" method=\"post\">");
-    strhtml.Append("<textarea name=\"content\" rows=\"5\" class=\"KL_textarea\" style=\"width:100%\"></textarea><br/>");
-
+    strhtml.Append("<textarea name=\"content\" required=\"required\" rows=\"5\" class=\"KL_textarea\" style=\"width:96.6%\"></textarea><br/>");
     strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"add\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"classid\" value=\"" + classid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"siteid\" value=\"" + siteid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"sid\" value=\"" + sid + "\"/>");
     strhtml.Append("<input type=\"hidden\"  name=\"nid\" value=\"waBao\"/>");
-    strhtml.Append("<br/><input type=\"submit\" name=\"g\" class=\"btn\" value=\"" + this.GetLang("发言|发言|submit") + "\"/>");
-    
+    strhtml.Append("<input type=\"submit\" name=\"g\" class=\"btn\" value=\"" + this.GetLang("发 言|发言|submit") + "\"/>");
     strhtml.Append("</form><br/>");
     if (showRe > 0)
     {
@@ -377,7 +373,7 @@ else //2.0界面
 
     }
 
-    strhtml.Append("<div class=\"bt1\"><a href=\"" + http_start + "games/chat/book_re.aspx?nid=waBao&amp;classid=" + classid + "&amp;siteid=" + siteid + "" + "\">查看更多...</a></div>");
+    strhtml.Append("<div class=\"more\"><a href=\"" + http_start + "games/chat/book_re.aspx?nid=waBao&amp;classid=" + classid + "&amp;siteid=" + siteid + "" + "\">查看更多</a></div>");
 
     strhtml.Append("</div>");
 
@@ -481,7 +477,7 @@ else //2.0界面
     strhtml.Append("</div>");
     strhtml.Append("<div class=\"subtitle\">投注参考</div>");
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("<a href=\""+this.http_start+"games/waBao/rank.aspx?siteid="+this.siteid+"&amp;classid="+this.classid+"&amp;sid="+this.sid+"\">【高手排行榜】<a/><br/>");
+    strhtml.Append("<a href=\""+this.http_start+"games/waBao/rank.aspx?siteid="+this.siteid+"&amp;classid="+this.classid+"\">【高手排行榜】<a/><br/>");
     strhtml.Append("<a href=\"" + this.http_start + "games/waBao/book_list.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">历史开奖</a>－<a href=\"" + this.http_start + "games/waBao/info.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">游戏规则</a><br/>");
     strhtml.Append("</div>");
     if (this.content != "")
