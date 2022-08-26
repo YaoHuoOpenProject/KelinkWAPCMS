@@ -1,0 +1,96 @@
+body {
+	margin: 0px auto; color: rgb(51, 51, 51); line-height: 28px; font-size: 16px; background-color: rgb(255, 255, 255);
+}
+img {
+	border: 0px currentColor;
+}
+img a {
+	border: 0px currentColor;
+}
+.red {
+	color: rgb(255, 0, 0); line-height: 24px; font-weight: bold;
+}
+.listLink {
+	text-align: center; color: rgb(0, 0, 0); background-color: rgb(255, 103, 11);
+}
+.listLink a {
+	color: rgb(255, 255, 255); font-size: 13px; font-weight: bold; text-decoration: none; margin-left: 10px;
+}
+.rmc {
+	background-color: rgb(244, 244, 244);
+}
+.rmc-table {
+	margin: 0px; padding: 0px; width: 100%; text-align: center; font-family: "Î¢ÈíÑÅºÚ"; font-size: 15px; display: inline-table; background-color: rgb(244, 244, 244);
+}
+.rmc-row {
+	margin: 0px; padding: 0px; width: 100%; display: table-row;
+}
+.rmc-cell {
+	margin: 0px; padding: 0px; width: 25%; height: 40px; text-align: center; line-height: 20px; vertical-align: middle; display: table-cell;
+}
+.rmc a {
+	margin: 0px; padding: 0px; border: 2px solid rgb(244, 244, 244); text-decoration: none;
+}
+.rmc .c1 {
+	color: rgb(255, 255, 255); background-color: rgb(247, 128, 142);
+}
+.rmc .c2 {
+	color: rgb(102, 102, 102); background-color: rgb(255, 255, 255);
+}
+.table1 {
+	padding: 1px; border: 2px solid rgb(153, 153, 153); width: 100%; font-size: 12px;
+}
+.table1 td {
+	padding: 1px;
+}
+.firstchange7 {
+	text-align: left; color: rgb(0, 0, 0); font-size: 14px; background-color: rgb(255, 255, 255);
+}
+.yy {
+	height: 150px; margin-top: 15px; margin-left: 15px;
+}
+.yyt {
+	height: 50px; text-align: center;
+}
+.y1 {
+	width: 84px; height: 30px; color: rgb(255, 255, 255); line-height: 30px; font-size: 14px; font-weight: bold; float: left; background-image: url("../images/kuai.png");
+}
+.y2 {
+	margin: 2px 15px 0px; line-height: 30px; font-size: 14px; font-weight: bold; float: left;
+}
+.qq {
+	margin: 10px; text-align: left; color: rgb(102, 102, 102); font-size: 12px; font-weight: bold;
+}
+.order {
+	width: 100%; text-align: center; display: inline-table;
+}
+.table-row {
+	width: 100%; display: table-row;
+}
+.online-cell {
+	height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 18px; font-weight: bold; display: table-cell; background-color: rgb(254, 100, 2);
+}
+.phone-cell {
+	height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 18px; font-weight: bold; display: table-cell; background-color: rgb(3, 123, 201);
+}
+.order a {
+	border: 3px solid rgb(255, 255, 255); text-decoration: none;
+}
+.order a:hover {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.order a:visited {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.STYLE34 {
+	color: rgb(255, 0, 0); font-size: 14px;
+}
+.seaiis_footer{
+height:109px;
+position:fixed;
+
+right:10px;
+top:200px; /*È«¶¥*/  
+
+z-index:100;
+}

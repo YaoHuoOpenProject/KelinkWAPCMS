@@ -1,0 +1,131 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="author" content="kelink.com"/>
+<meta name="keywords" content="wap建站,wap建站帮助,wap建站帮助文档,自助建站,wap帮助文档,3g,3g手机,3g建站,3g门户,wap,wap建站,手机建站,3G门户" />
+<meta name="description" content="体验神奇的WAP建站经历，走进一个全新的wap网站时代！无需专业知识，无需特殊软件，只要您会打字，十分钟的简单置作，您就可以拥有自己的精彩 wap站点，让亿万手机用户分享您的设计成果与乐趣；同时本站有成熟完善的商业合作模式，致力于与各wap站长一起创造互惠互利的双赢局面,给大家提供一个3G时代创造财富的机会。还犹豫 什么呢？赶快申请吧。" />
+<LINK href="/style/main_table.css" type=text/css rel=stylesheet>
+<style type="text/css">
+a:link {  text-decoration: none;  color: #1C5F82}
+a:visited {  text-decoration: none; color: #1C5F82}
+a:hover {  text-decoration: underline; color: #CC5533}
+.tdc {  font-family: "宋体"; font-size: 9pt; color: #333333}
+.tdc1 {  font-family: "宋体"; font-size: 9pt; color: #ffffff}
+.bdtj{background: #EFF1F3; border: 1px solid; border-color:#EFF1F3; color: #6699CC; font- size: 9pt; height: 18px}
+#inpt { font-family:"Arial";font-size:14px;border: 1px solid #75C5FF;padding-top: 4px;padding-left: 4px; background-color: #FFFFFF;}
+#butn { font-size: 14px;background-image: url(/images/butn.gif);text-align: center;
+height: 24px;width: 80px;border: 0px;}
+.tabb {font-family:"Arial";font-size:14px;line-height: 150%;text-align:justify;
+text-justify:inter-ideograph;}
+.taby {font-size: 12px; font-weight: bold;background-color: #FFD97D;height: 24px;width: 240px;border-bottom: 2px solid #FFB033;padding:6px 8px 2px;}
+.tabg {font-size: 12px; font-weight: bold;background-color: #D0FFA2;height: 24px;width: 240px;border-bottom: 2px solid #ABDA47;padding:6px 8px 2px;}
+.f12 {font-size: 12px;line-height: 19px;padding:6px;}
+.footer {color: #ADADAD;background-color: #ECECEF;padding: 5px;height: 27px;width: 740px; border-top:1px solid #ADADAD;margin-bottom:-15px;}
+.footer a:link,.footer a:visited{color: #333333; }
+.footerb{width: 740px;}
+.footerb a:link,.footerb a:visited{color: #999999;text-decoration: none;}
+a:hover, a.nav:hover,a.gray:hover,.footer a:hover,.footerb a:hover{color: #FF2421;}
+.f2{ font-size:20px;}
+.space{margin-top:1px;}
+-->
+</style>
+<title>第三方QQ帐号登录</title>
+</head>
+
+<body background=images/dw.gif topmargin="0" leftmargin="0">
+<table border=1 borderColor=#6699CC cellPadding=4 cellSpacing=1 width=98% style="border-collapse: collapse" align=center >
+<tr>
+<td align="center" background=images/b1.gif class=tdc1 height="23">
+<p align="left"><b>第三方QQ帐号登录</b></p>
+</td>
+</tr>
+
+<tr>
+
+<td class=tdc height="286"  width="62%">
+<div align="center">
+<table border="0" width="70%">
+<tr>
+<td width="100%">
+<table width="715" border="0">
+	<tbody>
+		<tr>
+			<td width="707">
+			<p style="line-height: 150%"><span class="tabb">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+			<p style="line-height: 150%"><b>申请地址：</b><a href="http://connect.qq.com/">http://connect.qq.com/</a><strong><span class="tabb"> 
+			申请网站接入&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></p>
+			<p style="line-height: 150%"><span class="tabb"><strong>一</strong></span><strong><span class="tabb">：申请步法：&nbsp;&nbsp;&nbsp;</span></strong></p>
+			<p style="line-height: 150%">
+			<img border="0" src="1.jpg" width="742" height="480"><br>
+			<br>
+			<img border="0" src="2.jpg" width="752" height="580"><br>
+			<br>
+			<img border="0" src="3.jpg" width="737" height="481"><br>
+			<br>
+			<img border="0" src="4.jpg" width="733" height="529"><br>
+			<br>
+			<img border="0" src="5.jpg" width="645" height="564"><br>
+			<br>
+			<img border="0" src="6.jpg" width="816" height="603"><br>
+			<br>
+			二：配置Web.Config文件：</p>
+			<div align="center">
+				<table border="1" width="109%" id="table1" cellspacing="0" bordercolor="#808080">
+					<tr>
+						<td bgcolor="#C0C0C0">
+						<span style="background-color: #FFFF00">&lt;?xml 
+						version=&quot;1.0&quot;?&gt;&lt;configuration&gt;</span><br>
+						<br>
+						&lt;configSections&gt;<br>
+						&lt;sectionGroup name=&quot;QQSectionGroup&quot;&gt;<br>
+						&lt;section name=&quot;QzoneSection&quot; type=&quot;System.Configuration.NameValueSectionHandler,System, 
+						Version=2.0.0.0, Culture=neutral,PublicKeyToken=b77a5c561934e089&quot; 
+						/&gt;<br>
+						&lt;/sectionGroup&gt;<br>
+						&lt;/configSections&gt;<br>
+						&lt;QQSectionGroup&gt;<br>
+						&lt;QzoneSection&gt;<br>
+						&lt;add key=&quot;AppKey&quot; value=&quot;<font color="#FFFFFF"><span style="background-color: #0000FF">10039783</span></font><span style="background-color: #0000FF"><font color="#FFFFFF">5</font></span>&quot; 
+						/&gt;<br>
+						&lt;add key=&quot;AppSecret&quot; value=&quot;<font color="#FFFFFF"><span style="background-color: #0000FF">5356c1813b13435722354a90c012accb</span></font>&quot; 
+						/&gt;<br>
+						&lt;add key=&quot;CallBackURI&quot; value=&quot;http://<font color="#FFFFFF"><span style="background-color: #0000FF">kelink.com</span></font>/oauth/qq/CallBack.aspx&quot; 
+						/&gt;<br>
+						&lt;add key=&quot;AuthorizeURL&quot; value=&quot;https://graph.qq.com/oauth2.0/authorize&quot; 
+						/&gt;<br>
+						&lt;/QzoneSection&gt;<br>
+						&lt;/QQSectionGroup&gt;<br>
+						<br>
+						<span style="background-color: #FFFF00">&lt;appSettings&gt;
+						</span></td>
+					</tr>
+				</table>
+			</div>
+			<p style="line-height: 150%"><b><font color="#FF00FF">方法：超级管理员操作，黄色部分为原web.config文件中，将中间所有代码复置至web.config黄色代码中间。只需配置蓝色三个参数即可！其中CallBackURI参数蓝色改成你网站地址。多用户版本只要超级管理员配置好，需要注意的是QQ登录链接地址必须是QQ官方网站授权的顶级域名开头(程序默认取本系统的授权域名作为开头)，实现所有子站通用。<br/><br/>提醒：在操作web.config前请先备份此文件，建议用UltraEdit编辑器配置，因为此文件是UTF-8码，否则会乱码。</font></b></p>
+			<p style="line-height: 150%"><br>
+			三：测试之后，请【申请上线】,上线后就可以使用了！<br>
+　</p></td>
+		</tr>
+	</tbody>
+</table>
+<p style="line-height: 150%">　</p>
+<p style="line-height: 150%">　</td>
+</tr>
+</table>
+</div>
+</td></tr>
+</table>
+
+<center>
+<table border=1 borderColor=#6699CC cellPadding=4 cellSpacing=1 width=98% style="border-collapse: collapse" align=center ><TR><TD bgcolor=#EFF1F3 class=tdc>
+<p align="right">
+<font class=tdc>
+
+
+&nbsp;
+
+<!--a href="http://www.kelink.com" target="_blank">Kelink.com</a--> </font></td>
+</tr></table>
+</center>

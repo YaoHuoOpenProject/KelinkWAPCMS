@@ -1,0 +1,148 @@
+RewriteEngine On
+RewriteCompatibility2 On
+RepeatLimit 32
+RewriteBase 
+# unsupported directive: [ISAPI_Rewrite]
+
+# unsupported directive: [ISAPI_Rewrite]
+
+#  3600 = 1 hour
+# unsupported directive: CacheClockRate 3600
+
+
+#  Protect httpd.ini and httpd.parse.errors files
+#  from accessing through HTTP
+#RewriteRule ^(.*)/index\.html(\?(.*))*$ $1/index\.aspx [NC]
+RewriteRule ^(.*)/admin/login\.html(\?(.*))*$ $1/admin/login\.aspx [NC]
+RewriteRule ^(.*)/admin/reg\.html(\?(.*))*$ $1/admin/reg\.aspx [NC]
+
+RewriteRule ^(.*)/wapindex-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/wapindex\.aspx\?siteid=$2&classid=$3&$5 [NC]
+RewriteRule ^(.*)/waplogin-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/waplogin\.aspx\?siteid=$2&classid=$3&$5 [NC]
+RewriteRule ^(.*)/myfile-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/myfile\.aspx\?siteid=$2&classid=$3&$5 [NC]
+RewriteRule ^(.*)/wapreg-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/wapreg\.aspx\?siteid=$2&classid=$3&$5 [NC]
+RewriteRule ^(.*)/wapstyle/skin-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/wapstyle/skin\.aspx\?siteid=$2&classid=$3&$5 [NC]
+RewriteRule ^(.*)/wapstyle/lang-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/wapstyle/lang\.aspx\?siteid=$2&classid=$3&$5 [NC]
+RewriteRule ^(.*)/wapstyle/mobileua-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/wapstyle/mobileua\.aspx\?siteid=$2&classid=$3&$5 [NC]
+
+
+RewriteRule ^(.*)/article-([0-9]+)\.html(\?(.*))*$ $1/article/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/articlelist-([0-9]+)\.html(\?(.*))*$ $1/article/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/articlelist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/article/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/articlere-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/article/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/bbs-([0-9]+)\.html(\?(.*))*$ $1/bbs/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/bbslist-([0-9]+)\.html(\?(.*))*$ $1/bbs/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/bbslist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/bbs/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/bbsre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/bbs/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/adlink-([0-9]+)\.html(\?(.*))*$ $1/adlink/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/adlinklist-([0-9]+)\.html(\?(.*))*$ $1/adlink/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/adlinklist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/adlink/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/adlinkre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/adlink/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/airplane-([0-9]+)\.html(\?(.*))*$ $1/airplane/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/airplanelist-([0-9]+)\.html(\?(.*))*$ $1/airplane/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/airplanelist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/airplane/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/airplanere-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/airplane/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/album-([0-9]+)\.html(\?(.*))*$ $1/album/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/albumlist-([0-9]+)\.html(\?(.*))*$ $1/album/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/albumlist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/album/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/albumre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/album/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/chat-([0-9]+)\.html(\?(.*))*$ $1/chat/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/chatlist-([0-9]+)\.html(\?(.*))*$ $1/chat/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/chatlist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/chat/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/chatre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/chat/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/download-([0-9]+)\.html(\?(.*))*$ $1/download/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/downloadlist-([0-9]+)\.html(\?(.*))*$ $1/download/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/downloadlist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/download/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/downloadre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/download/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/gongqiu-([0-9]+)\.html(\?(.*))*$ $1/gongqiu/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/gongqiulist-([0-9]+)\.html(\?(.*))*$ $1/gongqiu/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/gongqiulist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/gongqiu/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/gongqiure-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/gongqiu/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/guangbo-([0-9]+)\.html(\?(.*))*$ $1/guangbo/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/guangbolist-([0-9]+)\.html(\?(.*))*$ $1/guangbo/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/guangbolist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/guangbo/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/guangbore-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/guangbo/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/guessbook-([0-9]+)\.html(\?(.*))*$ $1/guessbook/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/guessbooklist-([0-9]+)\.html(\?(.*))*$ $1/guessbook/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/guessbooklist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/guessbook/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/guessbookre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/guessbook/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/hotel-([0-9]+)\.html(\?(.*))*$ $1/hotel/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/hotellist-([0-9]+)\.html(\?(.*))*$ $1/hotel/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/hotellist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/hotel/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/hotelre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/hotel/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/link-([0-9]+)\.html(\?(.*))*$ $1/link/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/linklist-([0-9]+)\.html(\?(.*))*$ $1/link/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/linklist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/link/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/linkre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/link/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/novel-([0-9]+)\.html(\?(.*))*$ $1/novel/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/novellist-([0-9]+)\.html(\?(.*))*$ $1/novel/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/novellist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/novel/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/novelre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/novel/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/paimai-([0-9]+)\.html(\?(.*))*$ $1/paimai/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/paimailist-([0-9]+)\.html(\?(.*))*$ $1/paimai/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/paimailist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/paimai/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/paimaire-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/paimai/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/picture-([0-9]+)\.html(\?(.*))*$ $1/picture/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/picturelist-([0-9]+)\.html(\?(.*))*$ $1/picture/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/picturelist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/picture/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/picturere-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/picture/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/ring-([0-9]+)\.html(\?(.*))*$ $1/ring/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/ringlist-([0-9]+)\.html(\?(.*))*$ $1/ring/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/ringlist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/ring/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/ringre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/ring/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7
+
+RewriteRule ^(.*)/rizhi-([0-9]+)\.html(\?(.*))*$ $1/rizhi/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/rizhilist-([0-9]+)\.html(\?(.*))*$ $1/rizhi/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/rizhilist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/rizhi/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/rizhire-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/rizhi/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/shop-([0-9]+)\.html(\?(.*))*$ $1/shop/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/shoplist-([0-9]+)\.html(\?(.*))*$ $1/shop/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/shoplist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/shop/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/shopre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/shop/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/video-([0-9]+)\.html(\?(.*))*$ $1/video/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/videolist-([0-9]+)\.html(\?(.*))*$ $1/video/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/videolist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/video/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/videore-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/video/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/wabao-([0-9]+)\.html(\?(.*))*$ $1/wabao/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/wabaolist-([0-9]+)\.html(\?(.*))*$ $1/wabao/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/wabaolist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/wabao/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/wabaore-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/wabao/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/wml-([0-9]+)\.html(\?(.*))*$ $1/wml/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/wmllist-([0-9]+)\.html(\?(.*))*$ $1/wml/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/wmllist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/wml/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/wmlre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/wml/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/xinzhang-([0-9]+)\.html(\?(.*))*$ $1/xinzhang/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/xinzhanglist-([0-9]+)\.html(\?(.*))*$ $1/xinzhang/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/xinzhanglist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/xinzhang/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/xinzhangre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/xinzhang/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+RewriteRule ^(.*)/yuehui-([0-9]+)\.html(\?(.*))*$ $1/yuehui/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/yuehuilist-([0-9]+)\.html(\?(.*))*$ $1/yuehui/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/yuehuilist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/yuehui/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/yuehuire-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/yuehui/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+
+
+RewriteRule ^(.*)/formedit-([0-9]+)\.html(\?(.*))*$ $1/formedit/view\.aspx\?id=$2&$4 [NC]
+RewriteRule ^(.*)/formeditlist-([0-9]+)\.html(\?(.*))*$ $1/formedit/list\.aspx\?classid=$2&$4 [NC]
+RewriteRule ^(.*)/formeditlist-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/formedit/list\.aspx\?classid=$2&page=$3&$5 [NC]
+RewriteRule ^(.*)/formeditre-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/formedit/book_re\.aspx\?siteid=$2&classid=$3&id=$4&page=$5&$7 [NC]
+

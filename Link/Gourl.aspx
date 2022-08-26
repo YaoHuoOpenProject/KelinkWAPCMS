@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gourl.aspx.cs" Inherits="KeLin.WebSite.link.gourl" %>
